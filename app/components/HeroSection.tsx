@@ -7,7 +7,7 @@ export default function HeroSection() {
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20 opacity-10" />
 			<div className="absolute inset-0">
-				<div className="absolute inset-0 bg-[url('/dollar.svg')] bg-center  bg-[length:50px] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+				<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center  bg-[length:30px] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
 			</div>
 
 			<div className="relative z-10 max-w-4xl w-full mx-4">
@@ -26,14 +26,12 @@ export default function HeroSection() {
 						<p className="text-green-500">$ whoami</p>
 						<h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">Elle Szabo</h1>
 						<p className="text-gray-400 mb-2">Software Engineer</p>
-						<p className="text-green-500">$ skills</p>
+						<p className="text-green-500">$ prev</p>
 						<div className="flex flex-wrap gap-2 mt-2">
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Node.js</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Typescript</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Python</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">AWS</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">React.js</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">React Native</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Microsoft</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">NASA</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">YC Startup</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Founder</span>
 						</div>
 					</div>
 				</motion.div>
