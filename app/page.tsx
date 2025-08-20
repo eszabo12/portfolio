@@ -2,7 +2,6 @@
 
 import HeroSection from './components/HeroSection';
 import Experience from './components/Experience';
-import TechnicalMetrics from './components/TechnicalMetrics';
 import ContactSection from './components/ContactSection';
 import ProjectsSection from './components/ProjectsSection';
 

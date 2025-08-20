@@ -30,8 +30,8 @@ export default function HeroSection() {
 						<div className="flex flex-wrap gap-2 mt-2">
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Microsoft</span>
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">NASA</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">YC Startup</span>
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Founder</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Dripos</span>
 						</div>
 					</div>
 				</motion.div>
