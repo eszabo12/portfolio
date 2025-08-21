@@ -25,7 +25,7 @@ export default function Experience() {
 						},
 						{
 							title: 'Lucendo Labs, Inc.',
-							description: 'Founder | 2023 - 2024',
+							description: '2023 - 2024',
 							details: [
 								'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 						],

@@ -1,0 +1,130 @@
+'use client';
+
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+export default function AboutSection() {
+	return (
+		<section className="py-20 px-4">
+			<div className="max-w-6xl mx-auto">
+				<motion.h2
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6 }}
+					className="text-3xl font-bold mb-12 text-center text-gray-200"
+				>
+					About Me
+				</motion.h2>
+
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+					{/* Photo Section */}
+					<motion.div
+						initial={{ opacity: 0, x: -30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: 0.2 }}
+						className="lg:col-span-1"
+					>
+						<div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
+							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+							<div className="relative z-10">
+								<div className="aspect-square bg-gray-800 relative rounded-lg overflow-hidden mb-6">
+									<Image
+										src="/portrait.jpeg"
+										alt="Elle Szabo"
+										fill
+										className="object-cover"
+									/>
+								</div>
+								<h3 className="text-xl font-bold text-gray-200 mb-2">Elle Szabo</h3>
+								<p className="text-green-400 font-mono">Software Engineer</p>
+							</div>
+						</div>
+					</motion.div>
+
+					{/* About Content */}
+					<motion.div
+						initial={{ opacity: 0, x: 30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: 0.4 }}
+						className="lg:col-span-2"
+					>
+						<div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
+							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+							<div className="relative z-10">
+								<h3 className="text-2xl font-bold mb-4 text-gray-200">My Story</h3>
+								<div className="mb-8">
+									<p className="text-gray-300 leading-relaxed mb-4">
+										I`m a passionate software engineer who loves tackling tough problems and building 0-1. I strive to constantly learn and upskill, whether that`s reading engineering newsletters or starting fun side projects.
+									</p>
+									<p className="text-gray-300 leading-relaxed">
+										When I`m not coding, you`ll find me reading a good book, putting together new fashion looks, in the pilates studio, curating a playlist, and tending to my two houseplants. 							</p>
+								</div>
+
+								{/* Favorites Grid */}
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+									{/* Favorite Books */}
+									<div>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">📚 Favorite Books</h4>
+										<ul className="space-y-2">
+											{[
+												'Ender\'s Game',
+												'The Hitchhiker\'s Guide to the Galaxy',
+												'Clean Code',
+												'Elon Musk by Ashlee Vance'
+											].map((book, index) => (
+												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
+													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
+													{book}
+												</li>
+											))}
+										</ul>
+									</div>
+
+									{/* Favorite Media */}
+									<div>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">🎬 Favorite Media</h4>
+										<ul className="space-y-2">
+											{[
+												'Sherlock BBC',
+												'Doctor Who',
+												'Call Me By Your Name',
+												'Lex Fridman Podcast'
+											].map((media, index) => (
+												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
+													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
+													{media}
+												</li>
+											))}
+										</ul>
+									</div>
+
+									{/* <div>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">🎯 Hobbies</h4>
+										<ul className="space-y-2">
+											{[
+												'Open Source Contributing',
+												'Reading Tech Blogs',
+												'Hiking & Nature Walks',
+												'Learning New Languages'
+											].map((hobby, index) => (
+												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
+													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
+													{hobby}
+												</li>
+											))}
+										</ul>
+									</div> */}
+
+
+								</div>
+							</div>
+						</div>
+					</motion.div>
+				</div>
+			</div>
+		</section>
+	);
+}

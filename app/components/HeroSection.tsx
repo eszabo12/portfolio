@@ -26,12 +26,12 @@ export default function HeroSection() {
 						<p className="text-green-500">$ whoami</p>
 						<h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">Elle Szabo</h1>
 						<p className="text-gray-400 mb-2">Software Engineer</p>
-						<p className="text-green-500">$ prev</p>
+						<p className="text-green-500">$ interests</p>
 						<div className="flex flex-wrap gap-2 mt-2">
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Microsoft</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">NASA</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Founder</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Dripos</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">fintech</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">machine learning</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">web dev</span>
+							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">app dev</span>
 						</div>
 					</div>
 				</motion.div>
