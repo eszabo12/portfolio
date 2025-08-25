@@ -37,8 +37,6 @@ export default function AboutSection() {
 										className="object-cover"
 									/>
 								</div>
-								<h3 className="text-xl font-bold text-gray-200 mb-2">Elle Szabo</h3>
-								<p className="text-green-400 font-mono">Software Engineer</p>
 							</div>
 						</div>
 					</motion.div>
@@ -101,7 +99,7 @@ export default function AboutSection() {
 
 									{/* Favorite Tools */}
 									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Fav Tools</h4>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Favorite Tools</h4>
 										<ul className="space-y-2">
 											{[
 												'Notion',
