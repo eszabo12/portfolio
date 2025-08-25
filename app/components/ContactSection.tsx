@@ -13,6 +13,16 @@ export default function ContactSection() {
 					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50"
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+					{/* Subtle pulsing glow like Hero */}
+					<motion.div
+						aria-hidden
+						initial={{ opacity: 0.4, scale: 0.98 }}
+						animate={{ opacity: [0.4, 0.7, 0.4], scale: [0.98, 1.02, 0.98] }}
+						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+						className="absolute inset-0 z-0"
+					>
+						<div className="absolute inset-0 rounded-3xl blur-2xl bg-green-500/10" />
+					</motion.div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">
 							<div className="w-3 h-3 rounded-full bg-red-500" />
@@ -20,10 +30,43 @@ export default function ContactSection() {
 							<div className="w-3 h-3 rounded-full bg-green-500" />
 						</div>
 						<div className="font-mono">
-							<p className="text-green-500 mb-2">$ contact --info</p>
+							<motion.p
+								className="text-green-500 mb-2"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1, 0.7, 1] }}
+								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse' }}
+							>
+								$ contact --info
+							</motion.p>
 							<h2 className="text-3xl font-bold mb-8 text-gray-200">Let&apos;s Connect</h2>
-
-							<p className="text-green-500 mt-8 mb-2">$ contact --email</p>
+							<motion.p
+								className="text-green-500 mb-2"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1, 0.7, 1] }}
+								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.2 }}
+							>
+								$ location --current
+							</motion.p>
+							<div className="flex items-center gap-2 text-gray-300">
+								<svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+									/>
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+								<span>New York City, New York</span>
+							</div>
+							<motion.p
+								className="text-green-500 mt-8 mb-2"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1, 0.7, 1] }}
+								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.4 }}
+							>
+								$ contact --email
+							</motion.p>
 							<motion.a
 								href="mailto:elleszabo77@gmail.com"
 								whileHover={{ scale: 1.02 }}
@@ -31,9 +74,16 @@ export default function ContactSection() {
 							>
 								elleszabo77@gmail.com
 							</motion.a>
-							<p className="text-green-500 mt-8 mb-2">$ cat resume.pdf</p>
+							<motion.p
+								className="text-green-500 mt-8 mb-2"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1, 0.7, 1] }}
+								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.6 }}
+							>
+								$ cat resume.pdf
+							</motion.p>
 							<motion.a
-								href="/Elle_Szabo_Resume.pdf"
+								href="/path-to-resume.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
@@ -44,7 +94,13 @@ export default function ContactSection() {
 								</svg>
 								<span>Download Resume</span>
 							</motion.a>
-							<p className="text-green-500 mt-8 mb-4">$ ls ./social-links</p>
+							<motion.p className="text-green-500 mt-8 mb-4"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1, 0.7, 1] }}
+								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.8 }}
+							>
+								$ ls ./social-links
+							</motion.p>
 							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 								<motion.a
 									href="https://github.com/eszabo12"
