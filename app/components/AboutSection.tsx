@@ -99,7 +99,7 @@ export default function AboutSection() {
 
 									{/* Favorite Tools */}
 									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Favorite Tools</h4>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Tool Stack</h4>
 										<ul className="space-y-2">
 											{[
 												'Notion',
