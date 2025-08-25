@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Spinner, Center } from "@chakra-ui/react"
 
 export default function ProjectsSection() {
 	return (
@@ -10,7 +11,11 @@ export default function ProjectsSection() {
 				<h2 className="text-xl sm:text-2xl font-bold text-gray-200 mb-6 sm:mb-8 text-center">
 					Featured Projects
 				</h2>
-				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+				<Center>
+					<Spinner className="center">hi </Spinner>
+				</Center>
+
+				{/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
 					{[1, 2, 3, 4].map((project) => (
 						<motion.div 
 							key={project} 
@@ -54,7 +59,7 @@ export default function ProjectsSection() {
 							</div>
 						</motion.div>
 					))}
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

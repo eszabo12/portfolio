@@ -22,19 +22,7 @@ export default function ContactSection() {
 						<div className="font-mono">
 							<p className="text-green-500 mb-2">$ contact --info</p>
 							<h2 className="text-3xl font-bold mb-8 text-gray-200">Let&apos;s Connect</h2>
-							<p className="text-green-500 mb-2">$ location --current</p>
-							<div className="flex items-center gap-2 text-gray-300">
-								<svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={2}
-										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-									/>
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-								</svg>
-								<span>New York, New York</span>
-							</div>
+
 							<p className="text-green-500 mt-8 mb-2">$ contact --email</p>
 							<motion.a
 								href="mailto:elleszabo77@gmail.com"
@@ -45,7 +33,7 @@ export default function ContactSection() {
 							</motion.a>
 							<p className="text-green-500 mt-8 mb-2">$ cat resume.pdf</p>
 							<motion.a
-								href="/path-to-resume.pdf"
+								href="/Elle_Szabo_Resume.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
