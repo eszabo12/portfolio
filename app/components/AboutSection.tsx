@@ -89,7 +89,7 @@ export default function AboutSection() {
 												'Visit every continent at least once',
 												'Hike the Redwood forests',
 												'Perfect the art of sourdough',
-												'Read more classics'
+												'Run an official half marathon'
 											].map((book, index) => (
 												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
 													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
