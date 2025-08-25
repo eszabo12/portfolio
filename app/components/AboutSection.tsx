@@ -83,23 +83,6 @@ export default function AboutSection() {
 										</ul>
 									</div>
 
-									{/* Favorite Media */}
-									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🎬 Favorite Media</h4>
-										<ul className="space-y-2">
-											{[
-												'Sherlock BBC',
-												'Doctor Who',
-												'Call Me By Your Name',
-												'Lex Fridman Podcast'
-											].map((media, index) => (
-												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
-													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
-													{media}
-												</li>
-											))}
-										</ul>
-									</div>
 
 									{/* <div>
 										<h4 className="text-lg font-semibold mb-3 text-green-400">🎯 Hobbies</h4>
