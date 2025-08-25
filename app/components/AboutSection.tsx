@@ -56,10 +56,10 @@ export default function AboutSection() {
 							<div className="relative z-10">
 								<div className="mb-8">
 									<p className="text-gray-300 leading-relaxed mb-4">
-										I&apos;m a software engineer based in New York. I started my career in backend systems and have developed an aptitude and passion for creating beautiful fullstack applications that suit business requirements! 
+										I'm a software engineer based in New York. I started my career in backend systems and have developed an aptitude and passion for creating beautiful fullstack applications that suit business requirements! 
 									</p>
 									<p className="text-gray-300 leading-relaxed">
-										When I&apos;m not coding, you&apos;ll find me reading a good book, putting together new fashion looks, in the pilates studio, curating a playlist, and tending to my two houseplants. 							</p>
+										When I'm not coding, you'll find me reading a good book, putting together new fashion looks, in the pilates studio, curating a playlist, and tending to my two houseplants. 							</p>
 								</div>
 
 								{/* Favorites Grid */}
@@ -69,8 +69,8 @@ export default function AboutSection() {
 										<h4 className="text-lg font-semibold mb-3 text-green-400">📚 Favorite Books of All Time</h4>
 										<ul className="space-y-2">
 											{[
-												"Ender&apos;s Game",
-												"The Hitchhiker&apos;s Guide to the Galaxy",
+												'Ender\'s Game',
+												'The Hitchhiker\'s Guide to the Galaxy',
 												'Clean Code',
 												'Elon Musk by Ashlee Vance'
 											].map((book, index) => (

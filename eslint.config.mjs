@@ -14,7 +14,7 @@ const eslintConfig = [
     extends: ["next/core-web-vitals", "next/typescript"],
     rules: {
       'react/no-unescaped-entities': 'off',
-      'typescript-eslint/no-unused-vars': 'off',
+      'typescript-eslint/no-unused-vars': 'warning',
       '@next/next/no-page-custom-font': 'off',
     },
   }),
