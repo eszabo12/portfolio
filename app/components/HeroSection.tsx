@@ -43,20 +43,11 @@ export default function HeroSection() {
 						>
 							$ whoami
 						</motion.p>
-						<motion.h1
-							className="text-4xl md:text-5xl font-bold mt-2 mb-4 text-green-300 drop-shadow-[0_0_10px_rgba(34,197,94,0.7)]"
-							initial={{ textShadow: "0 0 0px #22c55e" }}
-							animate={{
-								textShadow: [
-									"0 0 10px #22c55e, 0 0 20px #22c55e",
-									"0 0 20px #22c55e, 0 0 40px #22c55e",
-									"0 0 10px #22c55e, 0 0 20px #22c55e"
-								]
-							}}
-							transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+						<h1
+							className="text-4xl md:text-5xl font-bold mt-2 mb-4 text-white"
 						>
 							Elle Szabo
-						</motion.h1>
+						</h1>
 						<p className="text-gray-400 mb-2">Software Engineer</p>
 						<motion.p
 							className="text-green-500 mb-2"
