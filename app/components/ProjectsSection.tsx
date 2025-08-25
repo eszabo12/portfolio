@@ -1,7 +1,4 @@
 'use client';
-
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { Spinner, Center } from "@chakra-ui/react"
 
 export default function ProjectsSection() {

@@ -99,26 +99,6 @@ export default function AboutSection() {
 										</ul>
 									</div>
 
-
-
-									{/* <div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🎯 Hobbies</h4>
-										<ul className="space-y-2">
-											{[
-												'Open Source Contributing',
-												'Reading Tech Blogs',
-												'Hiking & Nature Walks',
-												'Learning New Languages'
-											].map((hobby, index) => (
-												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
-													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
-													{hobby}
-												</li>
-											))}
-										</ul>
-									</div> */}
-
-
 								</div>
 							</div>
 						</div>
