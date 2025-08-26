@@ -10,10 +10,11 @@ export default function HeroSection() {
 			{/* Animated green glow effect */}
 			<motion.div
 				aria-hidden
-				initial={{ opacity: 0.5, scale: 0.95 }}
+				initial={false}
 				animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.05, 0.95] }}
 				transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
 				className="absolute inset-0 z-0"
+				style={{ opacity: 0.5, scale: 0.95 }}
 			>
 				<div className="absolute inset-0 rounded-3xl blur-3xl bg-green-500/20" />
 			</motion.div>
@@ -23,10 +24,11 @@ export default function HeroSection() {
 
 			<div className="relative z-10 max-w-4xl w-full mx-4">
 				<motion.div
-					initial={{ opacity: 0, y: 20 }}
+					initial={false}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 					className="bg-black/50 backdrop-blur-lg rounded-2xl border border-gray-800 p-6 shadow-2xl shadow-green-500/20 hover:shadow-green-400/30 transition-all duration-300"
+					style={{ opacity: 1, transform: 'translateY(0px)' }}
 				>
 					<div className="flex items-center gap-2 mb-4">
 						<div className="w-3 h-3 rounded-full bg-red-500 shadow-md shadow-red-500/40" />

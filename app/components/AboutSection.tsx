@@ -99,11 +99,11 @@ export default function AboutSection() {
 
 									{/* Favorite Tools */}
 									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Tool Stack</h4>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Comfortable With</h4>
 										<ul className="space-y-2">
 											{[
-												'Notion',
 												'Linear',
+												'Notion',
 												'Figma',
 												'Cursor'
 											].map((book, index) => (
