@@ -57,7 +57,7 @@ export default function ContactSection() {
 									/>
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 								</svg>
-								<span>New York City, New York</span>
+								<span>New York, New York</span>
 							</div>
 							<motion.p
 								className="text-green-500 mt-8 mb-2"
@@ -101,7 +101,7 @@ export default function ContactSection() {
 							>
 								$ ls ./social-links
 							</motion.p>
-							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 								<motion.a
 									href="https://github.com/eszabo12"
 									whileHover={{ scale: 1.05 }}
@@ -145,6 +145,21 @@ export default function ContactSection() {
 									<div>
 										<p className="font-semibold text-gray-200">X</p>
 										<p className="text-sm text-gray-400">@ElleSzabo</p>
+									</div>
+								</motion.a>
+								<motion.a
+									href="https://open.spotify.com/user/liztheunicorn"
+									whileHover={{ scale: 1.05 }}
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+								>
+									<div className="p-2 bg-gray-700/50 rounded-lg group-hover:bg-gray-600/50 transition-colors">
+										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+											<path d="M12 0C5.371 0 0 5.371 0 12c0 6.627 5.371 12 12 12s12-5.373 12-12c0-6.629-5.371-12-12-12zm5.297 17.348a.749.749 0 0 1-1.03.246c-2.824-1.729-6.389-2.119-10.594-1.155a.75.75 0 1 1-.326-1.464c4.522-1.008 8.418-.574 11.522 1.292a.75.75 0 0 1 .246 1.081zm1.47-2.934a.937.937 0 0 1-1.287.307c-3.234-2.01-8.168-2.594-12.003-1.414a.938.938 0 1 1-.537-1.8c4.25-1.267 9.617-.627 13.278 1.646a.937.937 0 0 1 .309 1.261zm.13-2.999c-3.88-2.297-10.293-2.507-14.01-1.364a1.125 1.125 0 1 1-.646-2.154c4.168-1.25 11.17-1.008 15.507 1.572a1.125 1.125 0 0 1-1.12 1.946z"/>
+										</svg>
+									</div>
+									<div>
+										<p className="font-semibold text-gray-200">Spotify</p>
+										<p className="text-sm text-gray-400">Elle Szabo</p>
 									</div>
 								</motion.a>
 							</div>
