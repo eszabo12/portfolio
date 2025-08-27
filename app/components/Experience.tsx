@@ -21,7 +21,7 @@ export default function Experience() {
 								'Enabled instant loading of major reports using custom Redshift data warehouses across mobile, web, and tablet',
 								'Architected a custom CI/CD pipeline for the web dashboard using GitHub Actions and AWS S3 Buckets',
 							],
-							tech: ['AWS', 'Redshift', 'React', 'GitHub Actions', 'S3'],
+							tech: ['Typescript', 'Javascript', 'Go', 'AWS', 'React.js'],
 						},
 						{
 							title: 'Lucendo Labs, Inc.',
@@ -29,7 +29,7 @@ export default function Experience() {
 							details: [
 								'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 						],
-							tech: ['Flutter', 'React.js', 'AWS', 'PostgreSQL'],
+							tech: ['Flutter', 'React.js', 'Firebase'],
 						},
 						{
 							title: 'Microsoft',
@@ -37,7 +37,7 @@ export default function Experience() {
 							details: [
 								'Developed a proof-of-concept search indexing process for the Windows operating system',
 						],
-							tech: ['C#', 'Windows APIs'],
+							tech: ['C/C++', 'C#', 'Windows APIs'],
 						},
 						{
 							title: 'NASA',
@@ -45,7 +45,7 @@ export default function Experience() {
 							details: [
 								'Built a navigation pipeline for an autonomous inspection rover',
 						],
-							tech: ['ROS', 'Python', 'Computer Vision'],
+							tech: ['C/C++', 'ROS', 'Python', 'Computer Vision'],
 						},
 						{
 							title: 'Lucid Circuit',
@@ -54,7 +54,7 @@ export default function Experience() {
 								'Simulated a machine learning model for satellite telemetry using Python TensorBoard Lite',
 								'Developed an API for electrical engineers that stores all information about architecture hardware parsed from JSON',
 						],
-							tech: ['Python', 'TensorBoard', 'OpenCV', 'C++'],
+							tech: ['Python', 'TensorBoard', 'OpenCV', 'C/C++'],
 						},
 						{
 							title: 'Totall Metal Recycling',
