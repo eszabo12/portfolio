@@ -13,7 +13,7 @@ export default function Experience() {
 				<div className="grid grid-cols-1 gap-8">
 					{[
 						{
-							title: 'Dripos',
+							title: 'Dripos (YC S20)',
 							description: '2024 - 2025',
 							details: [
 								'Developed a fully end-to-end fullstack accounting feature 0-1, collaborating with Layer Financial',
