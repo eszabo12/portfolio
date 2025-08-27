@@ -64,7 +64,7 @@ export default function AboutSection() {
 								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 									{/* Favorite Books */}
 									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">📚 Favorite Books of All Time</h4>
+										<h4 className="text-lg font-semibold mb-3 text-green-400">📚 Favorite Books</h4>
 										<ul className="space-y-2">
 											{[
 												'Ender\'s Game',

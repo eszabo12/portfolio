@@ -83,9 +83,10 @@ export default function ContactSection() {
 								$ cat resume.pdf
 							</motion.p>
 							<motion.a
-								href="/path-to-resume.pdf"
+								href="/Elle_Szabo_Resume.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
+								download="Elle_Szabo_Resume.pdf"
 								whileHover={{ scale: 1.02 }}
 								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
 							>
