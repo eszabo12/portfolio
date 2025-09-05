@@ -28,7 +28,6 @@ export default function Experience() {
 							details: [
 								'Co-Founded a marketplace app company, raised an angel round from investors and led 11 partnerships across the NYC ',
 								'Led design and development a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
-								'Recruited and led a team of 6 across engineering, design, and marketing',
 								'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 						],
 							tech: ['Dart', 'Flutter', 'React.js', 'Firebase'],
