@@ -83,7 +83,9 @@ export default function ContactSection() {
 								$ cat resume.pdf
 							</motion.p>
 							<motion.a
-								href="https://drive.google.com/uc?export=download&id=1vlnjvcpGU4oYR6wgghB3C87PdX99gTS2"
+								href="https://drive.usercontent.google.com/u/0/uc?id=1vlnjvcpGU4oYR6wgghB3C87PdX99gTS2&export=download"
+								target="_blank"
+								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
 								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
 							>

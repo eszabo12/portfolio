@@ -54,7 +54,7 @@ export default function AboutSection() {
 							<div className="relative z-10">
 								<div className="mb-8">
 									<p className="text-gray-300 leading-relaxed mb-4">
-										I'm a software engineer based in New York. I started my career in backend systems and have developed an aptitude and passion for creating beautiful fullstack applications that suit business requirements!
+										I'm a software engineer based in New York. I have developed an aptitude and passion for creating beautiful fullstack applications that suit business requirements! Very excited about solving customer problems with good UI/UX principles.
 									</p>
 									<p className="text-gray-300 leading-relaxed">
 										When I'm not coding, you'll find me reading a good book, putting together new fashion looks, in the pilates studio, curating a playlist, and tending to my two houseplants. 							</p>

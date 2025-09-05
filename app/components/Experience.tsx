@@ -16,30 +16,32 @@ export default function Experience() {
 							title: 'Dripos (YC S20)',
 							description: '2024 - 2025',
 							details: [
-								'Led the design and implementation of fullstack accounting features from 0-1, including architecting new UI/UX for web and mobile pages in Typescript React',
-								'Created and shipped new frontend components and pages, focusing on intuitive user experiences and modern design patterns',
+								'Collaborated with customer facing teams to iterate on intuitive UI/UX for payroll features, driving a 44% attach rate and >100 NRR',
 								'Proactively fixed frontend bugs in complex financial reports, improving reliability and user trust across platforms',
+								'Improved accuracy and performance of sales reports by caching Redshift data and gaining clarity into the business use case',
 							],
-							tech: ['Typescript', 'Javascript', 'Go', 'AWS', 'React.js'],
+							tech: ['Typescript', 'React.JS', 'React Native', 'Javascript', 'Go', 'AWS'],
 						},
 						{
-							title: 'Lucendo Labs, Inc.',
+							title: 'Otea',
 							description: '2023 - 2024',
 							details: [
-								'Built a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
-								'Developed a fullstack company site in Typescript',
-								'Raised an angel round from investors and led 11 partnerships across the NYC area',
+								'Co-Founded a marketplace app company, raised an angel round from investors and led 11 partnerships across the NYC ',
+								'Led design and development a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
+								'Recruited and led a team of 6 across engineering, design, and marketing',
 								'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 						],
-							tech: ['Flutter', 'React.js', 'Firebase'],
+							tech: ['Dart', 'Flutter', 'React.js', 'Firebase'],
 						},
 						{
 							title: 'Microsoft',
 							description: '2021',
 							details: [
-								'Developed a proof-of-concept search indexing process for the Windows operating system',
-						],
-							tech: ['C/C++', 'C#', 'Windows APIs'],
+								'Proved the feasibility of a fullstack proof-of-concept search indexing process for the Windows file explorer',
+								'Demoed to stakeholders and led adoption into the Windows 11 release'
+							],
+					
+							tech: ['C#', 'C/C++'],
 						},
 						{
 							title: 'NASA',
@@ -47,7 +49,7 @@ export default function Experience() {
 							details: [
 								'Built a navigation pipeline for an autonomous inspection rover',
 						],
-							tech: ['C/C++', 'ROS', 'Python', 'Computer Vision'],
+							tech: ['C/C++', 'ROS', 'Python'],
 						},
 						{
 							title: 'Lucid Circuit',
@@ -65,7 +67,7 @@ export default function Experience() {
 								'Built Java web applications backed by a relational MySQL database',
 								'Created a VBScript-to-Java transpiler in Python to translate thousands of stored procedures',
 						],
-							tech: ['Java', 'MySQL', 'Python'],
+							tech: ['Java Swing', 'MySQL', 'Python'],
 						},
 					].map((project, index) => (
 						<motion.div
