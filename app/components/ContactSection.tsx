@@ -83,11 +83,28 @@ export default function ContactSection() {
 								$ cat resume.pdf
 							</motion.p>
 							<motion.a
-								href="https://drive.usercontent.google.com/u/0/uc?id=1vlnjvcpGU4oYR6wgghB3C87PdX99gTS2&export=download"
-								target="_blank"
-								rel="noopener noreferrer"
+								onClick={() => {
+									const anchor = document.createElement('a');
+									anchor.setAttribute('href', '/Elle_Szabo_Resume.pdf');
+									anchor.setAttribute('download', '');
+									document.body.appendChild(anchor);
+									anchor.click();
+									document.body.removeChild(anchor);
+								}}
 								whileHover={{ scale: 1.02 }}
-								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
+								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors cursor-pointer"
+								tabIndex={0}
+								role="button"
+								onKeyDown={e => {
+									if (e.key === 'Enter' || e.key === ' ') {
+										const anchor = document.createElement('a');
+										anchor.setAttribute('href', '/Elle_Szabo_Resume.pdf');
+										anchor.setAttribute('download', '');
+										document.body.appendChild(anchor);
+										anchor.click();
+										document.body.removeChild(anchor);
+									}
+								}}
 							>
 								<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 									<path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" />
