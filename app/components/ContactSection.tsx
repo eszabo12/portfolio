@@ -68,7 +68,7 @@ export default function ContactSection() {
 								$ contact --email
 							</motion.p>
 							<motion.a
-								href="mailto:elleszabo77@gmail.com"
+								href="mailto:elleszabo77@gmail.com?subject=hi%20I%27d%20like%20to%20hire%20you"
 								whileHover={{ scale: 1.02 }}
 								className="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
 							>
@@ -83,10 +83,7 @@ export default function ContactSection() {
 								$ cat resume.pdf
 							</motion.p>
 							<motion.a
-								href="/Elle_Szabo_Resume.pdf"
-								target="_blank"
-								rel="noopener noreferrer"
-								download="Elle_Szabo_Resume.pdf"
+								href="https://drive.google.com/uc?export=download&id=1vlnjvcpGU4oYR6wgghB3C87PdX99gTS2"
 								whileHover={{ scale: 1.02 }}
 								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
 							>
@@ -171,3 +168,4 @@ export default function ContactSection() {
 		</section>
 	);
 }
+

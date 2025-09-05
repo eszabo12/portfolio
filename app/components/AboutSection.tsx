@@ -60,62 +60,7 @@ export default function AboutSection() {
 										When I'm not coding, you'll find me reading a good book, putting together new fashion looks, in the pilates studio, curating a playlist, and tending to my two houseplants. 							</p>
 								</div>
 
-								{/* Favorites Grid */}
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-									{/* Favorite Books */}
-									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">📚 Favorite Books</h4>
-										<ul className="space-y-2">
-											{[
-												'Ender\'s Game',
-												'The Hitchhiker\'s Guide to the Galaxy',
-												'Clean Code',
-												'Elon Musk by Ashlee Vance'
-											].map((book, index) => (
-												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
-													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
-													{book}
-												</li>
-											))}
-										</ul>
-									</div>
-									{/* Favorite Movies */}
-									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🪣 Bucket List </h4>
-										<ul className="space-y-2">
-											{[
-												'Visit every continent at least once',
-												'Hike the Redwood forests',
-												'Perfect the art of sourdough',
-												'Run an official half marathon'
-											].map((book, index) => (
-												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
-													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
-													{book}
-												</li>
-											))}
-										</ul>
-									</div>
 
-									{/* Favorite Tools */}
-									<div>
-										<h4 className="text-lg font-semibold mb-3 text-green-400">🛠️ Comfortable With</h4>
-										<ul className="space-y-2">
-											{[
-												'Linear',
-												'Notion',
-												'Figma',
-												'Cursor'
-											].map((book, index) => (
-												<li key={index} className="text-gray-300 text-sm flex items-center gap-2">
-													<span className="w-1 h-1 bg-green-400 rounded-full"></span>
-													{book}
-												</li>
-											))}
-										</ul>
-									</div>
-
-								</div>
 							</div>
 						</div>
 					</motion.div>

@@ -16,10 +16,9 @@ export default function Experience() {
 							title: 'Dripos (YC S20)',
 							description: '2024 - 2025',
 							details: [
-								'Developed a fully end-to-end fullstack accounting feature 0-1, collaborating with Layer Financial',
-								'Designed, deployed, and architected fullstack 0-1 payroll features (e.g., post-tax deductions), which grew to a 44% attach rate and drove >100 NRR',
-								'Enabled instant loading of major reports using custom Redshift data warehouses across mobile, web, and tablet',
-								'Architected a custom CI/CD pipeline for the web dashboard using GitHub Actions and AWS S3 Buckets',
+								'Led the design and implementation of fullstack accounting features from 0-1, including architecting new UI/UX for web and mobile pages in Typescript React',
+								'Created and shipped new frontend components and pages, focusing on intuitive user experiences and modern design patterns',
+								'Proactively fixed frontend bugs in complex financial reports, improving reliability and user trust across platforms',
 							],
 							tech: ['Typescript', 'Javascript', 'Go', 'AWS', 'React.js'],
 						},
@@ -27,6 +26,9 @@ export default function Experience() {
 							title: 'Lucendo Labs, Inc.',
 							description: '2023 - 2024',
 							details: [
+								'Built a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
+								'Developed a fullstack company site in Typescript',
+								'Raised an angel round from investors and led 11 partnerships across the NYC area',
 								'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 						],
 							tech: ['Flutter', 'React.js', 'Firebase'],
@@ -49,7 +51,7 @@ export default function Experience() {
 						},
 						{
 							title: 'Lucid Circuit',
-							description: 'May 2020 - Jan 2021',
+							description: '2020 - 2021',
 							details: [
 								'Simulated a machine learning model for satellite telemetry using Python TensorBoard Lite',
 								'Developed an API for electrical engineers that stores all information about architecture hardware parsed from JSON',
@@ -58,7 +60,7 @@ export default function Experience() {
 						},
 						{
 							title: 'Totall Metal Recycling',
-							description: 'May 2019 - Aug 2019',
+							description: '2019',
 							details: [
 								'Built Java web applications backed by a relational MySQL database',
 								'Created a VBScript-to-Java transpiler in Python to translate thousands of stored procedures',
