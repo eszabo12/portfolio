@@ -57,7 +57,7 @@ export default function AboutSection() {
 										I'm a software engineer based in New York. I have developed an aptitude and passion for creating beautiful fullstack applications that suit business requirements! Very excited about solving customer problems with solid UI/UX understanding and building performant backend systems.
 									</p>
 									<p className="text-gray-300 leading-relaxed">
-										When I'm not coding, you'll find me reading a good book, putting together new fashion looks, in the pilates studio, curating a playlist, and tending to my two houseplants.</p>
+										When I'm not coding, you'll find me reading a good book, in the pilates studio, curating a playlist, and tending to my two houseplants.</p>
 								</div>
 
 
