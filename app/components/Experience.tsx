@@ -16,6 +16,7 @@ export default function Experience() {
 							title: 'Dripos (YC S20)',
 							description: '2024 - 2025',
 							details: [
+								'Developed the accounting feature from 0 to 1, collaborating with Layer Financial',
 								'Collaborated with customer facing teams to iterate on intuitive UI/UX for payroll features, driving a 44% attach rate and >100 NRR',
 								'Proactively fixed frontend bugs in complex financial reports, improving reliability and user trust across platforms',
 								'Improved accuracy and performance of sales reports by caching Redshift data and gaining clarity into the business use case',
