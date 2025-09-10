@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Head } from "next/document";
 
 import './globals.css';
 
@@ -73,6 +74,7 @@ export const metadata: Metadata = {
 	},
 };
 
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -80,8 +82,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
-			      <GoogleAnalytics gaId="G-PDQXKNVQSX" />
+			<head>
+				<link rel="icon" type="image/png" href="/icon.png" />
+				<meta name="apple-mobile-web-app-title" content="Snippit" />
+				<meta name="application-name" content="Snippit" />
+			</head>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				{children}
+				<GoogleAnalytics gaId="G-PDQXKNVQSX" />
+			</body>
 		</html>
 	);
 }
