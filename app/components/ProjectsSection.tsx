@@ -44,7 +44,7 @@ export default function ProjectsSection() {
 		{
 			img: '/daily_insights.gif',
 			title: 'Automated Email',
-			date: '2024',
+			date: '2025',
 			description: [
 				'Designed and shipped a daily insights email for Dripos, aggregating key business metrics and trends for coffee shop owners',
 				'Automated data pipeline and templated email delivery to thousands of users',
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
 		{
 			img: '/report.gif',
 			title: 'Report Improvements',
-			date: '2024',
+			date: '2025',
 			description: [
 				'Sped up the ticket type sales report by 10x by optimizing SQL queries and caching strategies',
 				'Improved reliability and user experience for high-volume merchants',

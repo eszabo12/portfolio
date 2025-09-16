@@ -17,7 +17,7 @@ export default function Experience() {
 				'Proactively fixed frontend bugs in complex financial reports, improving reliability and user trust across platforms',
 				'Improved accuracy and performance of sales reports by caching Redshift data and gaining clarity into the business use case',
 			],
-			tech: ['Typescript', 'React.JS', 'React Native', 'Javascript', 'Go', 'AWS'],
+			tech: ['Typescript', 'React', 'Next.js', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
 		},
 		{
 			title: 'Lucendo Labs, Inc.',
@@ -27,7 +27,7 @@ export default function Experience() {
 				'Led design and development a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
 				'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 			],
-			tech: ['Dart', 'Flutter', 'React.js', 'Firebase'],
+			tech: ['Dart', 'Flutter', 'React', 'Firebase'],
 		},
 		{
 			title: 'Microsoft',
