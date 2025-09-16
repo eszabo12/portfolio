@@ -46,7 +46,7 @@ export default function BackendPortfolio() {
 				<HeroSection />
 				<AboutSection />
 				<Experience />
-				{/* <ProjectsSection /> */}
+				<ProjectsSection />
 				<ContactSection />
 			</main>
 		</>
