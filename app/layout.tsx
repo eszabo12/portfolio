@@ -41,11 +41,11 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'Elle Szabo Portfolio Portfolio',
 		description: 'Passionate developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
-		url: 'https://your-domain.com',
-		siteName: 'Elle Szabo Portfolio - Portfolio',
+		url: 'https://elleszabo.com',
+		siteName: 'Elle Szabo Portfolio',
 		images: [
 			{
-				url: '/og-image.jpg',
+				url: '/icon.png',
 				width: 1200,
 				height: 630,
 				alt: 'Elle Szabo Portfolio',
@@ -83,9 +83,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
-				<link rel="icon" type="image/png" href="/icon.png" />
-				<meta name="apple-mobile-web-app-title" content="Snippit" />
-				<meta name="application-name" content="Snippit" />
+			<link rel="icon" href="/favicon.png" sizes="any" />
 			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				{children}

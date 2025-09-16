@@ -25,7 +25,7 @@ export default function Experience() {
 							tech: ['Typescript', 'React.JS', 'React Native', 'Javascript', 'Go', 'AWS'],
 						},
 						{
-							title: 'Otea',
+							title: 'Lucendo Labs, Inc.',
 							description: '2023 - 2024',
 							details: [
 								'Co-Founded a marketplace app company, raised an angel round from investors and led 11 partnerships across the NYC ',

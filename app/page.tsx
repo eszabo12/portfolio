@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import Experience from './components/Experience';
 import ContactSection from './components/ContactSection';
 import Script from 'next/script';
+import ProjectsSection from './components/ProjectsSection';
 
 export default function BackendPortfolio() {
 	return (
@@ -45,6 +46,7 @@ export default function BackendPortfolio() {
 				<HeroSection />
 				<AboutSection />
 				<Experience />
+				{/* <ProjectsSection /> */}
 				<ContactSection />
 			</main>
 		</>
