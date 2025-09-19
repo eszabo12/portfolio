@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function ProjectsSection() {
 	const projects = [
 		{
-			img: '/logo.png',
+			img: '/ios_app.png',
 			title: 'iOS Rental Application',
 			date: 'Dec 2020 – Present',
 			description: [
@@ -122,7 +122,7 @@ export default function ProjectsSection() {
 										<Image src={p.img} alt={p.title} fill className="object-cover" />
 									</div>
 									<h3 className="project-title">{p.title}</h3>
-									{p.date && <p className="text-pink-400 font-mono text-xs mb-2">{p.date}</p>}
+									{p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}
 									{Array.isArray(p.description) ? (
 										<ul className="list-disc list-inside text-gray-300 text-sm mb-4 space-y-1">
 											{p.description.map((d: string, i: number) => (
@@ -139,7 +139,7 @@ export default function ProjectsSection() {
 									</div>
 									<div className="project-actions">
 										{p.gh && (
-											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-pink">
+											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-green">
 												<span>GitHub</span>
 											</motion.a>
 										)}
