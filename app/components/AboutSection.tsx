@@ -18,7 +18,6 @@ export default function AboutSection() {
 				</motion.h2>
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-					{/* Photo Section */}
 					<motion.div
 						initial={{ opacity: 0, x: -30 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -26,8 +25,8 @@ export default function AboutSection() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="lg:col-span-1"
 					>
-						<div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
-							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+						<div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300">
+							<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
 							<div className="relative z-10">
 								<div className="aspect-square bg-gray-800 relative rounded-lg overflow-hidden mb-6">
 									<Image
@@ -41,7 +40,6 @@ export default function AboutSection() {
 						</div>
 					</motion.div>
 
-					{/* About Content */}
 					<motion.div
 						initial={{ opacity: 0, x: 30 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -49,8 +47,8 @@ export default function AboutSection() {
 						transition={{ duration: 0.6, delay: 0.4 }}
 						className="lg:col-span-2"
 					>
-						<div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
-							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+						<div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300">
+							<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
 							<div className="relative z-10">
 								<div className="mb-8">
 									<p className="text-gray-300 leading-relaxed mb-4">
@@ -59,8 +57,6 @@ export default function AboutSection() {
 									<p className="text-gray-300 leading-relaxed">
 										When I'm not coding, you'll find me reading a good book, in the pilates studio, curating a playlist, and tending to my two houseplants.</p>
 								</div>
-
-
 							</div>
 						</div>
 					</motion.div>

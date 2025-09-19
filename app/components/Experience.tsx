@@ -66,7 +66,6 @@ export default function Experience() {
 		},
 	];
 
-	// Show only up to NASA unless expanded, then show all
 	const visibleExperiences = expanded ? experiences : experiences.slice(0, 4);
 
 	return (
@@ -84,12 +83,12 @@ export default function Experience() {
 								scale: 1.02,
 								transition: { duration: 0.2 }
 							}}
-							className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300 cursor-pointer"
+							className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300 cursor-pointer"
 						>
-							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+							<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
 							<div className="relative z-10">
 								<h3 className="text-2xl font-bold mb-2 text-gray-200">{project.title}</h3>
-								<p className="text-green-400 mb-4 font-mono">{project.description}</p>
+								<p className="text-pink-400 mb-4 font-mono">{project.description}</p>
 								<div className="mb-6">
 									<ul className="list-disc list-inside space-y-2 text-gray-300">
 										{project.details.map((detail, i) => (
@@ -101,7 +100,7 @@ export default function Experience() {
 									{project.tech.map((tech, i) => (
 										<span
 											key={i}
-											className="text-sm px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20 text-green-400"
+											className="text-sm px-3 py-1 bg-pink-500/10 rounded-full border border-pink-500/20 text-pink-400"
 										>
 											{tech}
 										</span>
@@ -111,7 +110,6 @@ export default function Experience() {
 						</motion.div>
 					))}
 				</div>
-				{/* Show more button under the last visible card */}
 				{!expanded && (
 					<div className="flex justify-center mt-8">
 						<button
@@ -120,7 +118,7 @@ export default function Experience() {
 							className="group flex flex-col items-center focus:outline-none"
 						>
 							<svg
-								className="w-7 h-7 text-green-400 group-hover:text-green-300 transition-transform duration-200"
+								className="w-7 h-7 text-pink-400 group-hover:text-pink-300 transition-transform duration-200"
 								fill="none"
 								stroke="currentColor"
 								strokeWidth={2.5}

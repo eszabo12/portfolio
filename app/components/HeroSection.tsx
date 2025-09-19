@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 export default function HeroSection() {
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-			{/* Glowing green background gradient */}
-			<div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-green-700/30 to-blue-600/20 opacity-30 pointer-events-none" />
-			{/* Animated green glow effect */}
+			<div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-pink-700/30 to-blue-600/20 opacity-30 pointer-events-none" />
 			<motion.div
 				aria-hidden
 				initial={false}
@@ -16,7 +14,7 @@ export default function HeroSection() {
 				className="absolute inset-0 z-0"
 				style={{ opacity: 0.5, scale: 0.95 }}
 			>
-				<div className="absolute inset-0 rounded-3xl blur-3xl bg-green-500/20" />
+				<div className="absolute inset-0 rounded-3xl blur-3xl bg-pink-500/20" />
 			</motion.div>
 			<div className="absolute inset-0">
 				<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center bg-[length:20px] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
@@ -27,18 +25,17 @@ export default function HeroSection() {
 					initial={false}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
-					className="bg-black/50 backdrop-blur-lg rounded-2xl border border-gray-800 p-6 shadow-2xl shadow-green-500/20 hover:shadow-green-400/30 transition-all duration-300"
+					className="bg-black/50 backdrop-blur-lg rounded-2xl border border-gray-800 p-6 shadow-2xl shadow-pink-500/20 hover:shadow-pink-400/30 transition-all duration-300"
 					style={{ opacity: 1, transform: 'translateY(0px)' }}
 				>
 					<div className="flex items-center gap-2 mb-4">
 						<div className="w-3 h-3 rounded-full bg-red-500 shadow-md shadow-red-500/40" />
 						<div className="w-3 h-3 rounded-full bg-yellow-500 shadow-md shadow-yellow-500/40" />
-						<div className="w-3 h-3 rounded-full bg-green-500 shadow-md shadow-green-500/60 animate-pulse" />
+						<div className="w-3 h-3 rounded-full bg-pink-500 shadow-md shadow-pink-500/60 animate-pulse" />
 					</div>
 					<div className="font-mono">
-						{/* Cool loading effect for the name */}
 						<motion.p
-							className="text-green-500"
+							className="text-pink-500"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: [0, 1, 0.7, 1] }}
 							transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
@@ -52,7 +49,7 @@ export default function HeroSection() {
 						</h1>
 						<p className="text-gray-400 mb-2">Software Engineer</p>
 						<motion.p
-							className="text-green-500 mb-2"
+							className="text-pink-500 mb-2"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: [0, 1, 0.7, 1] }}
 							transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
@@ -60,7 +57,7 @@ export default function HeroSection() {
 							$ location --current
 						</motion.p>
 						<div className="flex items-center gap-2 text-gray-300">
-							<svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<svg className="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path
 									strokeLinecap="round"
 									strokeLinejoin="round"
@@ -74,12 +71,11 @@ export default function HeroSection() {
 					</div>
 				</motion.div>
 			</div>
-			{/* Animated down arrow for loading/cool effect */}
 			<div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20">
 				<motion.div
 					animate={{ y: [0, 12, 0] }}
 					transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-					className="text-green-400"
+					className="text-pink-400"
 				>
 					<svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
