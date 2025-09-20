@@ -106,6 +106,8 @@ export default function ProjectsSection() {
 		return () => clearInterval(id);
 	}, [middleStart, projects.length]);
 
+	const currentDot = ((index - middleStart) % projects.length + projects.length) % projects.length;
+
 	return (
 		<section className="py-20 px-4">
 			<div className="projects-container">
@@ -152,6 +154,17 @@ export default function ProjectsSection() {
 								</div>
 							</motion.article>
 						))}
+					</div>
+					<div className="flex justify-center mt-6">
+						<div className="flex gap-2">
+							{projects.map((_, i) => (
+								<span
+									key={i}
+									className={`h-2 w-2 rounded-full transition-all duration-200 ${i === currentDot ? 'bg-white/80 scale-125' : 'bg-white/30'}`}
+									style={{ display: 'inline-block' }}
+								/>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
