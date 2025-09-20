@@ -59,6 +59,28 @@ export default function ContactSection() {
 								</svg>
 								<span>New York, New York</span>
 							</div>
+							{/* Cal.com meeting link row */}
+							<motion.p
+								className="text-pink-500 mt-8 mb-2"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: [0, 1, 0.7, 1] }}
+								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.3 }}
+							>
+								$ schedule --meeting
+							</motion.p>
+							<motion.a
+								href="https://cal.com/elleszabo/30min"
+								target="_blank"
+								rel="noopener noreferrer"
+								whileHover={{ scale: 1.02 }}
+								className="inline-flex items-center gap-2 px-6 py-3 bg-pink-500/10 text-pink-400 rounded-lg border border-pink-500/20 hover:bg-pink-500/20 transition-colors cursor-pointer mb-2"
+							>
+								<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<rect x="3" y="4" width="18" height="18" rx="2" strokeWidth="2" />
+									<path d="M16 2v4M8 2v4M3 10h18" strokeWidth="2" />
+								</svg>
+								<span>Book a Meeting</span>
+							</motion.a>
 							<motion.p
 								className="text-pink-500 mt-8 mb-2"
 								initial={{ opacity: 0 }}
