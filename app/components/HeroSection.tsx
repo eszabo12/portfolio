@@ -4,8 +4,6 @@ import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import CircularNavigation from './CircularNavigation';
-import { useNavigation } from '../contexts/NavigationContext';
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
 
@@ -26,6 +24,15 @@ export default function HeroSection() {
 		const timeout = setTimeout(() => setShowTerminal(true), whoamiDelay);
 		return () => clearTimeout(timeout);
 	}, []);
+
+	useEffect(() => {
+		if (showTerminal) {
+			const nameTimeout = setTimeout(() => setShowName(true), nameDelay);
+			return () => clearTimeout(nameTimeout);
+		} else {
+			setShowName(false);
+		}
+	}, [showTerminal, nameDelay]);
 
 	useEffect(() => {
 		if (showTerminal) {
