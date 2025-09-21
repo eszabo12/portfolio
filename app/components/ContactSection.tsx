@@ -13,7 +13,6 @@ export default function ContactSection() {
 					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50"
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
-					{/* Subtle pulsing glow like Hero */}
 					<motion.div
 						aria-hidden
 						initial={{ opacity: 0.4, scale: 0.98 }}

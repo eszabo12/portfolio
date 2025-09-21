@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 export default function Experience() {
 	const [expanded, setExpanded] = useState(false);
+	const [showCount, setShowCount] = useState(4);
 
 	const experiences = [
 		{
@@ -66,7 +67,27 @@ export default function Experience() {
 		},
 	];
 
-	const visibleExperiences = expanded ? experiences : experiences.slice(0, 4);
+	const handleExpand = () => {
+		setExpanded(true);
+		let i = 1;
+		const totalToShow = experiences.length;
+		const interval = setInterval(() => {
+			setShowCount((prev) => {
+				if (prev < totalToShow) {
+					return prev + 1;
+				} else {
+					clearInterval(interval);
+					return prev;
+				}
+			});
+			i++;
+			if (i > totalToShow - 4) {
+				clearInterval(interval);
+			}
+		}, 200);
+	};
+
+	const visibleExperiences = expanded ? experiences.slice(0, showCount) : experiences.slice(0, 4);
 
 	return (
 		<section className="py-20 px-4">
@@ -79,6 +100,12 @@ export default function Experience() {
 					{visibleExperiences.map((project, index) => (
 						<motion.div
 							key={index}
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{
+								duration: 0.4,
+								delay: expanded && index >= 4 ? (index - 4) * 0.18 : 0,
+							}}
 							whileHover={{
 								scale: 1.02,
 								transition: { duration: 0.2 }
@@ -113,7 +140,7 @@ export default function Experience() {
 				{!expanded && (
 					<div className="flex justify-center mt-8">
 						<button
-							onClick={() => setExpanded(true)}
+							onClick={handleExpand}
 							aria-label="Show more experience"
 							className="group flex flex-col items-center focus:outline-none"
 						>
