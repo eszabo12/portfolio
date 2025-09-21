@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import GitHubContributions from './GitHubContributions';
 
 export default function AboutSection() {
 	return (
@@ -60,6 +61,11 @@ export default function AboutSection() {
 							</div>
 						</div>
 					</motion.div>
+				</div>
+				
+				{/* GitHub Contributions */}
+				<div className="mt-12">
+					<GitHubContributions />
 				</div>
 			</div>
 		</section>

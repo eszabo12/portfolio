@@ -78,7 +78,7 @@ export default function HeroSection() {
 						<div className="absolute inset-0 rounded-3xl blur-2xl bg-pink-500/10" />
 					</motion.div>
 					<div className="relative z-10">
-					<div className="flex items-center gap-2 mb-6">
+						<div className="flex items-center gap-2 mb-6">
 							<div className="w-3 h-3 rounded-full bg-red-500" />
 							<div className="w-3 h-3 rounded-full bg-yellow-500" />
 							<div className="w-3 h-3 rounded-full bg-pink-500" />
@@ -107,23 +107,43 @@ export default function HeroSection() {
 									/>
 								</motion.p>
 							)}
-							{showName && (
-								<motion.h1
-									className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
-									initial={{ opacity: 0, y: 10 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.7, ease: 'easeOut' }}
-									style={{
-										color: '#fff0fa',
-										textShadow: '0 0 1px #fff0fa, 0 0 1px #fff0fa, 0 0 1px #fff0fa',
-										letterSpacing: '-0.05em',
+							<div style={{
+								minHeight: '1.2em',
+								marginBottom: showName ? '1rem' : '1rem',
+								display: 'flex',
+								alignItems: 'center',
+								justifyContent: 'flex-start'
+							}}>
+								{showName ? (
+									<motion.h1
+										className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
+										initial={{ opacity: 0, y: 10 }}
+										animate={{ opacity: 1, y: 0 }}
+										transition={{ duration: 0.7, ease: 'easeOut' }}
+										style={{
+											color: '#fff0fa',
+											textShadow: '0 0 1px #fff0fa, 0 0 1px #fff0fa, 0 0 1px #fff0fa',
+											letterSpacing: '-0.05em',
+											whiteSpace: 'nowrap',
+											marginTop: '0em',
+										}}
+									>
+										{NAME}
+									</motion.h1>
+								) : (
+									<span style={{
+										display: 'inline-block',
+										width: '0',
+										visibility: 'hidden',
 										whiteSpace: 'nowrap',
-										marginTop: '0em',
-									}}
-								>
-									{NAME}
-								</motion.h1>
-							)}
+										fontWeight: 1000,
+										fontSize: '3.25rem',
+										letterSpacing: '-0.05em'
+									}}>
+										{NAME}
+									</span>
+								)}
+							</div>
 							{showTerminal && (
 								<motion.p
 									className="text-pink-500 mt-2 mb-2 text-base md:text-lg"
