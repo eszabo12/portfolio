@@ -28,16 +28,14 @@ export default function AboutSection() {
 					>
 						<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300 w-full h-full flex flex-col items-center justify-center">
 							<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
-							<div className="relative z-10 flex flex-col items-center">
-								<div className="w-40 h-40 bg-gray-800 relative rounded-lg overflow-hidden mb-4">
+
 									<Image
 										src="/portrait.jpeg"
 										alt="Elle Szabo"
 										fill
-										className="object-cover"
+										className="object-cover w-full h-full"
 									/>
-								</div>
-							</div>
+
 						</div>
 					</motion.div>
 
