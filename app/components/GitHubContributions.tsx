@@ -3,10 +3,17 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
+function getNumCols() {
+	if (typeof window === 'undefined') return 3;
+	const width = window.innerWidth;
+	return 23;
+}
+
 export default function GitHubContributions() {
 	const [contributions, setContributions] = useState<{
 		contributions: Array<{ count: number; date: string; level: number }>;
 	} | null>(null);
+	const [numCols, setNumCols] = useState(getNumCols());
 
 	useEffect(() => {
 		const fetchContributions = async () => {
@@ -25,10 +32,19 @@ export default function GitHubContributions() {
 		fetchContributions();
 	}, []);
 
+	useEffect(() => {
+		function handleResize() {
+			setNumCols(getNumCols());
+		}
+		window.addEventListener('resize', handleResize);
+		handleResize();
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	const contributionElements = useMemo(() => {
 		if (!contributions) return null;
-
-		const datedContributions = contributions.contributions.slice(0, 203);
+		const numCells = numCols * 7;
+		const datedContributions = contributions.contributions.slice(0, numCells);
 
 		return datedContributions.map(
 			(
@@ -46,7 +62,7 @@ export default function GitHubContributions() {
 				/>
 			),
 		);
-	}, [contributions]);
+	}, [contributions, numCols]);
 
 	if (!contributions) return null;
 

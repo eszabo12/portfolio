@@ -46,10 +46,6 @@ export default function HeroSection() {
 	return (
 		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-				{/* <Spline
-					scene="https://prod.spline.design/ywFUBCVbFdeRMEDX/scene.splinecode"
-					style={{ width: '200vw', height: '200vh', transform: 'scale(1.5) translate(-25vw, -25vh)' }}
-				/> */}
 			</div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
@@ -117,8 +113,8 @@ export default function HeroSection() {
 								{showName ? (
 									<motion.h1
 										className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
-										initial={{ opacity: 0, y: 10 }}
-										animate={{ opacity: 1, y: 0 }}
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
 										transition={{ duration: 0.7, ease: 'easeOut' }}
 										style={{
 											color: '#fff0fa',
