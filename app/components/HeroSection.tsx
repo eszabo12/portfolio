@@ -1,11 +1,9 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
 
 const WHOAMI = '$ whoami';
 const NAME = 'Elle Szabo';
