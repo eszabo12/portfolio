@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import ContactSection from './components/ContactSection';
 import Script from 'next/script';
 import ProjectsSection from './components/ProjectsSection';
+import CustomCursor from './components/CustomCursor';
 
 export default function BackendPortfolio() {
 	return (
@@ -43,6 +44,8 @@ export default function BackendPortfolio() {
 				}}
 			/>
 			<main className="min-h-screen bg-[#1A1A1A] text-white overflow-x-hidden">
+			<CustomCursor />
+
 				<HeroSection />
 				<AboutSection />
 				<Experience />

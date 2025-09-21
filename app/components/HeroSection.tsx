@@ -3,9 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-
 const WHOAMI = '$ whoami';
-const NAME    = 'Elle Szabo';
+const NAME = 'Elle Szabo';
 
 export default function HeroSection() {
 	const [showTerminal, setShowTerminal] = useState(false);
@@ -28,6 +27,7 @@ export default function HeroSection() {
 			setShowArrow(false);
 		}
 	}, [showTerminal, arrowDelay]);
+
 
 	return (
 		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">

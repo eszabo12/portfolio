@@ -72,7 +72,7 @@ export default function GitHubContributions() {
 				type: "spring",
 				stiffness: 300,
 				damping: 24,
-				delay: 0.2,
+				delay: 0
 			}}
 		>
 			<div className="flex items-center mb-2">
