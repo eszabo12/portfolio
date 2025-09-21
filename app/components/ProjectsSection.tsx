@@ -124,7 +124,7 @@ export default function ProjectsSection() {
 										<Image src={p.img} alt={p.title} fill className="object-cover" />
 									</div>
 									<h3 className="project-title">{p.title}</h3>
-									{p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}
+									{p.date && <p className="text-pink-400 font-mono text-xs mb-2">{p.date}</p>}
 									{Array.isArray(p.description) ? (
 										<ul className="list-disc list-inside text-gray-300 text-sm mb-4 space-y-1">
 											{p.description.map((d: string, i: number) => (
@@ -141,7 +141,7 @@ export default function ProjectsSection() {
 									</div>
 									<div className="project-actions">
 										{p.gh && (
-											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-green">
+											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-pink">
 												<span>GitHub</span>
 											</motion.a>
 										)}
@@ -160,7 +160,7 @@ export default function ProjectsSection() {
 							{projects.map((_, i) => (
 								<span
 									key={i}
-									className={`h-2 w-2 rounded-full transition-all duration-200 ${i === currentDot ? 'bg-white/80 scale-125' : 'bg-white/30'}`}
+									className={`h-2 w-2 rounded-full transition-all duration-200 ${i === currentDot ? 'bg-pink-400/80 scale-125' : 'bg-pink-400/30'}`}
 									style={{ display: 'inline-block' }}
 								/>
 							))}
