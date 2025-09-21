@@ -16,8 +16,8 @@ export default function HeroSection() {
 	const [showArrow, setShowArrow] = useState(false);
 
 	const whoamiDelay = 400;
-	const nameDelay = WHOAMI.length * 90 + 600;
-	const titleDelay = WHOAMI.length * 90 + 900;
+	const nameDelay = WHOAMI.length * 90 + 700;
+	const titleDelay = WHOAMI.length * 90 + 1000;
 	const arrowDelay = titleDelay + 1600;
 
 	useEffect(() => {
@@ -46,15 +46,15 @@ export default function HeroSection() {
 	return (
 		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-				<Spline
+				{/* <Spline
 					scene="https://prod.spline.design/ywFUBCVbFdeRMEDX/scene.splinecode"
 					style={{ width: '200vw', height: '200vh', transform: 'scale(1.5) translate(-25vw, -25vh)' }}
-				/>
+				/> */}
 			</div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: showTerminal ? 1 : 0 }}
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
 					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 flex flex-col items-stretch"
 					style={{
@@ -65,8 +65,6 @@ export default function HeroSection() {
 						boxShadow: '0 8px 40px 0 #0008',
 						pointerEvents: 'auto',
 						userSelect: 'auto',
-						transform: showTerminal ? 'translateY(0)' : 'translateY(30px)',
-						transition: 'opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1)',
 					}}
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
@@ -90,8 +88,8 @@ export default function HeroSection() {
 								<motion.p
 									className="text-pink-500 mb-2 text-lg md:text-2xl"
 									initial={{ opacity: 0 }}
-									animate={{ opacity: [0, 1, 0.7, 1] }}
-									transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse' }}
+									animate={{ opacity: 1 }}
+									transition={{ duration: 1.2 }}
 									style={{
 										letterSpacing: '0.01em',
 										pointerEvents: 'none',
@@ -130,8 +128,8 @@ export default function HeroSection() {
 								<motion.p
 									className="text-pink-500 mt-2 mb-2 text-base md:text-lg"
 									initial={{ opacity: 0 }}
-									animate={{ opacity: [0, 1, 0.7, 1] }}
-									transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.2 }}
+									animate={{ opacity: 1 }}
+									transition={{ duration: 1.2, delay: 0.2 }}
 								>
 									$ title --current
 								</motion.p>
@@ -141,7 +139,7 @@ export default function HeroSection() {
 									className="w-full flex justify-center mt-1"
 									initial={{ opacity: 0, y: 10 }}
 									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: titleDelay / 1000, duration: 0.7, ease: 'easeOut' }}
+									transition={{  duration: 1.7, ease: 'easeOut' }}
 								>
 									<span className="text-xs md:text-sm text-pink-200 tracking-widest font-mono opacity-80" style={{ fontSize: '0.7rem', letterSpacing: '0.2em' }}>
 										Software Engineer
@@ -162,7 +160,7 @@ export default function HeroSection() {
 						xmlns="http://www.w3.org/2000/svg"
 						style={{
 							filter: 'drop-shadow(0 0 12px #fff) drop-shadow(0 0 32px #fff)',
-							animation: 'arrowglow 1.5s infinite alternate',
+							animation: 'arrowglow 1.5s infinite alternate, arrowbounce 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 						}}
 					>
 						<path
@@ -184,6 +182,11 @@ export default function HeroSection() {
 					@keyframes arrowglow {
 						from { filter: drop-shadow(0 0 12px #fff) drop-shadow(0 0 32px #fff);}
 						to { filter: drop-shadow(0 0 24px #fff) drop-shadow(0 0 48px #fff);}
+					}
+					@keyframes arrowbounce {
+						0% { transform: translateY(0);}
+						50% { transform: translateY(16px);}
+						100% { transform: translateY(0);}
 					}
 				`}
 			</style>
