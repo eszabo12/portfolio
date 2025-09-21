@@ -4,17 +4,14 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 
-
 const WHOAMI = '$ whoami';
-const NAME = 'Elle Szabo';
+const NAME    = 'Elle Szabo';
 
 export default function HeroSection() {
 	const [showTerminal, setShowTerminal] = useState(false);
-	const [showName, setShowName] = useState(false);
 	const [showArrow, setShowArrow] = useState(false);
 
 	const whoamiDelay = 400;
-	const nameDelay = WHOAMI.length * 90 + 700;
 	const titleDelay = WHOAMI.length * 90 + 1000;
 	const arrowDelay = titleDelay + 1600;
 
@@ -22,15 +19,6 @@ export default function HeroSection() {
 		const timeout = setTimeout(() => setShowTerminal(true), whoamiDelay);
 		return () => clearTimeout(timeout);
 	}, []);
-
-	useEffect(() => {
-		if (showTerminal) {
-			const nameTimeout = setTimeout(() => setShowName(true), nameDelay);
-			return () => clearTimeout(nameTimeout);
-		} else {
-			setShowName(false);
-		}
-	}, [showTerminal, nameDelay]);
 
 	useEffect(() => {
 		if (showTerminal) {
@@ -103,41 +91,26 @@ export default function HeroSection() {
 							)}
 							<div style={{
 								minHeight: '1.2em',
-								marginBottom: showName ? '1rem' : '1rem',
+								marginBottom: '1rem',
 								display: 'flex',
 								alignItems: 'center',
 								justifyContent: 'flex-start'
 							}}>
-								{showName ? (
-									<motion.h1
-										className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
-										initial={{ opacity: 0 }}
-										animate={{ opacity: 1 }}
-										transition={{ duration: 0.7, ease: 'easeOut' }}
-										style={{
-											color: '#fff0fa',
-											textShadow: '0 0 1px #fff0fa, 0 0 1px #fff0fa, 0 0 1px #fff0fa',
-											letterSpacing: '-0.05em',
-											whiteSpace: 'nowrap',
-											marginTop: '.3em',
-										}}
-									>
-										{NAME}
-									</motion.h1>
-								) : (
-									<span style={{
-										display: 'inline-block',
-										width: '0',
-										
-										visibility: 'hidden',
+								<motion.h1
+									className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									transition={{ duration: 0.7, ease: 'easeOut' }}
+									style={{
+										color: '#fff0fa',
+										textShadow: '0 0 1px #fff0fa, 0 0 1px #fff0fa, 0 0 1px #fff0fa',
+										letterSpacing: '-0.05em',
 										whiteSpace: 'nowrap',
-										fontWeight: 1000,
-										fontSize: '3.25rem',
-										letterSpacing: '-0.05em'
-									}}>
-										{NAME}
-									</span>
-								)}
+										marginTop: '.3em',
+									}}
+								>
+									{NAME}
+								</motion.h1>
 							</div>
 							{showTerminal && (
 								<motion.p
