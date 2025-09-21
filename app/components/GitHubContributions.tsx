@@ -3,17 +3,13 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
-function getNumCols() {
-	if (typeof window === 'undefined') return 3;
-	const width = window.innerWidth;
-	return 23;
-}
-
 export default function GitHubContributions() {
 	const [contributions, setContributions] = useState<{
 		contributions: Array<{ count: number; date: string; level: number }>;
 	} | null>(null);
-	const [numCols, setNumCols] = useState(getNumCols());
+	const [numCols, setNumCols] = useState(
+		typeof window !== 'undefined' && window.innerWidth < 640 ? 23 : 29
+	);
 
 	useEffect(() => {
 		const fetchContributions = async () => {
@@ -34,7 +30,7 @@ export default function GitHubContributions() {
 
 	useEffect(() => {
 		function handleResize() {
-			setNumCols(getNumCols());
+			setNumCols(window.innerWidth < 640 ? 23 : 29);
 		}
 		window.addEventListener('resize', handleResize);
 		handleResize();
