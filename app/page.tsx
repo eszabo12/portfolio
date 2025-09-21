@@ -44,7 +44,7 @@ export default function BackendPortfolio() {
 				}}
 			/>
 			<main className="min-h-screen bg-[#1A1A1A] text-white overflow-x-hidden">
-			<CustomCursor />
+				<CustomCursor />
 
 				<HeroSection />
 				<AboutSection />
