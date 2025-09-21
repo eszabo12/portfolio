@@ -119,7 +119,7 @@ export default function HeroSection() {
 											textShadow: '0 0 1px #fff0fa, 0 0 1px #fff0fa, 0 0 1px #fff0fa',
 											letterSpacing: '-0.05em',
 											whiteSpace: 'nowrap',
-											marginTop: '0em',
+											marginTop: '.3em',
 										}}
 									>
 										{NAME}
@@ -128,6 +128,7 @@ export default function HeroSection() {
 									<span style={{
 										display: 'inline-block',
 										width: '0',
+										
 										visibility: 'hidden',
 										whiteSpace: 'nowrap',
 										fontWeight: 1000,
@@ -150,12 +151,12 @@ export default function HeroSection() {
 							)}
 							{showTerminal && (
 								<motion.div
-									className="w-full flex justify-center mt-1"
+									className="w-full flex justify-center mt-4"
 									initial={{ opacity: 0, y: 10 }}
 									animate={{ opacity: 1, y: 0 }}
-									transition={{  duration: 1.7, ease: 'easeOut' }}
+									transition={{ duration: 1.7, ease: 'easeOut' }}
 								>
-									<span className="text-xs md:text-sm text-pink-200 tracking-widest font-mono opacity-80" style={{ fontSize: '0.7rem', letterSpacing: '0.2em' }}>
+									<span className="text-pink-400 font-bold text-lg mb-1 font-mono" style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}>
 										Software Engineer
 									</span>
 								</motion.div>
