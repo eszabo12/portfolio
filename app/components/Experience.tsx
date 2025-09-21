@@ -142,7 +142,7 @@ export default function Experience() {
 						<button
 							onClick={handleExpand}
 							aria-label="Show more experience"
-							className="group flex flex-col items-center focus:outline-none"
+							className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-500/10 border border-pink-500/20 hover:bg-pink-500/20 transition-colors duration-200 focus:outline-none"
 						>
 							<svg
 								className="w-7 h-7 text-pink-400 group-hover:text-pink-300 transition-transform duration-200"
