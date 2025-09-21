@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
+import CircularNavigation from './CircularNavigation';
+import { useNavigation } from '../contexts/NavigationContext';
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
 
@@ -12,6 +14,7 @@ const NAME = 'Elle Szabo';
 
 export default function HeroSection() {
 	const [showTerminal, setShowTerminal] = useState(false);
+	const [showName, setShowName] = useState(false);
 	const [showArrow, setShowArrow] = useState(false);
 
 	const whoamiDelay = 400;
