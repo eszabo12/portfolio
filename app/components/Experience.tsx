@@ -12,12 +12,12 @@ export default function Experience() {
 			title: 'Dripos (YC S20)',
 			description: '2024 - 2025',
 			details: [
-				'Contributed #2 most lines of code to organization historically',
 				'Led the integration of Parafin capital loans into the Dripos ecosystem',
-				'Created frontend components for frontend forms, collaborating with the resident designer',
 				'Developed the accounting feature from 0 to 1, collaborating with Layer Financial',
 				'Collaborated with customer facing teams to iterate on intuitive UI/UX for payroll features, driving a 44% attach rate and >100 NRR',
 				'Improved accuracy and performance of sales reports by caching Redshift data and gaining clarity into the business use case',
+				'Contributed #2 most lines of code to organization',
+
 			],
 			tech: ['Typescript', 'React', 'Next.js', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
 		},
