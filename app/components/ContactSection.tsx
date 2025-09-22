@@ -65,7 +65,7 @@ export default function ContactSection() {
 								animate={{ opacity: [0, 1, 0.7, 1] }}
 								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.3 }}
 							>
-								$ schedule --meeting
+								$ schedule --chat
 							</motion.p>
 							<motion.a
 								href="https://cal.com/elleszabo/30min"
@@ -78,7 +78,7 @@ export default function ContactSection() {
 									<rect x="3" y="4" width="18" height="18" rx="2" strokeWidth="2" />
 									<path d="M16 2v4M8 2v4M3 10h18" strokeWidth="2" />
 								</svg>
-								<span>Book a Meeting</span>
+								<span>Let's chat!</span>
 							</motion.a>
 							<motion.p
 								className="text-pink-500 mt-8 mb-2"
