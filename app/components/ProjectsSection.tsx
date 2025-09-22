@@ -43,11 +43,13 @@ export default function ProjectsSection() {
 		},
 		{
 			img: '/daily_insights.gif',
-			title: 'Automated Email',
+			title: 'Email Template',
 			date: '2025',
 			description: [
-				'Designed and shipped a daily insights email for Dripos, aggregating key business metrics and trends for coffee shop owners',
-				'Automated data pipeline and templated email delivery to thousands of users',
+				'Designed and developed a mobile and desktop-responsive daily insights email template for Dripos, aggregating key business metrics and trends for coffee shop owners',
+				'Automated a high-throughput scheduled event and for timely delivery to thousands of users',
+				'Tracked send and open rates with a MongoDB collection',
+
 			],
 			skills: ['TypeScript','Node.js', 'AWS SMS', 'MySQL'],
 			gh: false,
@@ -57,10 +59,11 @@ export default function ProjectsSection() {
 			title: 'Report Improvements',
 			date: '2025',
 			description: [
-				'Sped up the ticket type sales report by 10x by optimizing SQL queries and caching strategies',
-				'Improved reliability and user experience for high-volume merchants',
+				'Enable instant loading of several reports by creating Redshift data warehouses',
+				'Improved accuracy of SQL queries by debugging years of data',
+				'Enabled full availability (low latency) of product sales report for restocking insights',
 			],
-			skills: ['Javascript', 'AWS Redshift', 'React', 'Next.js', 'MySQL', 'AWS'],
+			skills: ['AWS Redshift', 'React', 'Next.js', 'MySQL', 'AWS'],
 			gh: false,
 		},
 	];
