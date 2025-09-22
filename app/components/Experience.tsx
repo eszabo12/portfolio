@@ -12,7 +12,7 @@ export default function Experience() {
 			title: 'Dripos (YC S20)',
 			description: '2024 - 2025',
 			details: [
-				'Contributed #2 most lines of code to organization in history',
+				'Contributed #2 most lines of code to organization historically',
 				'Led the integration of Parafin capital loans into the Dripos ecosystem',
 				'Created frontend components for frontend forms, collaborating with the resident designer',
 				'Developed the accounting feature from 0 to 1, collaborating with Layer Financial',
