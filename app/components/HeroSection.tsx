@@ -47,7 +47,7 @@ export default function HeroSection() {
 						userSelect: 'auto',
 					}}
 				>
-					<div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-blue-500/5" />
+					<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
 					<motion.div
 						aria-hidden
 						initial={{ opacity: 0.4, scale: 0.98 }}
@@ -55,18 +55,18 @@ export default function HeroSection() {
 						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
 						className="absolute inset-0 z-0"
 					>
-						<div className="absolute inset-0 rounded-3xl blur-2xl bg-pink-500/10" />
+						<div className="absolute inset-0 rounded-3xl blur-2xl bg-green-500/10" />
 					</motion.div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">
 							<div className="w-3 h-3 rounded-full bg-red-500" />
 							<div className="w-3 h-3 rounded-full bg-yellow-500" />
-							<div className="w-3 h-3 rounded-full bg-pink-500" />
+							<div className="w-3 h-3 rounded-full bg-green-500" />
 						</div>
 						<div className="font-mono">
 							{showTerminal && (
 								<motion.p
-									className="text-pink-500 mb-2 text-lg md:text-2xl"
+									className="text-green-500 mb-2 text-lg md:text-2xl"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									transition={{ duration: 1.2 }}
@@ -100,8 +100,8 @@ export default function HeroSection() {
 									animate={{ opacity: 1 }}
 									transition={{ duration: 0.7, ease: 'easeOut' }}
 									style={{
-										color: '#fff0fa',
-										textShadow: '0 0 1px #fff0fa, 0 0 1px #fff0fa, 0 0 1px #fff0fa',
+										color: '#f0fff0',
+										textShadow: '0 0 1px #f0fff0, 0 0 1px #f0fff0, 0 0 1px #f0fff0',
 										letterSpacing: '-0.05em',
 										whiteSpace: 'nowrap',
 										marginTop: '.3em',
@@ -112,7 +112,7 @@ export default function HeroSection() {
 							</div>
 							{showTerminal && (
 								<motion.p
-									className="text-pink-500 mt-2 mb-2 text-base md:text-lg"
+									className="text-green-500 mt-2 mb-2 text-base md:text-lg"
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									transition={{ duration: 1.2, delay: 0.2 }}
@@ -127,7 +127,7 @@ export default function HeroSection() {
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ duration: 1.7, ease: 'easeOut' }}
 								>
-									<span className="text-pink-400 font-bold text-lg mb-1 font-mono" style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}>
+									<span className="text-green-400 font-bold text-lg mb-1 font-mono" style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}>
 										Software Engineer
 									</span>
 								</motion.div>

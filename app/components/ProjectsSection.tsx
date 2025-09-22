@@ -7,6 +7,19 @@ import { useEffect, useRef, useState } from 'react';
 export default function ProjectsSection() {
 	const projects = [
 		{
+			img: '/codenames.jpg',
+			title: 'Codenames',
+			date: '2022',
+			description: [
+				'Programmed and trained an NLP agent to play Codenames',
+				'Added a penalty into the evaluation for black card tokens',
+				'The first multi-agent (two-player) AI implementation of Codenames to my knowledge',
+			],
+			skills: ['Python', 'OpenAI Gym', 'numpy'],
+			gh: true,
+			ghLink: 'https://github.com/eszabo12/codenames_project',
+		},
+		{
 			img: '/favicon.png',
 			title: 'iOS Rental Application',
 			date: '2020',
@@ -73,7 +86,7 @@ export default function ProjectsSection() {
 			date: '2022',
 			description: [
 				'Contributed to open-source Python machine learning library for exploring the latent spaces in diffusion models',
-				'Research with ICAROS Laboratory at USC'
+				'Library used by thousands of researchers worldwide'
 			],
 			skills: ['Python', 'Jax'],
 			gh: true,
@@ -84,11 +97,38 @@ export default function ProjectsSection() {
 			title: 'Mind Palace',
 			date: '2023',
 			description: [
-				'Created a game with an avatar to prompt Alzheimer\'s patients to summarize and display their memories',
+				'Created a VR game with an avatar which prompted Alzheimer\'s patients to discuss their memories',
+				'Transcribed the text from voice, summarized, and generated AI images of their memories in realtime'
 			],
 			skills: ['C#', 'OpenAI'],
 			gh: true,
 			ghLink: 'https://github.com/puentesca/newtreehacks2023',
+		},
+		{
+			img: '/flask.gif',
+			title: 'VLN-CE Research',
+			date: '2023',
+			description: [
+				'First authored a paper on robotic navigation in continuous environments',
+				'Developed a fullstack Flask application to stream video and control the robot\'s movement',
+				'Closed the sim-to-real gap using efficient finetuning'
+			],
+			skills: ['Python'],
+			gh: true,
+			ghLink: 'https://github.com/eszabo12/Flask_Teleop',
+		},
+		{
+			img: '/flask.gif',
+			title: 'Image Capturing Pipeline',
+			date: '2023',
+			description: [
+				'First open source application for capturing images, not just videos, from the Intel Realsense Camera',
+				'Used by researchers in Japan and Korea to create custom datasets',
+
+			],
+			skills: ['C/C++'],
+			gh: true,
+			ghLink: 'https://github.com/eszabo12/image_capturing_pipeline',
 		},
 	];
 
@@ -151,7 +191,7 @@ export default function ProjectsSection() {
 										<Image src={p.img} alt={p.title} fill className="object-cover" />
 									</div>
 									<h3 className="project-title">{p.title}</h3>
-									{p.date && <p className="text-pink-400 font-mono text-xs mb-2">{p.date}</p>}
+									{p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}
 									{Array.isArray(p.description) ? (
 										<ul className="list-disc list-inside text-gray-300 text-sm mb-4 space-y-1">
 											{p.description.map((d: string, i: number) => (
@@ -187,7 +227,7 @@ export default function ProjectsSection() {
 							{projects.map((_, i) => (
 								<span
 									key={i}
-									className={`h-2 w-2 rounded-full transition-all duration-200 ${i === currentDot ? 'bg-pink-400/80 scale-125' : 'bg-pink-400/30'}`}
+									className={`h-2 w-2 rounded-full transition-all duration-200 ${i === currentDot ? 'bg-green-400/80 scale-125' : 'bg-green-400/30'}`}
 									style={{ display: 'inline-block' }}
 								/>
 							))}
