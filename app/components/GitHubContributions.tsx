@@ -4,12 +4,21 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 export default function GitHubContributions() {
+	const MIN_COLS = 14; // minimum number of columns
+	const MAX_COLS_DESKTOP = 30;
+	const MAX_COLS_MOBILE = 20;
+
 	const [contributions, setContributions] = useState<{
 		contributions: Array<{ count: number; date: string; level: number }>;
 	} | null>(null);
-	const [numCols, setNumCols] = useState(
-		typeof window !== 'undefined' && window.innerWidth < 640 ? 23 : 29
-	);
+	const [numCols, setNumCols] = useState(MIN_COLS);
+
+	// Helper function to compute cols based on screen width
+	function calculateCols(width: number) {
+		const isMobile = width < 640; // Tailwind's sm breakpoint
+		const maxCols = isMobile ? MAX_COLS_MOBILE : MAX_COLS_DESKTOP;
+		return Math.min(Math.max(MIN_COLS, Math.floor(width / 25)), maxCols);
+	}
 
 	useEffect(() => {
 		const fetchContributions = async () => {
@@ -30,23 +39,19 @@ export default function GitHubContributions() {
 
 	useEffect(() => {
 		function handleResize() {
-			setNumCols(window.innerWidth < 640 ? 23 : 29);
+			setNumCols(calculateCols(window.innerWidth));
 		}
 		window.addEventListener('resize', handleResize);
-		handleResize();
+		handleResize(); // initial run
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
 	const contributionElements = useMemo(() => {
 		if (!contributions) return null;
-		const numCells = numCols * 7;
-		const datedContributions = contributions.contributions.slice(0, numCells);
+		const datedContributions = contributions.contributions.slice(0, numCols * 7);
 
 		return datedContributions.map(
-			(
-				contribution: { count: number; date: string; level: number },
-				index: number,
-			) => (
+			(contribution, index) => (
 				<motion.div
 					key={index}
 					className={`${
@@ -54,7 +59,7 @@ export default function GitHubContributions() {
 					} w-3 h-3 rounded-sm`}
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.7, delay: 0.02 * index }}
+					transition={{ duration: 0.7, delay: 0.01 * index }}
 				/>
 			),
 		);

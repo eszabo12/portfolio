@@ -67,6 +67,29 @@ export default function ProjectsSection() {
 			skills: ['AWS Redshift', 'React', 'Next.js', 'MySQL', 'AWS'],
 			gh: false,
 		},
+		{
+			img: '/lunar_lander.gif',
+			title: 'Pyribs',
+			date: '2022',
+			description: [
+				'Contributed to open-source Python machine learning library for exploring the latent spaces in diffusion models',
+				'Research with ICAROS Laboratory at USC'
+			],
+			skills: ['Python', 'Jax'],
+			gh: true,
+			ghLink: 'https://github.com/icaros-usc/pyribs/pull/208',
+		},
+		{
+			img: '/oculus.jpg',
+			title: 'Mind Palace',
+			date: '2023',
+			description: [
+				'Created a game with an avator to prompt Alzheimer"s patients to summarize and display their memories',
+			],
+			skills: ['C#', 'OpenAI'],
+			gh: true,
+			ghLink: 'https://github.com/puentesca/newtreehacks2023',
+		},
 	];
 
 	const looped = [...projects, ...projects, ...projects];
