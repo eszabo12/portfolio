@@ -15,7 +15,7 @@ const CustomCursor = () => {
     };
   }, []);
 
-  return (
+  return ((window.innerWidth > 400) ? (
     <div
       className="custom-cursor"
       style={{
@@ -23,6 +23,9 @@ const CustomCursor = () => {
         top: `${position.y}px`,
       }}
     ></div>
+  ) :
+    <div />
+
   );
 };
 
