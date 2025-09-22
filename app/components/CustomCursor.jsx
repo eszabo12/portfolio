@@ -26,7 +26,7 @@ const CustomCursor = () => {
 	}, []);
 
   console.log(screenWidth)
-  return ((screenWidth > 400) ? (
+  return ((screenWidth > 450) ? (
     <div
       className="custom-cursor"
       style={{
