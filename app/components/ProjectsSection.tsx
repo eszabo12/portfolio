@@ -11,7 +11,7 @@ export default function ProjectsSection() {
 			title: 'Codenames',
 			date: '2022',
 			description: [
-				'Programmed and trained an NLP agent to play Codenames',
+				'Programmed and trained an NLP agent to play Codenames, a popular word association game',
 				'Added a penalty into the evaluation for black card tokens',
 				'The first multi-agent (two-player) AI implementation of Codenames to my knowledge',
 			],
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
 			ghLink: 'https://github.com/eszabo12/Flask_Teleop',
 		},
 		{
-			img: '/flask.gif',
+			img: '/capture.png',
 			title: 'Image Capturing Pipeline',
 			date: '2023',
 			description: [
