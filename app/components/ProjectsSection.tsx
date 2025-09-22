@@ -168,7 +168,7 @@ export default function ProjectsSection() {
 									</div>
 									<div className="project-actions">
 										{p.gh && (
-											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-pink">
+											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-green">
 												<span>GitHub</span>
 											</motion.a>
 										)}
