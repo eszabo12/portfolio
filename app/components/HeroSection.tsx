@@ -28,11 +28,9 @@ export default function HeroSection() {
 		}
 	}, [showTerminal, arrowDelay]);
 
-
 	return (
-		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
-			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-			</div>
+		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, #000 80%, #1a1a1a 100%)' }}>
+			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"></div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
