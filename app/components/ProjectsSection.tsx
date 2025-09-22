@@ -44,11 +44,11 @@ export default function ProjectsSection() {
 		},
 		{
 			img: '/daily_insights.gif',
-			title: 'Email Template',
+			title: 'Daily Insights - Dripos',
 			date: '2025',
 			description: [
 				'Designed and developed a mobile and desktop-responsive daily insights email template for Dripos, aggregating key business metrics and trends for coffee shop owners',
-				'Automated a high-throughput scheduled event and for timely delivery to thousands of users',
+				'Automated a high-throughput scheduled event for timely delivery to thousands of users',
 				'Tracked send and open rates with a MongoDB collection',
 
 			],
@@ -57,11 +57,11 @@ export default function ProjectsSection() {
 		},
 		{
 			img: '/report.gif',
-			title: 'Report Improvements',
+			title: 'Report Improvements - Dripos',
 			date: '2025',
 			description: [
 				'Enable instant loading of several reports by creating Redshift data warehouses',
-				'Improved accuracy of SQL queries by debugging years of data',
+				'Improved accuracy of SQL queries by debugging with years of sales data',
 				'Enabled full availability of product sales report for immediate restocking insights',
 			],
 			skills: ['AWS Redshift', 'React', 'Next.js', 'MySQL', 'AWS'],
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
 			title: 'Mind Palace',
 			date: '2023',
 			description: [
-				'Created a game with an avator to prompt Alzheimer"s patients to summarize and display their memories',
+				'Created a game with an avatar to prompt Alzheimer\'s patients to summarize and display their memories',
 			],
 			skills: ['C#', 'OpenAI'],
 			gh: true,
