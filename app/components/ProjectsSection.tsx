@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function ProjectsSection() {
 	const projects = [
 		{
-			img: '/ios_app.png',
+			img: '/favicon.png',
 			title: 'iOS Rental Application',
 			date: '2020',
 			description: [
