@@ -9,10 +9,11 @@ export default function ProjectsSection() {
 		{
 			img: '/ios_app.png',
 			title: 'iOS Rental Application',
-			date: 'Dec 2020 – Present',
+			date: '2020',
 			description: [
 				'Designed and developed Citibike-esque rental application in Swift using UIKit',
 				'Implemented backend with Heroku, map with Google API, and checkout with Stripe APIs',
+				'Developed for iOS Programming class',
 			],
 			skills: ['Swift', 'UIKit', 'Heroku', 'Google Maps API', 'Stripe'],
 			gh: true,
@@ -21,9 +22,9 @@ export default function ProjectsSection() {
 		{
 			img: '/stock.jpg',
 			title: 'Stock Trading Bot',
-			date: 'Aug 2022 – Present',
+			date: '2022',
 			description: [
-				'Developed a random forest approach to predicting the buy / sell windows of APPL stock with 95% accuracy',
+				'Developed a random forest approach to predicting the price of APPL stock with 95% accuracy',
 				'Used pandas dataframe to structure the raw csv historical data',
 			],
 			skills: ['Python', 'pandas', 'scikit-learn', 'Random Forest'],
@@ -31,8 +32,8 @@ export default function ProjectsSection() {
 		},
 		{
 			img: '/stream.png',
-			title: 'Twitch Chat Sentiment Analysis',
-			date: 'Feb 2022',
+			title: 'Streaming Chrome Extension',
+			date: '2022',
 			description: [
 				'Developed a chrome extension for HackSC that scrapes Twitch chat data and visualizes sentiment in real time',
 				'Connected nltk sentiment library via socketing to browser client',
@@ -61,7 +62,7 @@ export default function ProjectsSection() {
 			description: [
 				'Enable instant loading of several reports by creating Redshift data warehouses',
 				'Improved accuracy of SQL queries by debugging years of data',
-				'Enabled full availability (low latency) of product sales report for restocking insights',
+				'Enabled full availability of product sales report for immediate restocking insights',
 			],
 			skills: ['AWS Redshift', 'React', 'Next.js', 'MySQL', 'AWS'],
 			gh: false,
