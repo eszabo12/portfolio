@@ -65,7 +65,7 @@ export default function ProjectsSection() {
 				'Tracked send and open rates with a MongoDB collection',
 
 			],
-			skills: ['TypeScript','Node.js', 'AWS SMS', 'MySQL'],
+			skills: ['TypeScript', 'Node.js', 'AWS SMS', 'MySQL'],
 			gh: false,
 		},
 		{
@@ -111,11 +111,11 @@ export default function ProjectsSection() {
 			description: [
 				'First authored a paper on robotic navigation in continuous environments',
 				'Developed a fullstack Flask application to stream video and control the robot\'s movement',
-				'Closed the sim-to-real gap using efficient finetuning'
+				'As top 15% of workshop submissions, selected for a spotlight presentation'
 			],
-			skills: ['Python'],
+			skills: ['Python', 'NLP'],
 			gh: true,
-			ghLink: 'https://github.com/eszabo12/Flask_Teleop',
+			ghLink: 'https://github.com/eszabo12/VLN-CE',
 		},
 		{
 			img: '/capture.png',

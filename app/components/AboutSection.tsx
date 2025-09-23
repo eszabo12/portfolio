@@ -30,7 +30,7 @@ export default function AboutSection() {
 							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
 							<div className="relative w-full h-full min-h-[320px] sm:min-h-[400px]">
 								<Image
-									src="/portrait.jpeg"
+									src="/headshot.png"
 									alt="Elle Szabo"
 									fill
 									className="object-cover w-full h-full"
