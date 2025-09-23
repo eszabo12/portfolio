@@ -20,7 +20,7 @@ export default function ProjectsSection() {
 			ghLink: 'https://github.com/eszabo12/codenames_project',
 		},
 		{
-			img: '/citibike.png',
+			img: '/citibike.jpg',
 			title: 'iOS Rental Application',
 			date: '2020',
 			description: [
