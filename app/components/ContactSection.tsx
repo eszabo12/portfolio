@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactSection() {
 	return (
+		<div>
 		<section className="py-20 px-4">
 			<div className="max-w-6xl mx-auto">
 				<motion.div
@@ -206,5 +207,16 @@ export default function ContactSection() {
 				</motion.div>
 			</div>
 		</section>
+		<section>
+			<div className="flex flex-col items-center justify-center py-4">
+				<div className="flex items-center gap-2 text-gray-400 text-sm">
+				<div className="flex flex-col items-center gap-1 text-gray-400 text-sm">
+						<span>© 2025 Elle Szabo</span>
+						<span>Built with Next.js and Vercel</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
 	);
 }

@@ -70,22 +70,7 @@ export default function Experience() {
 
 	const handleExpand = () => {
 		setExpanded(true);
-		let i = 1;
-		const totalToShow = experiences.length;
-		const interval = setInterval(() => {
-			setShowCount((prev) => {
-				if (prev < totalToShow) {
-					return prev + 1;
-				} else {
-					clearInterval(interval);
-					return prev;
-				}
-			});
-			i++;
-			if (i > totalToShow - 4) {
-				clearInterval(interval);
-			}
-		}, 200);
+		setShowCount(experiences.length);
 	};
 
 	const visibleExperiences = expanded ? experiences.slice(0, showCount) : experiences.slice(0, 4);
