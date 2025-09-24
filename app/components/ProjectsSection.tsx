@@ -223,7 +223,7 @@ export default function ProjectsSection() {
 												<span>Demo</span>
 											</motion.a>
 										)}
-										{Array.isArray(p.buttons) && p.buttons.map((btn, i) => (
+										{Array.isArray(p.buttons) && p.buttons.map((btn: any, i: any) => (
 											<motion.a
 												key={i}
 												href={btn.href}
