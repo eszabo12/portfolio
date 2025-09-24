@@ -69,8 +69,8 @@ export default function Experience() {
 	];
 
 	const handleExpand = () => {
-		setExpanded(true);
 		setShowCount(experiences.length);
+		setExpanded(true);
 	};
 
 	const visibleExperiences = expanded ? experiences.slice(0, showCount) : experiences.slice(0, 4);
@@ -91,10 +91,6 @@ export default function Experience() {
 							transition={{
 								duration: 0.4,
 								delay: expanded && index >= 4 ? (index - 4) * 0.18 : 0,
-							}}
-							whileHover={{
-								scale: 1.02,
-								transition: { duration: 0.2 }
 							}}
 							className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300 cursor-pointer"
 						>
@@ -128,13 +124,13 @@ export default function Experience() {
 						<button
 							onClick={handleExpand}
 							aria-label="Show more experience"
-							className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 hover:bg-green-500/20 transition-colors duration-200 focus:outline-none"
+							className="flex items-center justify-center w-12 h-12 rounded-full border border-white bg-white/20 hover:bg-white/30 transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white"
 						>
 							<svg
-								className="w-7 h-7 text-green-400 group-hover:text-green-300 transition-transform duration-200"
+								className="w-7 h-7 text-white transition-transform duration-200"
 								fill="none"
-								stroke="currentColor"
-								strokeWidth={2.5}
+								stroke="white"
+								strokeWidth={1}
 								viewBox="0 0 24 24"
 							>
 								<path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -142,6 +138,7 @@ export default function Experience() {
 						</button>
 					</div>
 				)}
+				
 			</div>
 		</section>
 	);

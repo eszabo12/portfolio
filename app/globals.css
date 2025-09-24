@@ -9,17 +9,16 @@ body {
 @layer components {
 	.projects-container { @apply max-w-6xl mx-auto; }
 	.projects-title { @apply text-3xl font-bold text-gray-200 mb-10 text-center; }
-
+	
 	.carousel { @apply relative; }
 	.carousel-fade-left { @apply pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#1A1A1A] to-transparent z-20; }
 	.carousel-fade-right { @apply pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#1A1A1A] to-transparent z-20; }
 	.carousel-track { @apply flex gap-6 overflow-x-auto snap-x snap-mandatory px-6 scroll-smooth; }
 
-	.project-card { @apply relative shrink-0 snap-center p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 transition-all duration-300; }
-	.project-card:hover { @apply shadow-2xl shadow-green-500/10; }
+	.project-card { @apply relative snap-center p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 }
 	.project-card-gradient { @apply absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5; }
 	.project-card-inner { @apply relative z-10 flex flex-col; }
-	.project-image { @apply relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-gray-900/40; }
+	.project-image { @apply  relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-gray-900/40; }
 	.project-title { @apply text-xl font-bold text-gray-200 mb-1; }
 	.project-desc { @apply text-gray-300 text-sm mb-4; }
 	.project-chips { @apply flex flex-wrap gap-2 mb-5; }
@@ -27,6 +26,7 @@ body {
 	.project-actions { @apply mt-auto flex items-center gap-3; }
 	.btn-green { @apply inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors text-sm; }
 	.btn-blue { @apply inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-300 rounded-lg border border-blue-500/20 hover:bg-blue-500/20 transition-colors text-sm; }
+	
 	
 	.nav-link {
 		@apply relative px-4 py-2 rounded-lg transition-all duration-300;
@@ -51,3 +51,26 @@ body {
 	pointer-events: none;
 	z-index: 9999;
   }
+
+
+.icon-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 9999px;
+	border: 1px solid #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition-duration: 200ms;
+	outline: none;
+}
+
+.icon-btn:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.icon-btn:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px #fff;
+}

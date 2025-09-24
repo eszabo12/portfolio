@@ -1,12 +1,12 @@
 'use client';
 
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import Experience from './components/Experience';
-import ContactSection from './components/ContactSection';
+import HeroSection from './pages/HeroSection';
+import AboutSection from './pages/AboutSection';
+import Experience from './pages/Experience';
+import ContactSection from './pages/ContactSection';
 import Script from 'next/script';
-import ProjectsSection from './components/ProjectsSection';
-import CustomCursor from './components/CustomCursor';
+import ProjectsSection from './pages/ProjectsSection';
+import CustomCursor from './pages/CustomCursor';
 
 export default function BackendPortfolio() {
 	return (
