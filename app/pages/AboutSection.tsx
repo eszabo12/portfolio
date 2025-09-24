@@ -33,7 +33,7 @@ export default function AboutSection() {
 									src="/headshot.png"
 									alt="Elle Szabo"
 									fill
-									className="object-cover w-full h-full"
+									className="object-cover w-full h-full rounded-xl"
 								/>
 							</div>
 							</div>
