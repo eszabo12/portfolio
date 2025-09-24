@@ -32,17 +32,17 @@ export default function ProjectsSection() {
 			gh: true,
 			ghLink: 'https://github.com/eszabo12/Mobile_iOS_Bird-esque_Application',
 		},
-		{
-			img: '/stock.jpg',
-			title: 'Stock Trading Bot',
-			date: '2022',
-			description: [
-				'Developed a random forest approach to predicting the price of APPL stock with 95% accuracy',
-				'Used pandas dataframe to structure the raw csv historical data',
-			],
-			skills: ['Python', 'pandas', 'scikit-learn', 'Random Forest'],
-			gh: false,
-		},
+		// {
+		// 	img: '/stock.jpg',
+		// 	title: 'Stock Trading Bot',
+		// 	date: '2022',
+		// 	description: [
+		// 		'Developed a random forest approach to predicting the price of APPL stock with 95% accuracy',
+		// 		'Used pandas dataframe to structure the raw csv historical data',
+		// 	],
+		// 	skills: ['Python', 'pandas', 'scikit-learn', 'Random Forest'],
+		// 	gh: false,
+		// },
 		{
 			img: '/stream.png',
 			title: 'Streaming Chrome Extension',
@@ -109,13 +109,19 @@ export default function ProjectsSection() {
 			title: 'VLN-CE Research',
 			date: '2023',
 			description: [
-				'First authored a paper on robotic navigation in continuous environments',
-				'Developed a fullstack Flask application to stream video and control the robot\'s movement',
-				'As top 15% of workshop submissions, selected for a spotlight presentation'
+				'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
+				'As top 15% of workshop submissions, gave a spotlight presentation at The Conference on Robot Learning (CoRL) in Atlanta, Georgia October 2023'
 			],
 			skills: ['Python', 'NLP'],
 			gh: true,
 			ghLink: 'https://github.com/eszabo12/VLN-CE',
+			buttons: [
+				{
+					label: 'Paper',
+					href: 'https://openreview.net/forum?id=uABEHp6tjy',
+					className: 'btn-blue'
+				}
+			]
 		},
 		{
 			img: '/capture.png',
@@ -217,6 +223,18 @@ export default function ProjectsSection() {
 												<span>Demo</span>
 											</motion.a>
 										)}
+										{Array.isArray(p.buttons) && p.buttons.map((btn, i) => (
+											<motion.a
+												key={i}
+												href={btn.href}
+												target="_blank"
+												rel="noopener noreferrer"
+												whileHover={{ scale: 1.05 }}
+												className={btn.className}
+											>
+												<span>{btn.label}</span>
+											</motion.a>
+										))}
 									</div>
 								</div>
 							</motion.article>

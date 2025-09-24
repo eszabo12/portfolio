@@ -25,7 +25,7 @@ export default function Experience() {
 			title: 'Lucendo Labs, Inc.',
 			description: '2023 - 2024',
 			details: [
-				'Co-Founded a marketplace app company, raised an angel round from investors and led 11 partnerships across the NYC ',
+				'Co-Founded a marketplace app company, raised an angel round from investors, and led 11 partnerships across the NYC ',
 				'Led design and development a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
 				'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
 			],
