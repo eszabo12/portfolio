@@ -5,7 +5,7 @@ import AboutSection from './components/AboutSection';
 import Experience from './components/Experience';
 import ContactSection from './components/ContactSection';
 import Script from 'next/script';
-import ProjectsSection from './components/ProjectsSection';
+import ProjectsSection from './components/Projects/ProjectsSection';
 import CustomCursor from './components/CustomCursor';
 
 export default function BackendPortfolio() {

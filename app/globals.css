@@ -7,16 +7,9 @@ body {
 }
 
 @layer components {
-	.projects-container { @apply max-w-6xl mx-auto; }
 	.projects-title { @apply text-3xl font-bold text-gray-200 mb-10 text-center; }
 
-	.carousel { @apply relative; }
-	.carousel-fade-left { @apply pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#1A1A1A] to-transparent z-20; }
-	.carousel-fade-right { @apply pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#1A1A1A] to-transparent z-20; }
-	.carousel-track { @apply flex gap-6 overflow-x-auto snap-x snap-mandatory px-6 scroll-smooth; }
-
-	.project-card { @apply relative shrink-0 snap-center p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 transition-all duration-300; }
-	.project-card:hover { @apply shadow-2xl shadow-green-500/10; }
+	.project-card { @apply relative snap-center rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 px-16   }
 	.project-card-gradient { @apply absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5; }
 	.project-card-inner { @apply relative z-10 flex flex-col; }
 	.project-image { @apply relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-gray-900/40; }
@@ -51,3 +44,76 @@ body {
 	pointer-events: none;
 	z-index: 9999;
   }
+
+  .embla {
+	overflow: hidden;
+  }
+  .embla__container {
+	display: flex;
+  }
+  
+  @layer base {
+  :root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+		--primary: 222.2 47.4% 11.2%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 222.2 84% 4.9%;
+		--chart-1: 12 76% 61%;
+		--chart-2: 173 58% 39%;
+		--chart-3: 197 37% 24%;
+		--chart-4: 43 74% 66%;
+		--chart-5: 27 87% 67%;
+		--radius: 0.5rem;
+	}
+  .dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+		--primary: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 212.7 26.8% 83.9%;
+		--chart-1: 220 70% 50%;
+		--chart-2: 160 60% 45%;
+		--chart-3: 30 80% 55%;
+		--chart-4: 280 65% 60%;
+		--chart-5: 340 75% 55%;
+	}
+}
+  
+  @layer base {
+  * {
+    @apply border-border;
+	}
+  body {
+    @apply bg-background text-foreground;
+	}
+}
+  

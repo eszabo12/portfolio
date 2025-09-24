@@ -1,10 +1,38 @@
-'use client';
-
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import React from 'react'
+import { EmblaOptionsType } from 'embla-carousel'
+import { DotButton, useDotButton } from './EmblaCarouselDotButton.tsx'
+import {
+	PrevButton,
+	NextButton,
+	usePrevNextButtons
+} from './EmblaCarouselArrowButtons.tsx'
+import useEmblaCarousel from 'embla-carousel-react'
 
 export default function ProjectsSection() {
+	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+	const [isDesktop, setIsDesktop] = useState(false);
+	useEffect(() => {
+		const mql = window.matchMedia('(min-width: 1024px)');
+		const handler = (e: MediaQueryListEvent | MediaQueryList) => setIsDesktop('matches' in e ? e.matches : (e as MediaQueryList).matches);
+		handler(mql);
+		mql.addEventListener?.('change', handler as (e: MediaQueryListEvent) => void);
+		return () => mql.removeEventListener?.('change', handler as (e: MediaQueryListEvent) => void);
+	}, []);
+
+
+	const { selectedIndex, scrollSnaps, onDotButtonClick } =
+		useDotButton(emblaApi)
+
+	const {
+		prevBtnDisabled,
+		nextBtnDisabled,
+		onPrevButtonClick,
+		onNextButtonClick
+	} = usePrevNextButtons(emblaApi)
+
 	const projects = [
 		{
 			img: '/codenames.jpg',
@@ -138,59 +166,19 @@ export default function ProjectsSection() {
 		},
 	];
 
-	const looped = [...projects, ...projects, ...projects];
-	const middleStart = projects.length;
-
-	const scrollRef = useRef<HTMLDivElement>(null);
-	const [index, setIndex] = useState(middleStart);
-	const [isDesktop, setIsDesktop] = useState(false);
-
-	useEffect(() => {
-		const mql = window.matchMedia('(min-width: 1024px)');
-		const handler = (e: MediaQueryListEvent | MediaQueryList) => setIsDesktop('matches' in e ? e.matches : (e as MediaQueryList).matches);
-		handler(mql);
-		mql.addEventListener?.('change', handler as (e: MediaQueryListEvent) => void);
-		return () => mql.removeEventListener?.('change', handler as (e: MediaQueryListEvent) => void);
-	}, []);
-
-	const scrollToIndex = (i: number, smooth: boolean) => {
-		const container = scrollRef.current;
-		if (!container) return;
-		const target = container.children[i] as HTMLElement | undefined;
-		if (!target) return;
-		container.scrollTo({ left: target.offsetLeft - 24, behavior: smooth ? 'smooth' : 'auto' });
-	};
-
-	useEffect(() => { scrollToIndex(middleStart, false); }, []);
-
-	useEffect(() => {
-		const id = setInterval(() => {
-			setIndex((prev) => {
-				let next = prev + 1;
-				if (next >= middleStart * 2 + projects.length) {
-					next = middleStart + ((next - middleStart) % projects.length);
-					scrollToIndex(next, false);
-					return next;
-				}
-				scrollToIndex(next, true);
-				return next;
-			});
-		}, 5000);
-		return () => clearInterval(id);
-	}, [middleStart, projects.length]);
-
-	const currentDot = ((index - middleStart) % projects.length + projects.length) % projects.length;
-
 	return (
 		<section className="py-20 px-4">
-			<div className="projects-container">
-				<h2 className="projects-title">Projects</h2>
-				<div className="carousel">
-					<div className="carousel-fade-left" />
-					<div className="carousel-fade-right" />
-					<div ref={scrollRef} className="carousel-track" style={{ scrollbarWidth: 'none' as any }}>
-						{looped.map((p: any, idx: number) => (
-							<motion.article key={idx} whileHover={{ scale: 1.02 }} className="project-card" style={{ width: isDesktop ? 520 : 320 }}>
+			<h2 className="projects-title">Projects</h2>
+			<div className="embla">
+				<div className="embla__viewport" ref={emblaRef}>
+
+					<div className="embla__container">
+						{projects.map((p: any, idx: number) => (
+							<article
+								key={idx}
+								className="project-card embla__slide"
+								style={{ flex: isDesktop ? "0 0 40%" : "0 0 100%" }}
+							>
 								<div className="project-card-gradient" />
 								<div className="project-card-inner">
 									<div className="project-image">
@@ -214,45 +202,62 @@ export default function ProjectsSection() {
 									</div>
 									<div className="project-actions">
 										{p.gh && (
-											<motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-green">
+											<a
+												href={p.ghLink}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="btn-green"
+											>
 												<span>GitHub</span>
-											</motion.a>
+											</a>
 										)}
 										{'demoLink' in p && p.demoLink && (
-											<motion.a href={p.demoLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-blue">
+											<a
+												href={p.demoLink}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="btn-blue"
+											>
 												<span>Demo</span>
-											</motion.a>
+											</a>
 										)}
 										{Array.isArray(p.buttons) && p.buttons.map((btn: any, i: any) => (
-											<motion.a
+											<a
 												key={i}
 												href={btn.href}
 												target="_blank"
 												rel="noopener noreferrer"
-												whileHover={{ scale: 1.05 }}
 												className={btn.className}
 											>
 												<span>{btn.label}</span>
-											</motion.a>
+											</a>
 										))}
 									</div>
 								</div>
-							</motion.article>
+							</article>
 						))}
-					</div>
-					<div className="flex justify-center mt-6">
-						<div className="flex gap-2">
-							{projects.map((_, i) => (
-								<span
-									key={i}
-									className={`h-2 w-2 rounded-full transition-all duration-200 ${i === currentDot ? 'bg-green-400/80 scale-125' : 'bg-green-400/30'}`}
-									style={{ display: 'inline-block' }}
-								/>
-							))}
-						</div>
 					</div>
 				</div>
 			</div>
+
+			<div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
+      </div>
 		</section>
 	);
 }
