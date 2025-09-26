@@ -25,7 +25,7 @@ export default function Experience() {
         'Led the integration of Parafin capital loans into the Dripos ecosystem',
         'Developed the accounting feature from 0 to 1, collaborating with Layer Financial',
         'Collaborated with customer facing teams to iterate on intuitive UI/UX for payroll features, driving a 44% attach rate and >100 NRR',
-        'Improved accuracy and performance of sales reports by caching Redshift data and gaining clarity into the business use case',
+        'Improved performance of sales reports by creating Redshift data warehouses and debugged fatal SQL errors',
         'Contributed #2 most lines of code to organization',
       ],
       tech: ['Typescript', 'React', 'Next.js', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
@@ -130,7 +130,7 @@ export default function Experience() {
                     className="w-7 h-7 text-white transition-transform duration-200"
                     fill="none"
                     stroke="white"
-                    strokeWidth={1}
+                    strokeWidth={2}
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
