@@ -52,7 +52,7 @@ export default function AboutSection() {
 								<div className="relative z-10">
 									<div>
 										<p className="text-gray-300 leading-relaxed mb-4">
-											Hi!👋 I'm a software engineer based in New York. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! Very excited about solving customer problems with solid UI/UX understanding and building performant backend systems.
+											Hi!👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! Very excited about solving customer problems with solid UI/UX understanding and building performant backend systems.
 										</p>
 										<p className="text-gray-300 leading-relaxed">
 											When I'm not coding, you'll find me reading a good book, in the pilates studio, curating a playlist, and tending to my two houseplants.

@@ -28,7 +28,7 @@ export default function Experience() {
         'Improved performance of sales reports by creating Redshift data warehouses and debugged fatal SQL errors',
         'Contributed #2 most lines of code to organization',
       ],
-      tech: ['Typescript', 'React', 'Next.js', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
+      tech: ['Typescript', 'React', 'Next.js', 'Redis', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
     },
     {
       title: 'Lucendo Labs, Inc.',
