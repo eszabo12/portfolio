@@ -44,7 +44,9 @@ body {
 	}
 
 	.filter-dropdown {
-		@apply absolute top-14 right-0 bg-black/90 backdrop-blur-lg border border-gray-700 rounded-lg p-2 min-w-[120px] z-50;
+		@apply absolute top-14 right-0 border border-gray-700 rounded-lg p-2 min-w-[120px] z-50;
+		background-color: #1a1a1a;
+		backdrop-filter: blur(8px);
 	}
 
 	.filter-option {
@@ -56,11 +58,14 @@ body {
 	}
 
 	.filter-modal-overlay {
-		@apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+		@apply fixed inset-0 z-50 flex items-center justify-center p-4;
+		background-color: rgba(26,26,26,0.85);
+		backdrop-filter: blur(8px);
 	}
 
 	.filter-modal-card {
-		@apply bg-black/90 border border-gray-700 rounded-[2.5rem] p-6 max-w-md w-full;
+		@apply border border-gray-700 rounded-[2.5rem] p-6 max-w-md w-full;
+		background-color: #1a1a1a;
 	}
 
 	.filter-modal-header {
