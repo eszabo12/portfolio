@@ -104,7 +104,7 @@ export default function ProjectsSection() {
             </svg>
           </button>
         </div>
-        <div className="carousel pl-8">
+        <div className="carousel">
           {filteredProjects.length > 1 && <div className="carousel-fade-left" />}
           {filteredProjects.length > 1 && <div className="carousel-fade-right" />}
           <div ref={emblaRef} className="embla overflow-hidden">
@@ -119,9 +119,13 @@ export default function ProjectsSection() {
                 <div
                   key={idx}
                   className={`embla__slide embla-slide flex-shrink-0 ${
+                     idx === 0 && isDesktop
+                      ? 'ml-6'
+                      : ''
+                  } ${
                     isDesktop
-                      ? 'w-[60%] max-w-[600px] min-w-[500px] h-[420px]'
-                      : 'w-[90%] max-w-[400px] min-w-[260px] h-[520px]'
+                      ? 'h-[600px] max-h-[700px] min-h-[500px] w-[420px] max-w-[500px] min-w-[350px]'
+                      : 'h-[520px] max-h-[600px] min-h-[400px] w-[90%] max-w-[320px] min-w-[220px]'
                   }`}
                 >
                   <article className="project-card h-full flex flex-col">
@@ -174,9 +178,12 @@ export default function ProjectsSection() {
                       </div>
                     </div>
                   </article>
+				  
                 </div>
               ))}
+            
             </div>
+			 
           </div>
         </div>
         <div className="flex justify-between items-center mt-8 px-4">

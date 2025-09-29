@@ -103,7 +103,12 @@ body {
 	.embla-slide {
 		position: relative;
 	}
-
+	@media (max-width: 1023px) {
+		.embla__slide:nth-child(1) {
+			padding-left: 10px;
+		}
+	}
+	  
 	.dot-button {
 		min-width: 12px;
 		min-height: 12px;
@@ -129,9 +134,6 @@ body {
 		height: 20px;
 	}
 
-	.embla__slide:first-child {
-		margin-left: 2rem;
-	}
 }
 .custom-cursor {
 	position: fixed;
