@@ -18,6 +18,7 @@ export default function FilterModal({ isOpen, onClose, selectedFilter, onFilterC
     <div className="filter-modal-overlay">
       <div className="filter-modal-card">
         <div className="filter-modal-header">
+          <span className="text-xs uppercase tracking-widest text-gray-400 mb-2">filter type</span>
           <button
             onClick={onClose}
             className="filter-modal-close"

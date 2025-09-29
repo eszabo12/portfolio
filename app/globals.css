@@ -59,13 +59,13 @@ body {
 
 	.filter-modal-overlay {
 		@apply fixed inset-0 z-50 flex items-center justify-center p-4;
-		background-color: rgba(26,26,26,0.85);
+		background-color: rgba(26,26,26,0.3);
 		backdrop-filter: blur(8px);
 	}
 
 	.filter-modal-card {
 		@apply border border-gray-700 rounded-[2.5rem] p-6 max-w-md w-full;
-		background-color: #1a1a1a;
+		background-color: rgba(26,26,26,0.85);
 	}
 
 	.filter-modal-header {
@@ -97,7 +97,7 @@ body {
 	}
 
 	.filter-modal-option.inactive {
-		@apply bg-white/20 text-gray-200 border-gray-500 hover:bg-green-400 hover:text-black;
+		@apply bg-white/20 text-gray-200 border-gray-500 hover:bg-green-400 hover:text-black duration-1000;
 	}
 
 	.embla-slide {
