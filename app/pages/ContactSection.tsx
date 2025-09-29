@@ -120,7 +120,7 @@ export default function ContactSection() {
 							>
 								$ ls ./social-links
 							</motion.p>
-							<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 								<motion.a
 									href="https://github.com/eszabo12"
 									whileHover={{ scale: 1.05 }}
@@ -207,7 +207,14 @@ export default function ContactSection() {
 				<div className="flex items-center gap-2 text-gray-400 text-sm">
 				<div className="flex flex-col items-center gap-1 text-gray-400 text-sm">
 						<span>© 2025 Elle Szabo</span>
-						<span>Built with Next.js and Vercel</span>
+						<span>
+							Built with{' '}
+							<a href="https://nextjs.org" className="underline hover:text-green-400" target="_blank" rel="noopener noreferrer">Next.js</a>
+							{', '}
+							<a href="https://vercel.com" className="underline hover:text-green-400" target="_blank" rel="noopener noreferrer">Vercel</a>
+							{', and '}
+							<a href="https://ui.shadcn.com" className="underline hover:text-green-400" target="_blank" rel="noopener noreferrer">Shadcn</a>
+						</span>
 					</div>
 				</div>
 			</div>
