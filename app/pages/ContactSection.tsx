@@ -39,27 +39,7 @@ export default function ContactSection() {
 								$ contact --info
 							</motion.p>
 							<h2 className="text-3xl font-bold mb-8 text-gray-200">Let&apos;s Connect</h2>
-							{/* <motion.p
-								className="text-green-500 mb-2"
-								initial={{ opacity: 0 }}
-								animate={{ opacity: [0, 1, 0.7, 1] }}
-								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.2 }}
-							>
-								$ location --current
-							</motion.p>
-							<div className="flex items-center gap-2 text-gray-300">
-								<svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={2}
-										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-									/>
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-								</svg>
-								<span>San Francisco</span>
-							</div> */}
-							{/* Cal.com meeting link row */}
+						
 							<motion.p
 								className="text-green-500 mt-8 mb-2"
 								initial={{ opacity: 0 }}
@@ -140,7 +120,7 @@ export default function ContactSection() {
 							>
 								$ ls ./social-links
 							</motion.p>
-							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+							<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 								<motion.a
 									href="https://github.com/eszabo12"
 									whileHover={{ scale: 1.05 }}
@@ -198,6 +178,21 @@ export default function ContactSection() {
 									</div>
 									<div>
 										<p className="font-semibold text-gray-200">Spotify</p>
+										<p className="text-sm text-gray-400">Elle Szabo</p>
+									</div>
+								</motion.a>
+								<motion.a
+									href="https://www.strava.com/athletes/109112515"
+									whileHover={{ scale: 1.05 }}
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+								>
+									<div className="p-2 bg-gray-700/50 rounded-xl group-hover:bg-gray-600/50 transition-colors">
+										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+											<path d="M6.5 17L12 7l5.5 10h-3.1L12 13.2l-2.4 3.8z"/>
+										</svg>
+									</div>
+									<div>
+										<p className="font-semibold text-gray-200">Strava</p>
 										<p className="text-sm text-gray-400">Elle Szabo</p>
 									</div>
 								</motion.a>
