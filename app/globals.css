@@ -10,9 +10,9 @@ body {
 	.projects-container { @apply max-w-6xl mx-auto; }
 	.projects-title { @apply text-3xl font-bold text-gray-200 mb-10 text-center; }
 	
-	.carousel { @apply relative; }
-	.carousel-fade-left { @apply pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#1A1A1A] to-transparent z-20; }
-	.carousel-fade-right { @apply pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#1A1A1A] to-transparent z-20; }
+	.carousel { @apply relative my-2; }
+	.carousel-fade-left { @apply pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#1A1A1A] to-transparent z-20; }
+	.carousel-fade-right { @apply pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#1A1A1A] to-transparent z-20; }
 	.carousel-track { @apply flex gap-6 overflow-x-auto snap-x snap-mandatory px-6 scroll-smooth; }
 
 	.project-card { @apply relative snap-center p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 }
@@ -56,13 +56,22 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 2rem;
-	height: 2rem;
 	border-radius: 9999px;
 	border: 1px solid #fff;
 	background-color: rgba(255, 255, 255, 0.1);
 	transition-duration: 200ms;
 	outline: none;
+	width: 56px;
+	height: 56px;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+	.icon-btn {
+		width: 40px;
+		height: 40px;
+		font-size: 1rem;
+	}
 }
 
 .icon-btn:hover {

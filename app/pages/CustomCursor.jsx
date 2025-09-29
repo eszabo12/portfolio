@@ -25,7 +25,6 @@ const CustomCursor = () => {
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
-  console.log(screenWidth)
   return ((screenWidth > 450) ? (
     <div
       className="custom-cursor"
