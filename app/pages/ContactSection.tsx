@@ -39,7 +39,7 @@ export default function ContactSection() {
 								$ contact --info
 							</motion.p>
 							<h2 className="text-3xl font-bold mb-8 text-gray-200">Let&apos;s Connect</h2>
-							<motion.p
+							{/* <motion.p
 								className="text-green-500 mb-2"
 								initial={{ opacity: 0 }}
 								animate={{ opacity: [0, 1, 0.7, 1] }}
@@ -58,7 +58,7 @@ export default function ContactSection() {
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 								</svg>
 								<span>San Francisco</span>
-							</div>
+							</div> */}
 							{/* Cal.com meeting link row */}
 							<motion.p
 								className="text-green-500 mt-8 mb-2"
