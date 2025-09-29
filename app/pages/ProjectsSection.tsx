@@ -87,11 +87,11 @@ export default function ProjectsSection() {
   return (
     <section className="py-20 px-4">
       <div className="projects-container">
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="projects-title">Projects</h2>
+        <div className="relative flex items-center justify-center mb-10">
+          <h2 className="projects-title mx-auto">Projects</h2>
           <button
             onClick={() => setIsFilterOpen(true)}
-            className="filter-btn"
+            className="filter-btn absolute right-0"
             aria-label="Filter projects"
           >
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
