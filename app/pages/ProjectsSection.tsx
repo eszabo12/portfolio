@@ -20,6 +20,8 @@ export default function ProjectsSection() {
     slidesToScroll: 1,
     dragFree: false,
     direction: 'ltr',
+    containScroll: 'trimSnaps',
+    inViewThreshold: 0.7,
   });
 
   useEffect(() => {
@@ -102,7 +104,7 @@ export default function ProjectsSection() {
             </svg>
           </button>
         </div>
-        <div className="carousel">
+        <div className="carousel pl-8">
           {filteredProjects.length > 1 && <div className="carousel-fade-left" />}
           {filteredProjects.length > 1 && <div className="carousel-fade-right" />}
           <div ref={emblaRef} className="embla overflow-hidden">
@@ -126,7 +128,7 @@ export default function ProjectsSection() {
                     <div className="project-card-gradient" />
                     <div className="project-card-inner flex flex-col h-full">
                       <div className={`project-image relative w-full mb-4 ${
-                        isDesktop ? 'h-64' : 'h-48'
+                        isDesktop ? 'h-112' : 'h-48'
                       }`}>
                         <Image src={p.img} alt={p.title} fill className="object-cover rounded-lg" />
                       </div>

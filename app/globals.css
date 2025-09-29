@@ -123,6 +123,10 @@ body {
 		width: 20px;
 		height: 20px;
 	}
+
+	.embla__slide:first-child {
+		margin-left: 2rem;
+	}
 }
 .custom-cursor {
 	position: fixed;
