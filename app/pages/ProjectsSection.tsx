@@ -182,10 +182,10 @@ export default function ProjectsSection() {
             {scrollSnaps.map((_, idx) => (
               <button
                 key={idx}
-                className={`dot-button w-3 h-3 rounded-full p-0 border-2 border-white/60 flex items-center justify-center transition-all duration-150 ${
+                className={`dot-button w-3 h-3 rounded-full p-0 border-2 flex items-center justify-center transition-all duration-150 ${
                   selectedIndex === idx
-                    ? 'bg-white/80'
-                    : 'bg-transparent'
+                    ? 'border-white'
+                    : 'border-white/60'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
                 onClick={() => scrollTo(idx)}
