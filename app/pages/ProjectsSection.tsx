@@ -5,15 +5,12 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import {projects} from './Constants';
-import FilterModal from '../../components/FilterModal';
 export default function ProjectsSection() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [selectedFilter, setSelectedFilter] = useState('All');
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isAutoplay, setIsAutoplay] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
@@ -55,6 +52,16 @@ export default function ProjectsSection() {
     });
   }, [emblaApi]);
 
+  useEffect(() => {
+    if (!emblaApi || !isAutoplay) return;
+    
+    const autoplay = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(autoplay);
+  }, [emblaApi, isAutoplay]);
+
 
   const handlePrev = () => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -64,15 +71,10 @@ export default function ProjectsSection() {
     if (emblaApi) emblaApi.scrollNext();
   };
 
-  const handleFilterChange = (filter: string) => {
-    setSelectedFilter(filter);
-    if (filter === 'All') {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(projects.filter(project => project.tag === filter));
-    }
-    setIsFilterOpen(false);
+  const toggleAutoplay = () => {
+    setIsAutoplay(!isAutoplay);
   };
+
 
   if (!isLoaded) {
     return (
@@ -87,26 +89,12 @@ export default function ProjectsSection() {
   return (
     <section className="py-20 px-4">
       <div className="projects-container">
-        <div className="relative flex items-center justify-center mb-10">
-          <h2 className="projects-title mx-auto">Projects</h2>
-          <button
-            onClick={() => setIsFilterOpen(true)}
-            className="filter-btn absolute right-0"
-            aria-label="Filter projects"
-          >
-            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <line x1="7" y1="4" x2="7" y2="20" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/>
-              <circle cx="7" cy="8" r="1.5" stroke="currentColor" strokeWidth="1.1" fill="none"/>
-              <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/>
-              <circle cx="12" cy="16" r="1.5" stroke="currentColor" strokeWidth="1.1" fill="none"/>
-              <line x1="17" y1="4" x2="17" y2="20" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/>
-              <circle cx="17" cy="12" r="1.5" stroke="currentColor" strokeWidth="1.1" fill="none"/>
-            </svg>
-          </button>
+        <div className="flex items-center justify-center mb-10">
+          <h2 className="projects-title">Projects</h2>
         </div>
         <div className="carousel">
-          {filteredProjects.length > 1 && <div className="carousel-fade-left" />}
-          {filteredProjects.length > 1 && <div className="carousel-fade-right" />}
+          {projects.length > 1 && <div className="carousel-fade-left" />}
+          {projects.length > 1 && <div className="carousel-fade-right" />}
           <div ref={emblaRef} className="embla overflow-hidden">
             <div
               className={`embla__container flex ${
@@ -115,7 +103,7 @@ export default function ProjectsSection() {
                   : 'flex-row gap-4'
               }`}
             >
-              {filteredProjects.map((p: any, idx: number) => (
+              {projects.map((p: any, idx: number) => (
                 <div
                   key={idx}
                   className={`embla__slide embla-slide flex-shrink-0 ${
@@ -123,8 +111,10 @@ export default function ProjectsSection() {
                       ? 'ml-6'
                       : ''
                   } ${
+                    selectedIndex === idx ? 'is-selected' : ''
+                  } ${
                     isDesktop
-                      ? 'h-[600px] max-h-[700px] min-h-[500px] w-[420px] max-w-[500px] min-w-[350px]'
+                      ? 'h-[600px] max-h-[700px] min-h-[500px] w-[600px] max-w-[700px] min-w-[500px]'
                       : 'h-[520px] max-h-[600px] min-h-[400px] w-[90%] max-w-[320px] min-w-[220px]'
                   }`}
                 >
@@ -205,6 +195,23 @@ export default function ProjectsSection() {
           <div className="flex gap-2">
             <button
               className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
+              aria-label="Toggle autoplay"
+              onClick={toggleAutoplay}
+              tabIndex={0}
+              type="button"
+            >
+              {isAutoplay ? (
+                <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
+                  <path d="M6 4h2v12H6V4zM12 4h2v12h-2V4z" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ) : (
+                <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
+                  <path d="M6 4l8 6-8 6V4z" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              )}
+            </button>
+            <button
+              className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
               aria-label="Previous"
               onClick={handlePrev}
               tabIndex={0}
@@ -228,12 +235,6 @@ export default function ProjectsSection() {
           </div>
         </div>
       </div>
-      <FilterModal
-        isOpen={isFilterOpen}
-        onClose={() => setIsFilterOpen(false)}
-        selectedFilter={selectedFilter}
-        onFilterChange={handleFilterChange}
-      />
     </section>
   );
 }

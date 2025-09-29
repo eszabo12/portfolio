@@ -53,7 +53,7 @@ export default function ContactSection() {
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
-								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-2xl border border-green-500/20 hover:bg-green-500/20 transition-colors cursor-pointer mb-2"
+								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-2xl border border-green-500/20 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300 cursor-pointer mb-2"
 							>
 								<svg className="w-5 h-5 rounded-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<rect x="3" y="4" width="18" height="18" rx="4" strokeWidth="2" />
@@ -72,7 +72,7 @@ export default function ContactSection() {
 							<motion.a
 								href="mailto:elleszabo77@gmail.com?subject=hi%20I%27d%20like%20to%20hire%20you"
 								whileHover={{ scale: 1.02 }}
-								className="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-xl border border-green-500/20 hover:bg-green-500/20 transition-colors"
+								className="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-xl border border-green-500/20 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300"
 							>
 								elleszabo77@gmail.com
 							</motion.a>
@@ -94,7 +94,7 @@ export default function ContactSection() {
 									document.body.removeChild(anchor);
 								}}
 								whileHover={{ scale: 1.02 }}
-								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-xl border border-green-500/20 hover:bg-green-500/20 transition-colors cursor-pointer"
+								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-xl border border-green-500/20 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300 cursor-pointer"
 								tabIndex={0}
 								role="button"
 								onKeyDown={e => {
@@ -123,8 +123,8 @@ export default function ContactSection() {
 							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 								<motion.a
 									href="https://github.com/eszabo12"
-									whileHover={{ scale: 1.05 }}
-									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+									
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 hover:border-green-400 transition-all duration-300 border border-gray-700/50 group"
 								>
 									<div className="p-2 bg-gray-700/50 rounded-xl group-hover:bg-gray-600/50 transition-colors">
 										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -138,8 +138,8 @@ export default function ContactSection() {
 								</motion.a>
 								<motion.a
 									href="https://www.linkedin.com/in/elle-75b6o5m/"
-									whileHover={{ scale: 1.05 }}
-									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+									
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 hover:border-green-400 transition-all duration-300 border border-gray-700/50 group"
 								>
 									<div className="p-2 bg-gray-700/50 rounded-xl group-hover:bg-gray-600/50 transition-colors">
 										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -153,8 +153,8 @@ export default function ContactSection() {
 								</motion.a>
 								<motion.a
 									href="https://x.com/ElleSzabo"
-									whileHover={{ scale: 1.05 }}
-									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+									
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 hover:border-green-400 transition-all duration-300 border border-gray-700/50 group"
 								>
 									<div className="p-2 bg-gray-700/50 rounded-xl group-hover:bg-gray-600/50 transition-colors">
 										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -168,8 +168,8 @@ export default function ContactSection() {
 								</motion.a>
 								<motion.a
 									href="https://open.spotify.com/user/liztheunicorn"
-									whileHover={{ scale: 1.05 }}
-									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+									
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 hover:border-green-400 transition-all duration-300 border border-gray-700/50 group"
 								>
 									<div className="p-2 bg-gray-700/50 rounded-xl group-hover:bg-gray-600/50 transition-colors">
 										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -183,8 +183,8 @@ export default function ContactSection() {
 								</motion.a>
 								<motion.a
 									href="https://www.strava.com/athletes/109112515"
-									whileHover={{ scale: 1.05 }}
-									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+									
+									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 hover:border-green-400 transition-all duration-300 border border-gray-700/50 group"
 								>
 									<div className="p-2 bg-gray-700/50 rounded-xl group-hover:bg-gray-600/50 transition-colors">
 										<svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">

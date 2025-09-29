@@ -90,7 +90,7 @@ export default function Experience() {
             {visibleExperiences.map((project, index) => (
               <Card
                 key={index}
-                className="relative rounded-2xl overflow-hidden border border-gray-800 bg-black/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300"
+                className="relative rounded-2xl overflow-hidden border border-gray-800 bg-black/50 hover:border-green-400 transition-all duration-300"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 pointer-events-none" />
                 <div className="relative z-10">

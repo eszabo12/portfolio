@@ -4,7 +4,6 @@ export const projects = [
       img: '/codenames.jpg',
       title: 'Codenames',
       date: '2022',
-      tag: 'AI',
       description: [
         'Programmed and trained an NLP agent to play Codenames, a popular word association game',
         'Added a penalty into the evaluation for black card tokens',
@@ -18,7 +17,6 @@ export const projects = [
       img: '/citibike.jpg',
       title: 'iOS Rental Application',
       date: '2020',
-      tag: 'Mobile',
       description: [
         'Designed and developed Citibike-esque rental application in Swift using UIKit',
         'Implemented backend with Heroku, map with Google API, and checkout with Stripe APIs',
@@ -32,7 +30,6 @@ export const projects = [
       img: '/stream.png',
       title: 'Streaming Chrome Extension',
       date: '2022',
-      tag: 'Web',
       description: [
         'Developed a chrome extension for HackSC that scrapes Twitch chat data and visualizes sentiment in real time',
         'Connected nltk sentiment library via socketing to browser client',
@@ -45,7 +42,6 @@ export const projects = [
       img: '/daily_insights.gif',
       title: 'Daily Insights - Dripos',
       date: '2025',
-      tag: 'Web',
       description: [
         'Designed and developed a mobile and desktop-responsive daily insights email template for Dripos, aggregating key business metrics and trends for coffee shop owners',
         'Automated a high-throughput scheduled event for timely delivery to thousands of users',
@@ -58,7 +54,6 @@ export const projects = [
       img: '/report.gif',
       title: 'Report Improvements - Dripos',
       date: '2025',
-      tag: 'Web',
       description: [
         'Enable instant loading of several reports by creating Redshift data warehouses',
         'Improved accuracy of SQL queries by debugging with years of sales data',
@@ -71,7 +66,6 @@ export const projects = [
       img: '/lunar_lander.gif',
       title: 'Pyribs',
       date: '2022',
-      tag: 'AI',
       description: [
         'Contributed to open-source Python machine learning library for exploring the latent spaces in diffusion models',
         'Library used by thousands of researchers worldwide'
@@ -84,7 +78,6 @@ export const projects = [
       img: '/oculus.jpg',
       title: 'Mind Palace',
       date: '2023',
-      tag: 'VR',
       description: [
         'Created a VR game with an avatar which prompted Alzheimer\'s patients to discuss their memories',
         'Transcribed the text from voice, summarized, and generated AI images of their memories in realtime'
@@ -97,7 +90,6 @@ export const projects = [
       img: '/flask.gif',
       title: 'VLN-CE Research',
       date: '2023',
-      tag: 'AI',
       description: [
         'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
         'As top 15% of workshop submissions, gave a spotlight presentation at The Conference on Robot Learning (CoRL) in Atlanta, Georgia October 2023'
@@ -117,7 +109,6 @@ export const projects = [
       img: '/capture.png',
       title: 'Image Capturing Pipeline',
       date: '2023',
-      tag: 'AI',
       description: [
         'First open source application for capturing images, not just videos, from the Intel Realsense Camera',
         'Used by researchers in Japan and Korea to create custom datasets',

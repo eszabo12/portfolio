@@ -93,7 +93,7 @@ export default function GitHubContributions() {
 					delay: 0
 				}}
 			>
-				<Card className="rounded-[25px] border-2 border-gray-900 bg-black flex flex-col justify-center p-4 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
+				<Card className="rounded-[25px] border-2 border-gray-900 bg-black flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300">
 					<CardContent className="p-0">
 						<div className="flex items-center mb-2">
 							<svg width="20" height="20" fill="none" viewBox="0 0 24 24" className="mr-2">
