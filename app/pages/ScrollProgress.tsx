@@ -1,12 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ScrollProgress() {
 	const [scrollProgress, setScrollProgress] = useState(0);
 	const [currentSection, setCurrentSection] = useState(0);
-	const [showConfetti, setShowConfetti] = useState(false);
 
 	// Define page sections
 	const sections = [
@@ -40,12 +38,6 @@ export default function ScrollProgress() {
 			});
 
 			setCurrentSection(current);
-
-			// Show confetti when reaching the last section (contact)
-			if (current === sections.length - 1 && currentSection !== sections.length - 1) {
-				setShowConfetti(true);
-				setTimeout(() => setShowConfetti(false), 3000); // Hide confetti after 3 seconds
-			}
 		};
 
 		window.addEventListener('scroll', updateScrollProgress);
@@ -88,41 +80,6 @@ export default function ScrollProgress() {
 				</div>
 			</div>
 
-			{/* Confetti Animation */}
-			<AnimatePresence>
-				{showConfetti && (
-					<div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none">
-						{Array.from({ length: 20 }, (_, i) => (
-							<motion.div
-								key={i}
-								className="absolute w-2 h-2 rounded-full"
-								style={{
-									backgroundColor: ['#22c55e', '#16a34a', '#15803d', '#00a5cf', '#0088b3'][Math.floor(Math.random() * 5)],
-									left: `${Math.random() * 200 - 100}px`,
-									top: `${Math.random() * 100 - 50}px`,
-								}}
-								initial={{ 
-									opacity: 1, 
-									scale: 1,
-									y: 0,
-									rotate: 0
-								}}
-								animate={{ 
-									opacity: 0, 
-									scale: 0.5,
-									y: -200 - Math.random() * 100,
-									rotate: 360 + Math.random() * 360,
-									x: (Math.random() - 0.5) * 200
-								}}
-								transition={{ 
-									duration: 2 + Math.random(),
-									ease: "easeOut"
-								}}
-							/>
-						))}
-					</div>
-				)}
-			</AnimatePresence>
 		</>
 	);
 }
