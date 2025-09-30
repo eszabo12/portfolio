@@ -27,7 +27,7 @@ export default function AboutSection() {
 						className="flex flex-col items-center"
 					>
 						<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white shadow-lg hover:border-green-400 transition-all duration-300 w-full h-full flex flex-col items-center justify-center">
-							<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+							<div className="absolute inset-0 bg-white" />
 							<div className="relative w-full h-full min-h-[320px] sm:min-h-[400px]">
 								<Image
 									src="/headshot.png"
@@ -48,7 +48,7 @@ export default function AboutSection() {
 							className="flex-1 flex flex-col justify-center"
 						>
 							<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white shadow-lg hover:border-green-400 transition-all duration-300 h-full flex flex-col justify-center">
-								<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+								<div className="absolute inset-0 bg-white" />
 								<div className="relative z-10">
 									<div>
 										<p className="text-gray-600 leading-relaxed mb-4">

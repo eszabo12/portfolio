@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
+import { TruckElectricIcon } from 'lucide-react';
 const WHOAMI = '$ whoami';
 const NAME = 'Elle Szabo';
 
@@ -76,15 +77,7 @@ export default function HeroSection() {
 										userSelect: 'none',
 									}}
 								>
-									<Typewriter
-										words={[WHOAMI]}
-										loop={1}
-										cursor
-										cursorStyle="|"
-										typeSpeed={90}
-										deleteSpeed={50}
-										delaySpeed={1000}
-									/>
+									{WHOAMI}
 								</motion.p>
 							)}
 							<div style={{
@@ -107,7 +100,14 @@ export default function HeroSection() {
 										marginTop: '.3em',
 									}}
 								>
-									{NAME}
+									<Typewriter
+										loop={0}
+										words={[NAME]}
+										cursor={true}
+										delaySpeed={900}
+										typeSpeed={200}
+										deleteSpeed={50}
+									/>
 								</motion.h1>
 							</div>
 							{showTerminal && (

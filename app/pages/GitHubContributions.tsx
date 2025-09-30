@@ -56,8 +56,8 @@ export default function GitHubContributions() {
 				<motion.div
 					key={index}
 					className={`${
-						contribution.count > 0 ? "bg-[#7BFD79] opacity-80" : "bg-gray-700"
-					} w-3 h-3 rounded-sm`}
+						contribution.count > 0 ? "bg-[#7BFD79] opacity-80" : "bg-transparent border border-gray-300"
+					} w-3 h-3 rounded-full`}
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.7, delay: 0.01 * index }}

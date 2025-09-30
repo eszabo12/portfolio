@@ -92,7 +92,7 @@ export default function Experience() {
                 key={index}
                 className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-lg hover:border-green-400 transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 pointer-events-none" />
+                <div className="absolute inset-0 bg-white pointer-events-none" />
                 <div className="relative z-10">
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold text-gray-800">{project.title}</CardTitle>

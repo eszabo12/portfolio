@@ -10,7 +10,7 @@ export default function ProjectsSection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const [isAutoplay, setIsAutoplay] = useState(false);
+  const [isAutoplay, setIsAutoplay] = useState(true);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
@@ -93,8 +93,6 @@ export default function ProjectsSection() {
           <h2 className="projects-title">Projects</h2>
         </div>
         <div className="carousel">
-          {projects.length > 1 && <div className="carousel-fade-left" />}
-          {projects.length > 1 && <div className="carousel-fade-right" />}
           <div ref={emblaRef} className="embla overflow-hidden">
             <div
               className={`embla__container flex ${
@@ -185,7 +183,7 @@ export default function ProjectsSection() {
                   className={`dot-button w-3 h-3 rounded-full p-0 border-2 flex items-center justify-center transition-all duration-150 ${
                     selectedIndex === idx
                       ? 'border-white'
-                      : 'border-white/60'
+                      : ''
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                   onClick={() => scrollTo(idx)}
