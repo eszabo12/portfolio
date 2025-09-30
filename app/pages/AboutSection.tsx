@@ -52,7 +52,7 @@ export default function AboutSection() {
 								<div className="relative z-10">
 									<div>
 										<p className="text-gray-300 leading-relaxed mb-4">
-											Hi!👋 I'm Elle. I love building beautiful fullstack applications that help businesses thrive! I bring entrepreneurial experience, deep expertise in fintech systems, and valuable workflow insights from big tech. I'm passionate about creating positive impact for customers and always excited to solve new challenges.
+											Hi!👋 I'm Elle. I love building beautiful fullstack applications that help businesses thrive! I've worked in fintech, conducted AI research, and bring a breadth of knowledge as a generalist to startups. I'm passionate about creating positive impact for customers and always excited to solve new challenges.
 										</p>
 										<p className="text-gray-300 leading-relaxed">
 											When I'm not coding, you'll find me reading a good book, in the pilates studio, curating a playlist, and tending to my two houseplants.
