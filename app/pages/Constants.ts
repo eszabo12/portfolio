@@ -88,7 +88,7 @@ export const projects = [
     },
     {
       img: '/flask.gif',
-      title: 'VLN-CE Research',
+      title: 'AI Research',
       date: '2023',
       description: [
         'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
