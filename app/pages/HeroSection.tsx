@@ -107,7 +107,15 @@ export default function HeroSection() {
 										marginTop: '.3em',
 									}}
 								>
-									{NAME}
+									<Typewriter
+										words={[NAME]}
+										loop={1}
+										cursor
+										cursorStyle="|"
+										typeSpeed={60}
+										deleteSpeed={200}
+										delaySpeed={1000}
+									/>
 								</motion.h1>
 							</div>
 							{showTerminal && (

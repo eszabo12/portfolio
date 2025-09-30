@@ -56,7 +56,7 @@ export default function GitHubContributions() {
 				<motion.div
 					key={index}
 					className={`${
-						contribution.count > 0 ? "bg-[#79BFFD] opacity-80" : "bg-gray-700"
+						contribution.count > 0 ? "bg-green-400 opacity-80" : "bg-gray-700"
 					} w-3 h-3 rounded-full`}
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
@@ -93,7 +93,7 @@ export default function GitHubContributions() {
 					delay: 0
 				}}
 			>
-				<Card className="rounded-[25px] border-2 border-gray-900 bg-black flex flex-col justify-center p-4 hover:border-[#79BFFD] transition-all duration-300">
+				<Card className="rounded-[25px] border-2 border-gray-900 bg-black flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300">
 					<CardContent className="p-0">
 						<div className="flex items-center mb-2">
 							<svg width="20" height="20" fill="none" viewBox="0 0 24 24" className="mr-2">

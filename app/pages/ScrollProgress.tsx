@@ -97,7 +97,7 @@ export default function ScrollProgress() {
 								key={i}
 								className="absolute w-2 h-2 rounded-full"
 								style={{
-									backgroundColor: ['#22c55e', '#16a34a', '#15803d', '#166534', '#14532d'][Math.floor(Math.random() * 5)],
+									backgroundColor: ['#22c55e', '#16a34a', '#15803d', '#00a5cf', '#0088b3'][Math.floor(Math.random() * 5)],
 									left: `${Math.random() * 200 - 100}px`,
 									top: `${Math.random() * 100 - 50}px`,
 								}}
