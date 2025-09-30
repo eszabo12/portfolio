@@ -53,7 +53,7 @@ export default function ContactSection() {
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
-								className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-100 to-green-50 text-green-700 rounded-2xl border border-green-300/40 hover:bg-green-200 hover:border-green-400 transition-all duration-300 cursor-pointer mb-2"
+								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-2xl border border-green-500/20 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300 cursor-pointer mb-2"
 							>
 								<svg className="w-5 h-5 rounded-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<rect x="3" y="4" width="18" height="18" rx="4" strokeWidth="2" />
@@ -72,7 +72,7 @@ export default function ContactSection() {
 							<motion.a
 								href="mailto:elleszabo77@gmail.com?subject=hi%20I%27d%20like%20to%20hire%20you"
 								whileHover={{ scale: 1.02 }}
-								className="inline-block px-6 py-3 bg-gradient-to-r from-green-100 to-green-50 text-green-700 rounded-xl border border-green-300/40 hover:bg-green-200 hover:border-green-400 transition-all duration-300"
+								className="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-xl border border-green-500/20 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300"
 							>
 								elleszabo77@gmail.com
 							</motion.a>
@@ -94,7 +94,7 @@ export default function ContactSection() {
 									document.body.removeChild(anchor);
 								}}
 								whileHover={{ scale: 1.02 }}
-								className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-100 to-green-50 text-green-700 rounded-xl border border-green-300/40 hover:bg-green-200 hover:border-green-400 transition-all duration-300 cursor-pointer"
+								className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 text-green-400 rounded-xl border border-green-500/20 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300 cursor-pointer"
 								tabIndex={0}
 								role="button"
 								onKeyDown={e => {

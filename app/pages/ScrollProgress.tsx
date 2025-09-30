@@ -67,7 +67,7 @@ export default function ScrollProgress() {
 			<div className="fixed bottom-2 left-16 right-16 z-50 h-2 bg-gradient-to-r from-gray-800/30 via-blue-500/20 to-gray-800/30 rounded-full shadow-lg backdrop-blur-sm border border-blue-300/20">
 				{/* Progress bar - glass effect */}
 				<div 
-					className="h-full bg-gradient-to-r from-green-400/60 via-green-300/70 to-green-400/60 rounded-full shadow-green-400/30 shadow-lg backdrop-blur-sm border border-green-300/20 transition-all duration-150 ease-out"
+					className="h-full bg-gradient-to-r from-green-400/60 via-green-300/70 to-blue-400/60 rounded-full shadow-green-400/30 shadow-lg backdrop-blur-sm border border-green-300/20 transition-all duration-150 ease-out"
 					style={{ width: `${(currentSection / (sections.length - 1)) * 100}%` }}
 				/>
 				

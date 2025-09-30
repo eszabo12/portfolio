@@ -10,7 +10,7 @@ export default function ProjectsSection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const [isAutoplay, setIsAutoplay] = useState(false);
+  const [isAutoplay, setIsAutoplay] = useState(true);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
