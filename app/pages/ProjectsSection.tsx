@@ -176,8 +176,8 @@ export default function ProjectsSection() {
 			 
           </div>
         </div>
-        <div className="flex justify-between items-center mt-8 px-4">
-          <div className="flex gap-2">
+        <div className="mt-8 px-4 flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
+          <div className="flex gap-2 justify-center">
             {scrollSnaps.map((_, idx) => (
               <button
                 key={idx}
@@ -192,7 +192,7 @@ export default function ProjectsSection() {
               />
             ))}
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             <button
               className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
               aria-label="Toggle autoplay"
