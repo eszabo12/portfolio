@@ -39,13 +39,13 @@ export const metadata: Metadata = {
 	authors: [{ name: 'Elle Szabo Portfolio' }],
 	creator: 'Elle Szabo Portfolio',
 	openGraph: {
-		title: 'Elle Szabo Portfolio Portfolio',
+		title: 'Elle Szabo Portfolio',
 		description: 'Passionate developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
 		url: 'https://elleszabo.com',
 		siteName: 'Elle Szabo Portfolio',
 		images: [
 			{
-				url: '/icon.png',
+				url: '/headshot.png',
 				width: 1200,
 				height: 630,
 				alt: 'Elle Szabo Portfolio',
