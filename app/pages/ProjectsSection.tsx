@@ -78,7 +78,7 @@ export default function ProjectsSection() {
 
   if (!isLoaded) {
     return (
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="projects-container">
           <h2 className="projects-title">Projects</h2>
         </div>
@@ -87,7 +87,7 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-gray-50">
       <div className="projects-container">
         <div className="flex items-center justify-center mb-10">
           <h2 className="projects-title">Projects</h2>
@@ -126,10 +126,10 @@ export default function ProjectsSection() {
                       }`}>
                         <Image src={p.img} alt={p.title} fill className="object-cover rounded-lg" />
                       </div>
-                      <h3 className="project-title">{p.title}</h3>
+                        <h3 className="project-title">{p.title}</h3>
                       {p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}
                       {Array.isArray(p.description) ? (
-                        <ul className="list-disc list-inside text-gray-300 text-sm mb-4 space-y-1">
+                        <ul className="list-disc list-inside text-sm mb-4 space-y-1 project-desc">
                           {p.description.map((d: string, i: number) => (
                             <li key={i}>{d}</li>
                           ))}
@@ -176,64 +176,125 @@ export default function ProjectsSection() {
 			 
           </div>
         </div>
-        <div className="flex justify-between items-center mt-8 px-4">
-          <div className="flex gap-2">
-            {scrollSnaps.map((_, idx) => (
+        {isDesktop ? (
+          <div className="flex justify-between items-center mt-8 px-4">
+            <div className="flex gap-2">
+              {scrollSnaps.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`dot-button w-3 h-3 rounded-full p-0 border-2 flex items-center justify-center transition-all duration-150 ${
+                    selectedIndex === idx
+                      ? 'border-white'
+                      : 'border-white/60'
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  onClick={() => scrollTo(idx)}
+                  tabIndex={0}
+                />
+              ))}
+            </div>
+            <div className="flex gap-2">
               <button
-                key={idx}
-                className={`dot-button w-3 h-3 rounded-full p-0 border-2 flex items-center justify-center transition-all duration-150 ${
-                  selectedIndex === idx
-                    ? 'border-white'
-                    : 'border-white/60'
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-                onClick={() => scrollTo(idx)}
+                className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
+                aria-label="Toggle autoplay"
+                onClick={toggleAutoplay}
                 tabIndex={0}
-              />
-            ))}
-          </div>
-          <div className="flex gap-2">
-            <button
-              className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
-              aria-label="Toggle autoplay"
-              onClick={toggleAutoplay}
-              tabIndex={0}
-              type="button"
-            >
-              {isAutoplay ? (
+                type="button"
+              >
+                {isAutoplay ? (
+                  <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
+                    <path d="M6 4h2v12H6V4zM12 4h2v12h-2V4z" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ) : (
+                  <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
+                    <path d="M6 4l8 6-8 6V4z" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+              </button>
+              <button
+                className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
+                aria-label="Previous"
+                onClick={handlePrev}
+                tabIndex={0}
+                type="button"
+              >
                 <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                  <path d="M6 4h2v12H6V4zM12 4h2v12h-2V4z" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13 15l-5-5 5-5" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              ) : (
+              </button>
+              <button
+                className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
+                aria-label="Next"
+                onClick={handleNext}
+                tabIndex={0}
+                type="button"
+              >
                 <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                  <path d="M6 4l8 6-8 6V4z" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M7 5l5 5-5 5" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              )}
-            </button>
-            <button
-              className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
-              aria-label="Previous"
-              onClick={handlePrev}
-              tabIndex={0}
-              type="button"
-            >
-              <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                <path d="M13 15l-5-5 5-5" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <button
-              className={`icon-btn ${!isDesktop ? 'icon-btn-mobile' : 'icon-btn-desktop'}`}
-              aria-label="Next"
-              onClick={handleNext}
-              tabIndex={0}
-              type="button"
-            >
-              <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                <path d="M7 5l5 5-5 5" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex flex-col items-center gap-4 mt-8 px-4">
+            <div className="flex gap-2">
+              {scrollSnaps.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`dot-button w-3 h-3 rounded-full p-0 border-2 flex items-center justify-center transition-all duration-150 ${
+                    selectedIndex === idx
+                      ? 'border-white'
+                      : 'border-white/60'
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  onClick={() => scrollTo(idx)}
+                  tabIndex={0}
+                />
+              ))}
+            </div>
+            <div className="flex gap-2">
+              <button
+                className="icon-btn icon-btn-mobile"
+                aria-label="Toggle autoplay"
+                onClick={toggleAutoplay}
+                tabIndex={0}
+                type="button"
+              >
+                {isAutoplay ? (
+                  <svg className="icon-svg-mobile" fill="none" viewBox="0 0 20 20">
+                    <path d="M6 4h2v12H6V4zM12 4h2v12h-2V4z" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ) : (
+                  <svg className="icon-svg-mobile" fill="none" viewBox="0 0 20 20">
+                    <path d="M6 4l8 6-8 6V4z" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+              </button>
+              <button
+                className="icon-btn icon-btn-mobile"
+                aria-label="Previous"
+                onClick={handlePrev}
+                tabIndex={0}
+                type="button"
+              >
+                <svg className="icon-svg-mobile" fill="none" viewBox="0 0 20 20">
+                  <path d="M13 15l-5-5 5-5" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button
+                className="icon-btn icon-btn-mobile"
+                aria-label="Next"
+                onClick={handleNext}
+                tabIndex={0}
+                type="button"
+              >
+                <svg className="icon-svg-mobile" fill="none" viewBox="0 0 20 20">
+                  <path d="M7 5l5 5-5 5" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

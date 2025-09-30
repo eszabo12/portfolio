@@ -80,9 +80,9 @@ export default function Experience() {
   const visibleExperiences = open ? experiences : experiences.slice(0, 4);
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-200">
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
           Experience
         </h2>
         <Collapsible open={open} onOpenChange={setOpen}>
@@ -90,16 +90,16 @@ export default function Experience() {
             {visibleExperiences.map((project, index) => (
               <Card
                 key={index}
-                className="relative rounded-2xl overflow-hidden border border-gray-800 bg-black/50 hover:border-green-400 transition-all duration-300"
+                className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-lg hover:border-green-400 transition-all duration-300"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 pointer-events-none" />
                 <div className="relative z-10">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-gray-200">{project.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold text-gray-800">{project.title}</CardTitle>
                     <CardDescription className="text-green-400 font-mono">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
+                    <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
                       {project.details.map((detail, i) => (
                         <li key={i}>{detail}</li>
                       ))}
@@ -123,13 +123,13 @@ export default function Experience() {
             <CollapsibleTrigger asChild>
               <button
                 aria-label={open ? "Show less experience" : "Show more experience"}
-                className="flex items-center justify-center w-12 h-12 rounded-full border border-white bg-white/20 hover:bg-white/30 transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white"
+                className="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-50 hover:border-green-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 text-green-600 active:border-gray-300"
               >
                 {open ? (
                   <svg
-                    className="w-7 h-7 text-white transition-transform duration-200"
+                    className="w-7 h-7 transition-transform duration-200"
                     fill="none"
-                    stroke="white"
+                    stroke="currentColor"
                     strokeWidth={2}
                     viewBox="0 0 24 24"
                   >
@@ -137,9 +137,9 @@ export default function Experience() {
                   </svg>
                 ) : (
                   <svg
-                    className="w-7 h-7 text-white transition-transform duration-200"
+                    className="w-7 h-7 transition-transform duration-200"
                     fill="none"
-                    stroke="white"
+                    stroke="currentColor"
                     strokeWidth={1}
                     viewBox="0 0 24 24"
                   >

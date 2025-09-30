@@ -29,14 +29,14 @@ export default function HeroSection() {
 	}, [showTerminal, arrowDelay]);
 
 	return (
-		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, #000 80%, #1a1a1a 100%)' }}>
+		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, #ffffff 80%, #f8fafc 100%)' }}>
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"></div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50 hover:border-green-400 transition-all duration-300 flex flex-col items-stretch"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/80 hover:border-green-400 transition-all duration-300 flex flex-col items-stretch shadow-lg"
 					style={{
 						minWidth: '320px',
 						maxWidth: '90vw',
@@ -100,8 +100,8 @@ export default function HeroSection() {
 									animate={{ opacity: 1 }}
 									transition={{ duration: 0.7, ease: 'easeOut' }}
 									style={{
-										color: '#f0fff0',
-										textShadow: '0 0 1px #f0fff0, 0 0 1px #f0fff0, 0 0 1px #f0fff0',
+										color: '#1a1a1a',
+										textShadow: '0 0 1px #1a1a1a, 0 0 1px #1a1a1a, 0 0 1px #1a1a1a',
 										letterSpacing: '-0.05em',
 										whiteSpace: 'nowrap',
 										marginTop: '.3em',
@@ -145,13 +145,13 @@ export default function HeroSection() {
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						style={{
-							filter: 'drop-shadow(0 0 12px #fff) drop-shadow(0 0 32px #fff)',
+							filter: 'drop-shadow(0 0 12px #1a1a1a) drop-shadow(0 0 32px #1a1a1a)',
 							animation: 'arrowglow 1.5s infinite alternate, arrowbounce 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 						}}
 					>
 						<path
 							d="M18 8V28M18 28L10 20M18 28L26 20"
-							stroke="#fff"
+							stroke="#1a1a1a"
 							strokeWidth="2.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
@@ -166,8 +166,8 @@ export default function HeroSection() {
 						to { opacity: 1; transform: translateY(0);}
 					}
 					@keyframes arrowglow {
-						from { filter: drop-shadow(0 0 12px #fff) drop-shadow(0 0 32px #fff);}
-						to { filter: drop-shadow(0 0 24px #fff) drop-shadow(0 0 48px #fff);}
+						from { filter: drop-shadow(0 0 12px #1a1a1a) drop-shadow(0 0 32px #1a1a1a);}
+						to { filter: drop-shadow(0 0 24px #1a1a1a) drop-shadow(0 0 48px #1a1a1a);}
 					}
 					@keyframes arrowbounce {
 						0% { transform: translateY(0);}
