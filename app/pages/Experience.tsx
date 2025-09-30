@@ -108,7 +108,7 @@ export default function Experience() {
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="text-sm px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20 text-green-400"
+                          className="project-chip"
                         >
                           {tech}
                         </span>

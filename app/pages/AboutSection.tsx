@@ -52,10 +52,16 @@ export default function AboutSection() {
 								<div className="relative z-10">
 									<div>
 										<p className="text-gray-600 leading-relaxed mb-4">
-											Hi!👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! Very excited about solving customer problems with solid UI/UX understanding and building performant backend systems.
+											Hi! 👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! 💻 . 
+											I offer domain expertise in fintech as well as 0-1 founding experience and workflow insights from big tech. 🏢
 										</p>
+										<div className="flex flex-wrap gap-2 mb-4">
+											<span className="project-chip">Fintech</span>
+											<span className="project-chip">0-1 Startups</span>
+											<span className="project-chip">Big Tech</span>
+										</div>
 										<p className="text-gray-600 leading-relaxed">
-											When I'm not coding, you'll find me reading a good book, in the pilates studio, curating a playlist, and tending to my two houseplants.
+											When I'm not coding, you'll find me reading a good book 📚, in the pilates studio, curating a playlist, and tending to my two houseplants.
 										</p>
 									</div>
 								</div>
