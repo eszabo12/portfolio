@@ -124,7 +124,7 @@ export default function ProjectsSection() {
                       <div className={`project-image relative w-full mb-4 ${
                         isDesktop ? 'h-112' : 'h-48'
                       }`}>
-                        <Image src={p.img} alt={p.title} fill className="object-cover rounded-lg" />
+                        <Image src={p.img} alt={p.title} fill className="object-cover rounded-xl" />
                       </div>
                       <h3 className="project-title">{p.title}</h3>
                       {p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}
