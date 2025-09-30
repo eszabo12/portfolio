@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Head } from "next/document";
+import ScrollProgress from './pages/ScrollProgress';
 
 import './globals.css';
 
@@ -87,6 +88,7 @@ export default function RootLayout({
 			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				{children}
+				<ScrollProgress />
 				<GoogleAnalytics gaId="G-PDQXKNVQSX" />
 			</body>
 		</html>

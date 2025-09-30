@@ -18,11 +18,21 @@ export default function BackendPortfolio() {
 			<main className="min-h-screen bg-[#1A1A1A] text-white overflow-x-hidden">
 				<CustomCursor />
 
-				<HeroSection />
-				<AboutSection />
-				<Experience />
-				<ProjectsSection />
-				<ContactSection />
+				<section id="hero">
+					<HeroSection />
+				</section>
+				<section id="about">
+					<AboutSection />
+				</section>
+				<section id="experience">
+					<Experience />
+				</section>
+				<section id="projects">
+					<ProjectsSection />
+				</section>
+				<section id="contact">
+					<ContactSection />
+				</section>
 			</main>
 		</>
 	);
