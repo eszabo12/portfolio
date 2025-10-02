@@ -38,7 +38,7 @@ export default function ContactSection() {
 							>
 								$ contact --info
 							</motion.p>
-							<h2 className="text-3xl font-bold mb-8 text-gray-800">Let&apos;s Connect</h2>
+							<h2 className="text-3xl font-bold mb-8 text-gray-800 ">Let&apos;s Connect</h2>
 						
 							<motion.p
 								className="text-green-500 mt-8 mb-2"
@@ -55,14 +55,14 @@ export default function ContactSection() {
 								
 								className="inline-flex items-center gap-2 px-6 py-3 bg-white text-green-600 rounded-2xl border border-green-500/30 hover:border-green-500 transition-all duration-200 cursor-pointer mb-2"
 							>
-								<svg className="w-5 h-5 rounded-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg className="w-5 h-5 rounded-xl " fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<rect x="3" y="4" width="18" height="18" rx="4" strokeWidth="2" />
 									<path d="M16 2v4M8 2v4M3 10h18" strokeWidth="2" />
 								</svg>
 								<span>Let's Chat!</span>
 							</motion.a>
 							<motion.p
-								className="text-green-500 mt-8 mb-2"
+								className="text-green-500 mt-8 mb-2 "
 								initial={{ opacity: 0 }}
 								animate={{ opacity: [0, 1, 0.7, 1] }}
 								transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse', delay: 0.4 }}

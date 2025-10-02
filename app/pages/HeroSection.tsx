@@ -30,14 +30,21 @@ export default function HeroSection() {
 	}, [showTerminal, arrowDelay]);
 
 	return (
-		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ background: 'white' }}>
+		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ 
+			background: 'bg-white',
+			backgroundImage: `
+				linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)
+			`,
+			backgroundSize: '20px 20px'
+		}}>
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"></div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/80 hover:border-green-400 transition-all duration-300 flex flex-col items-stretch shadow-lg"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/80 hover:border-green-400 flex flex-col items-stretch shadow-lg"
 					style={{
 						minWidth: '320px',
 						maxWidth: '90vw',
@@ -49,15 +56,9 @@ export default function HeroSection() {
 					}}
 				>
 					<div className="absolute inset-0 bg-white" />
-					<motion.div
-						aria-hidden
-						initial={{ opacity: 0.4, scale: 0.98 }}
-						animate={{ opacity: [0.4, 0.7, 0.4], scale: [0.98, 1.02, 0.98] }}
-						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-						className="absolute inset-0 z-0"
-					>
+					<div className="absolute inset-0 z-0">
 						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
-					</motion.div>
+					</div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">
 							<div className="w-3 h-3 rounded-full bg-red-500" />
@@ -77,7 +78,10 @@ export default function HeroSection() {
 										userSelect: 'none',
 									}}
 								>
-									{WHOAMI}
+									<Typewriter
+										words={[WHOAMI]}
+										cursor={true}
+									/>
 								</motion.p>
 							)}
 							<div style={{
@@ -100,14 +104,7 @@ export default function HeroSection() {
 										marginTop: '.3em',
 									}}
 								>
-									<Typewriter
-										loop={0}
-										words={[NAME]}
-										cursor={true}
-										delaySpeed={900}
-										typeSpeed={200}
-										deleteSpeed={50}
-									/>
+									{NAME}
 								</motion.h1>
 							</div>
 							{showTerminal && (
@@ -145,13 +142,13 @@ export default function HeroSection() {
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						style={{
-							filter: 'drop-shadow(0 0 12px #1a1a1a) drop-shadow(0 0 32px #1a1a1a)',
+							filter: 'drop-shadow(0 0 12px #22c55e) drop-shadow(0 0 32px #22c55e)',
 							animation: 'arrowglow 1.5s infinite alternate, arrowbounce 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 						}}
 					>
 						<path
 							d="M18 8V28M18 28L10 20M18 28L26 20"
-							stroke="#1a1a1a"
+							stroke="#22c55e"
 							strokeWidth="2.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
@@ -166,8 +163,8 @@ export default function HeroSection() {
 						to { opacity: 1; transform: translateY(0);}
 					}
 					@keyframes arrowglow {
-						from { filter: drop-shadow(0 0 12px #1a1a1a) drop-shadow(0 0 32px #1a1a1a);}
-						to { filter: drop-shadow(0 0 24px #1a1a1a) drop-shadow(0 0 48px #1a1a1a);}
+						from { filter: drop-shadow(0 0 12px #22c55e) drop-shadow(0 0 32px #22c55e);}
+						to { filter: drop-shadow(0 0 24px #22c55e) drop-shadow(0 0 48px #22c55e);}
 					}
 					@keyframes arrowbounce {
 						0% { transform: translateY(0);}
