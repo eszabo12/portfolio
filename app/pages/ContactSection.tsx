@@ -180,20 +180,37 @@ export default function ContactSection() {
 		<section>
 			<div className="flex flex-col items-center justify-center py-4">
 				<div className="flex items-center gap-2 text-gray-400 text-sm">
-				<div className="flex flex-col items-center gap-1 text-gray-400 text-sm">
+					<div className="flex flex-col items-center gap-1 text-gray-400 text-sm">
 						<span>© 2025 Elle Szabo</span>
-						<span>
+						<span className="flex items-center gap-1">
 							Built with{' '}
-							<a href="https://nextjs.org" className="underline hover:text-green-400" target="_blank" rel="noopener noreferrer">Next.js</a>
+							<a href="https://nextjs.org" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+								<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
+									<circle cx="16" cy="16" r="16" fill="currentColor"/>
+									<path d="M16.004 6.4c-5.302 0-9.604 4.302-9.604 9.604 0 5.302 4.302 9.604 9.604 9.604 5.302 0 9.604-4.302 9.604-9.604 0-5.302-4.302-9.604-9.604-9.604zm0 17.208c-4.2 0-7.604-3.404-7.604-7.604 0-4.2 3.404-7.604 7.604-7.604 4.2 0 7.604 3.404 7.604 7.604 0 4.2-3.404 7.604-7.604 7.604z" fill="#fff"/>
+								</svg>
+								Next.js
+							</a>
 							{', '}
-							<a href="https://vercel.com" className="underline hover:text-green-400" target="_blank" rel="noopener noreferrer">Vercel</a>
-							{', and '}
-							<a href="https://ui.shadcn.com" className="underline hover:text-green-400" target="_blank" rel="noopener noreferrer">Shadcn</a>
+							<a href="https://vercel.com" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+								<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
+									<path d="M16 6l12 20H4L16 6z" fill="currentColor"/>
+								</svg>
+								Vercel
+							</a>
+							{', and  '}
+							<a href="https://ui.shadcn.com" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+								<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 24 24" fill="none">
+									<rect width="24" height="24" rx="4" fill="currentColor"/>
+									<path d="M7.5 7.5h9v9h-9z" fill="#fff"/>
+								</svg>
+								Shadcn
+							</a>
 						</span>
 					</div>
 				</div>
 			</div>
 		</section>
 		</div>
-	);
-}
+	);	
+}	

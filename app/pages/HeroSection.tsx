@@ -45,15 +45,15 @@ export default function HeroSection() {
 
 	return (
 		<section
-			className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
+			className="relative w-full flex flex-col items-center justify-center overflow-hidden"
 			style={{
 				backgroundImage: `
 					linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
 					linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)
 				`,
 				backgroundSize: '20px 20px',
-				paddingTop: typeof window !== 'undefined' && window.innerWidth < 640 ? '-8px' : undefined,
-				minHeight: typeof window !== 'undefined' && window.innerWidth < 640 ? `calc(${screenHeight}px - 8px)` : `${screenHeight}px`,
+				paddingTop: typeof window !== 'undefined' && window.innerWidth < 640 ? '-8px' : '',
+				minHeight: `100dvh`,
 			}}
 		>
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"></div>
