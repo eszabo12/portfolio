@@ -39,18 +39,6 @@ export const projects = [
       ghLink: 'https://github.com/likhity/twitch-stream-chat-analyzer',
     },
     {
-      img: '/daily_insights.gif',
-      title: 'Daily Insights - Dripos',
-      date: '2025',
-      description: [
-        'Designed and developed a mobile and desktop-responsive daily insights email template for Dripos, aggregating key business metrics and trends for coffee shop owners',
-        'Automated a high-throughput scheduled event for timely delivery to thousands of users',
-        'Tracked send and open rates with a MongoDB collection',
-      ],
-      skills: ['TypeScript', 'Node.js', 'AWS SMS', 'MySQL'],
-      gh: false,
-    },
-    {
       img: '/report.gif',
       title: 'Report Improvements - Dripos',
       date: '2025',
@@ -87,25 +75,6 @@ export const projects = [
       ghLink: 'https://github.com/puentesca/newtreehacks2023',
     },
     {
-      img: '/flask.gif',
-      title: 'AI Research',
-      date: '2023',
-      description: [
-        'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
-        'As top 15% of workshop submissions, gave a spotlight presentation at The Conference on Robot Learning (CoRL) in Atlanta, Georgia October 2023'
-      ],
-      skills: ['Python', 'NLP'],
-      gh: true,
-      ghLink: 'https://github.com/eszabo12/VLN-CE',
-      buttons: [
-        {
-          label: 'Paper',
-          href: 'https://openreview.net/forum?id=uABEHp6tjy',
-          className: 'btn-blue'
-        }
-      ]
-    },
-    {
       img: '/capture.png',
       title: 'Image Capturing Pipeline',
       date: '2023',
@@ -117,4 +86,35 @@ export const projects = [
       gh: true,
       ghLink: 'https://github.com/eszabo12/image_capturing_pipeline',
     },
+    {
+        img: '/daily_insights.gif',
+        title: 'Daily Insights - Dripos',
+        date: '2025',
+        description: [
+          'Designed and developed a mobile and desktop-responsive daily insights email template for Dripos, aggregating key business metrics and trends for coffee shop owners',
+          'Automated a high-throughput scheduled event for timely delivery to thousands of users',
+          'Tracked send and open rates with a MongoDB collection',
+        ],
+        skills: ['TypeScript', 'Node.js', 'AWS SMS', 'MySQL'],
+        gh: false,
+      },
+      {
+        img: '/flask.gif',
+        title: 'AI Research',
+        date: '2023',
+        description: [
+          'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
+          'As top 15% of workshop submissions, gave a spotlight presentation at The Conference on Robot Learning (CoRL) in Atlanta, Georgia October 2023'
+        ],
+        skills: ['Python', 'NLP'],
+        gh: true,
+        ghLink: 'https://github.com/eszabo12/VLN-CE',
+        buttons: [
+          {
+            label: 'Paper',
+            href: 'https://openreview.net/forum?id=uABEHp6tjy',
+            className: 'btn-blue'
+          }
+        ]
+      },
   ];
