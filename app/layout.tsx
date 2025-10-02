@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 		siteName: 'Elle Szabo Portfolio',
 		images: [
 			{
-				url: '/headshot.png',
+				url: '/favicon.png',
 				width: 1200,
 				height: 630,
 				alt: 'Elle Szabo Portfolio',
