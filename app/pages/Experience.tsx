@@ -156,7 +156,7 @@ export default function Experience() {
                     className="w-7 h-7 transition-transform duration-200"
                     fill="none"
                     stroke="#22c55e"
-                    strokeWidth={2}
+                    strokeWidth={1}
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
