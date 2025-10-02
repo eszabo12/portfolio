@@ -93,9 +93,9 @@ export default function GitHubContributions() {
 					delay: 0
 				}}
 			>
-				<Card className="relative rounded-[25px] border-2 border-gray-200 bg-white/60 shadow-lg flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300 group">
+				<Card className="relative rounded-[25px] border-2 border-gray-200 bg-white/80 shadow-lg flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300 group">
 					<span
-						className="pointer-events-none absolute -top-2 -right-2 opacity-0 group-hover:opacity-80 group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 z-20"
+						className="pointer-events-none absolute -top-2 -right-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 z-20"
 						aria-hidden="true"
 					>
 						<svg width="48" height="48" viewBox="0 0 24 24" fill="none">
