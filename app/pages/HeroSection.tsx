@@ -76,7 +76,11 @@ export default function HeroSection() {
 										userSelect: 'none',
 									}}
 								>
-									{WHOAMI}
+									<Typewriter
+										words={[WHOAMI]}
+										cursor
+										cursorStyle="|"
+									/>
 								</motion.p>
 							)}
 							<div style={{
@@ -99,15 +103,7 @@ export default function HeroSection() {
 										marginTop: '.3em',
 									}}
 								>
-									<Typewriter
-										words={[NAME]}
-										loop={0}
-										cursor
-										cursorStyle="|"
-										typeSpeed={60}
-										deleteSpeed={200}
-										delaySpeed={1000}
-									/>
+									{NAME}
 								</motion.h1>
 							</div>
 							{showTerminal && (
