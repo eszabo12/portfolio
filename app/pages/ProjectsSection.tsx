@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import {projects} from './Constants';
+import { Skeleton } from "@/components/ui/skeleton";
 export default function ProjectsSection() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -75,6 +76,20 @@ export default function ProjectsSection() {
     setIsAutoplay(!isAutoplay);
   };
 
+  const handleImageLoad = (projectId: string) => {
+    setImageLoadingStates(prev => ({
+      ...prev,
+      [projectId]: true
+    }));
+  };
+
+  const handleImageError = (projectId: string) => {
+    setImageLoadingStates(prev => ({
+      ...prev,
+      [projectId]: true
+    }));
+  };
+
 
   if (!isLoaded) {
     return (
@@ -122,7 +137,20 @@ export default function ProjectsSection() {
                       <div className={`project-image relative w-full mb-4 ${
                         isDesktop ? 'h-112' : 'h-48'
                       }`}>
-                        <Image src={p.img} alt={p.title} fill className="object-cover rounded-lg" />
+                        {!imageLoadingStates[p.title] && (
+                          <Skeleton className="absolute inset-0 rounded-xl" />
+                        )}
+                        <Image 
+                          src={p.img} 
+                          alt={p.title} 
+                          fill 
+                          className={`object-cover rounded-xl transition-opacity duration-300 ${
+                            imageLoadingStates[p.title] ? 'opacity-100' : 'opacity-0'
+                          }`}
+                          loading="lazy"
+                          onLoad={() => handleImageLoad(p.title)}
+                          onError={() => handleImageError(p.title)}
+                        />
                       </div>
                         <h3 className="project-title">{p.title}</h3>
                       {p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}

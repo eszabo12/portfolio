@@ -69,7 +69,7 @@ export default function GitHubContributions() {
 	const skeletonGrid = (
 		<div className="grid grid-rows-7 grid-flow-col gap-1">
 			{Array.from({ length: numCols * 7 }).map((_, idx) => (
-				<Skeleton key={idx} className="w-3 h-3 rounded-sm bg-gray-800" />
+				<Skeleton key={idx} className="w-3 h-3 rounded-full bg-gray-800" />
 			))}
 		</div>
 	);
