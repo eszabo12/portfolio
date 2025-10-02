@@ -202,12 +202,12 @@ export default function ProjectsSection() {
                       </div>
                       <div className="project-actions mt-auto flex flex-wrap gap-2">
                         {p.gh && (
-                          <motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-green">
+                          <motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" className="contact-button px-4 py-2 rounded-xl text-sm font-medium">
                             <span>GitHub</span>
                           </motion.a>
                         )}
                         {'demoLink' in p && p.demoLink && (
-                          <motion.a href={p.demoLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-blue">
+                          <motion.a href={p.demoLink} target="_blank" rel="noopener noreferrer" className="contact-button-blue px-4 py-2 rounded-xl text-sm font-medium">
                             <span>Demo</span>
                           </motion.a>
                         )}
@@ -218,7 +218,7 @@ export default function ProjectsSection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
-                            className={btn.className}
+                            className="contact-button-blue px-4 py-2 rounded-xl text-sm font-medium"
                           >
                             <span>{btn.label}</span>
                           </motion.a>
@@ -299,7 +299,7 @@ export default function ProjectsSection() {
                   className={`dot-button w-3 h-3 rounded-full p-0 border-2 flex items-center justify-center transition-all duration-150 ${
                     selectedIndex === idx
                       ? 'border-white'
-                      : 'border-white/60'
+                      : ''
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                   onClick={() => scrollTo(idx)}

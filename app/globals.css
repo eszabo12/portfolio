@@ -97,7 +97,6 @@ body {
 			padding-left: 10px;
 		}
 	}
-	  
 	.dot-button {
 		min-width: 12px;
 		min-height: 12px;
@@ -107,7 +106,15 @@ body {
 		border-color: #9ca3af;
 		border-width: 1px;
 	}
-	
+
+	@media (max-width: 640px) {
+		.dot-button {
+			background-color: #fff!important;
+			border-width: 2px;
+			border-color: #fff!important;
+		}
+	}
+
 	.dot-button.border-white {
 		background-color: transparent!important;
 		border-color: #22c55e!important;
@@ -181,6 +188,14 @@ body {
 
 .contact-button:hover {
 	@apply bg-green-500 text-white border-green-500;
+}
+
+.contact-button-blue {
+	@apply bg-white text-blue-600 border border-blue-500/30 transition-all duration-200;
+}
+
+.contact-button-blue:hover {
+	@apply bg-blue-500 text-white border-blue-500;
 }
 
 .card-hover-effect {
