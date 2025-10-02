@@ -31,7 +31,6 @@ export default function HeroSection() {
 
 	return (
 		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ 
-			background: 'bg-white',
 			backgroundImage: `
 				linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
 				linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)
@@ -44,7 +43,7 @@ export default function HeroSection() {
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/80 hover:border-green-400 flex flex-col items-stretch shadow-lg"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/60 hover:border-green-400 flex flex-col items-stretch shadow-lg"
 					style={{
 						minWidth: '320px',
 						maxWidth: '90vw',
@@ -55,7 +54,7 @@ export default function HeroSection() {
 						userSelect: 'auto',
 					}}
 				>
-					<div className="absolute inset-0 bg-white" />
+					<div className="absolute inset-0 bg-white/60" />
 					<div className="absolute inset-0 z-0">
 						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
 					</div>

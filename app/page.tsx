@@ -15,24 +15,26 @@ export default function BackendPortfolio() {
 				strategy="afterInteractive"
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
 			/>
-			<main className="min-h-screen bg-white text-white overflow-x-hidden">
+			<main className="min-h-screen text-white relative z-10">
 				<CustomCursor />
 
-				<section id="hero">
+				<section id="hero" className="hero-section">
 					<HeroSection />
 				</section>
-				<section id="about">
-					<AboutSection />
-				</section>
-				<section id="experience">
-					<Experience />
-				</section>
-				<section id="projects">
-					<ProjectsSection />
-				</section>
-				<section id="contact">
-					<ContactSection />
-				</section>
+				<div className="floating-background">
+					<section id="about">
+						<AboutSection />
+					</section>
+					<section id="experience">
+						<Experience />
+					</section>
+					<section id="projects">
+						<ProjectsSection />
+					</section>
+					<section id="contact">
+						<ContactSection />
+					</section>
+				</div>
 			</main>
 		</>
 	);

@@ -11,7 +11,7 @@ export default function ContactSection() {
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white shadow-lg hover:border-green-500 transition-all duration-300"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/60 shadow-lg hover:border-green-500 transition-all duration-300"
 				>
 					<div className="absolute inset-0" />
 					<motion.div

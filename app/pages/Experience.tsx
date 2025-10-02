@@ -80,7 +80,7 @@ export default function Experience() {
   const visibleExperiences = open ? experiences : experiences.slice(0, 4);
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
           Experience
@@ -90,9 +90,9 @@ export default function Experience() {
             {visibleExperiences.map((project, index) => (
               <Card
                 key={index}
-                className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-lg hover:border-green-400 transition-all duration-300"
+                className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white/60 shadow-lg hover:border-green-400 transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-white pointer-events-none" />
+                <div className="absolute inset-0 bg-white/60 pointer-events-none" />
                 <div className="relative z-10">
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold text-gray-800">{project.title}</CardTitle>
