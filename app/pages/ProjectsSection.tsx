@@ -99,7 +99,7 @@ export default function ProjectsSection() {
 
   if (!isLoaded) {
     return (
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="projects-container">
           <h2 className="projects-title">Projects</h2>
         </div>
@@ -108,7 +108,7 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-gray-50">
       <div className="projects-container">
         <div className="flex items-center justify-center mb-10">
           <h2 className="projects-title">Projects</h2>
