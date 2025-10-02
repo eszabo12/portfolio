@@ -66,7 +66,7 @@ export default function HeroSection() {
 						{NAME}
 					</motion.h1>
 					<motion.div
-						className="text-2xl md:text-3xl font-light text-white/90 mb-8"
+						className="text-2xl md:text-3xl font-light text-white/90 mb-8 font-mono"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
@@ -74,7 +74,15 @@ export default function HeroSection() {
 							textShadow: '0 0 10px rgba(255, 255, 255, 0.2)',
 						}}
 					>
-						Software Engineer
+						<Typewriter
+							words={['Software Engineer']}
+							cursor={true}
+							cursorStyle='|'
+							cursorColor='white'
+							typeSpeed={100}
+							deleteSpeed={50}
+							delaySpeed={1000}
+						/>
 					</motion.div>
 				</motion.div>
 			</div>
@@ -87,13 +95,13 @@ export default function HeroSection() {
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						style={{
-							filter: 'drop-shadow(0 0 12px #22c55e) drop-shadow(0 0 32px #22c55e)',
+							filter: 'drop-shadow(0 0 12px white) drop-shadow(0 0 32px white)',
 							animation: 'arrowglow 1.5s infinite alternate, arrowbounce 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 						}}
 					>
 						<path
 							d="M18 8V28M18 28L10 20M18 28L26 20"
-							stroke="#22c55e"
+							stroke="white"
 							strokeWidth="2.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
@@ -108,8 +116,8 @@ export default function HeroSection() {
 						to { opacity: 1; transform: translateY(0);}
 					}
 					@keyframes arrowglow {
-						from { filter: drop-shadow(0 0 12px #22c55e) drop-shadow(0 0 32px #22c55e);}
-						to { filter: drop-shadow(0 0 24px #22c55e) drop-shadow(0 0 48px #22c55e);}
+						from { filter: drop-shadow(0 0 12px white) drop-shadow(0 0 32px white);}
+						to { filter: drop-shadow(0 0 24px white) drop-shadow(0 0 48px white);}
 					}
 					@keyframes arrowbounce {
 						0% { transform: translateY(0);}
