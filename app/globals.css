@@ -15,7 +15,7 @@ body {
 	.carousel-track { @apply flex gap-6 overflow-x-auto snap-x snap-mandatory px-6 scroll-smooth; }
 
 	.project-card { @apply relative snap-center p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white hover:border-green-400 transition-all duration-300 shadow-lg }
-	.project-card-gradient { @apply absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5; }
+	.project-card-gradient { @apply absolute inset-0 bg-white; }
 	.project-card-inner { @apply relative z-10 flex flex-col; }
 	.project-image { @apply  relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-gray-100; }
 	.project-title { @apply text-xl font-bold text-gray-800 mb-1; }

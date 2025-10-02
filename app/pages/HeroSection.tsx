@@ -48,7 +48,7 @@ export default function HeroSection() {
 						userSelect: 'auto',
 					}}
 				>
-					<div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5" />
+					<div className="absolute inset-0 bg-white" />
 					<motion.div
 						aria-hidden
 						initial={{ opacity: 0.4, scale: 0.98 }}
@@ -56,7 +56,7 @@ export default function HeroSection() {
 						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
 						className="absolute inset-0 z-0"
 					>
-						<div className="absolute inset-0 rounded-3xl blur-2xl bg-green-500/10" />
+						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
 					</motion.div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">

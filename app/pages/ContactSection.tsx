@@ -11,7 +11,7 @@ export default function ContactSection() {
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white shadow-lg"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white shadow-lg hover:border-green-500 transition-all duration-300"
 				>
 					<div className="absolute inset-0" />
 					<motion.div
@@ -21,7 +21,7 @@ export default function ContactSection() {
 						transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
 						className="absolute inset-0 z-0"
 					>
-						<div className="absolute inset-0 rounded-3xl blur-2xl bg-green-500/10" />
+						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
 					</motion.div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">

@@ -4,14 +4,16 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import {projects} from './Constants';
+import { projects } from './Constants';
 import { Skeleton } from "@/components/ui/skeleton";
+
 export default function ProjectsSection() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [isAutoplay, setIsAutoplay] = useState(true);
+  const [imageLoadingStates, setImageLoadingStates] = useState<{ [key: string]: boolean }>({});
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
@@ -55,14 +57,11 @@ export default function ProjectsSection() {
 
   useEffect(() => {
     if (!emblaApi || !isAutoplay) return;
-    
     const autoplay = setInterval(() => {
       emblaApi.scrollNext();
     }, 3000);
-
     return () => clearInterval(autoplay);
   }, [emblaApi, isAutoplay]);
-
 
   const handlePrev = () => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -90,6 +89,13 @@ export default function ProjectsSection() {
     }));
   };
 
+  useEffect(() => {
+    const initialStates: { [key: string]: boolean } = {};
+    projects.forEach((p: any) => {
+      initialStates[p.title] = false;
+    });
+    setImageLoadingStates(initialStates);
+  }, []);
 
   if (!isLoaded) {
     return (
@@ -194,12 +200,9 @@ export default function ProjectsSection() {
                       </div>
                     </div>
                   </article>
-				  
                 </div>
               ))}
-            
             </div>
-			 
           </div>
         </div>
         {isDesktop ? (
