@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import { TruckElectricIcon } from 'lucide-react';
+import Spline from '@splinetool/react-spline';
 const WHOAMI = '$ whoami';
 const NAME = 'Elle Szabo';
 
@@ -37,99 +38,44 @@ export default function HeroSection() {
 			`,
 			backgroundSize: '20px 20px'
 		}}>
+			{/* Spline 3D Scene */}
+			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
+				<Spline 
+					scene="https://prod.spline.design/V1U2zZdjZu2MvXSu/scene.splinecode"
+					style={{ width: '100%', height: '100%' }}
+				/>
+			</div>
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"></div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
-					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
+					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/40 hover:border-green-400 flex flex-col items-stretch shadow-lg"
-					style={{
-						minWidth: '320px',
-						maxWidth: '90vw',
-						width: '38rem',
-						padding: '2.5rem 2.5rem 2rem 2.5rem',
-						boxShadow: '0 8px 40px 0 #0008',
-						pointerEvents: 'auto',
-						userSelect: 'auto',
-					}}
+					className="text-center"
 				>
-					<div className="absolute inset-0 bg-white/40" />
-					<div className="absolute inset-0 z-0">
-						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
-					</div>
-					<div className="relative z-10">
-						<div className="flex items-center gap-2 mb-6">
-							<div className="w-3 h-3 rounded-full bg-red-500" />
-							<div className="w-3 h-3 rounded-full bg-yellow-500" />
-							<div className="w-3 h-3 rounded-full bg-green-500" />
-						</div>
-						<div className="font-mono">
-							{showTerminal && (
-								<motion.p
-									className="text-green-500 mb-2 text-lg md:text-2xl"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1.2 }}
-									style={{
-										letterSpacing: '0.01em',
-										pointerEvents: 'none',
-										userSelect: 'none',
-									}}
-								>
-									<Typewriter
-										words={[WHOAMI]}
-										cursor={true}
-									/>
-								</motion.p>
-							)}
-							<div style={{
-								minHeight: '1.2em',
-								marginBottom: '1rem',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'flex-start'
-							}}>
-								<motion.h1
-									className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 0.7, ease: 'easeOut' }}
-									style={{
-										color: '#1a1a1a',
-										textShadow: '0 0 1px #1a1a1a, 0 0 1px #1a1a1a, 0 0 1px #1a1a1a',
-										letterSpacing: '-0.05em',
-										whiteSpace: 'nowrap',
-										marginTop: '.3em',
-									}}
-								>
-									{NAME}
-								</motion.h1>
-							</div>
-							{showTerminal && (
-								<motion.p
-									className="text-green-500 mt-2 mb-2 text-base md:text-lg"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1.2, delay: 0.2 }}
-								>
-									$ title --current
-								</motion.p>
-							)}
-							{showTerminal && (
-								<motion.div
-									className="w-full flex justify-center mt-4"
-									initial={{ opacity: 0, y: 10 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 1.7, ease: 'easeOut' }}
-								>
-									<span className="text-green-400 font-bold text-lg mb-1 font-mono" style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}>
-										Software Engineer
-									</span>
-								</motion.div>
-							)}
-						</div>
-					</div>
+					<motion.h1
+						className="text-6xl md:text-8xl font-extrabold tracking-tight mb-6 text-white"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.7, ease: 'easeOut' }}
+						style={{
+							letterSpacing: '-0.05em',
+							textShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
+						}}
+					>
+						{NAME}
+					</motion.h1>
+					<motion.div
+						className="text-2xl md:text-3xl font-light text-white/90 mb-8"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+						style={{
+							textShadow: '0 0 10px rgba(255, 255, 255, 0.2)',
+						}}
+					>
+						Software Engineer
+					</motion.div>
 				</motion.div>
 			</div>
 			{showArrow && (
