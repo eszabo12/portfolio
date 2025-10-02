@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import {
   Collapsible,
   CollapsibleContent,
@@ -86,14 +87,36 @@ export default function Experience() {
           Experience
         </h2>
         <Collapsible open={open} onOpenChange={setOpen}>
-          <div className="grid grid-cols-1 gap-8">
-            {visibleExperiences.map((project, index) => (
-              <Card
-                key={index}
-                className="relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-white/40 pointer-events-none" />
-                <div className="relative z-10">
+          <div className="relative">
+            {/* Progress Line */}
+            <motion.div 
+              className="absolute left-8 top-0 w-1 bg-green-400 rounded-full z-10"
+              initial={{ height: 0 }}
+              whileInView={{ height: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+            ></motion.div>
+            
+            <div className="grid grid-cols-1 gap-8">
+              {visibleExperiences.map((project, index) => (
+                <div key={index} className="relative flex items-start">
+                  {/* Progress Dot */}
+                  <motion.div 
+                    className="absolute left-6 w-4 h-4 bg-green-400 rounded-full z-20 border-2 border-white shadow-lg"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: index * 0.2,
+                      ease: "easeOut"
+                    }}
+                  ></motion.div>
+                  
+                  <div className="ml-16 flex-1">
+                    <Card className="relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300">
+                      <div className="absolute inset-0 bg-white/40 pointer-events-none" />
+                      <div className="relative z-10">
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold text-gray-800">{project.title}</CardTitle>
                     <CardDescription className="text-green-400 font-mono">{project.description}</CardDescription>
@@ -115,9 +138,12 @@ export default function Experience() {
                       ))}
                     </div>
                   </CardContent>
+                      </div>
+                    </Card>
+                  </div>
                 </div>
-              </Card>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="flex justify-center mt-8">
             <CollapsibleTrigger asChild>
