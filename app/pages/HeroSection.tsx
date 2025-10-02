@@ -10,6 +10,9 @@ const NAME = 'Elle Szabo';
 export default function HeroSection() {
 	const [showTerminal, setShowTerminal] = useState(false);
 	const [showArrow, setShowArrow] = useState(false);
+	const [screenHeight, setScreenHeight] = useState(
+		typeof window !== 'undefined' ? window.innerHeight : 0
+	);
 
 	const whoamiDelay = 400;
 	const titleDelay = WHOAMI.length * 90 + 1000;
@@ -29,14 +32,30 @@ export default function HeroSection() {
 		}
 	}, [showTerminal, arrowDelay]);
 
+	useEffect(() => {
+		function handleResize() {
+			setScreenHeight(window.innerHeight);
+		}
+		if (typeof window !== 'undefined') {
+			setScreenHeight(window.innerHeight);
+			window.addEventListener('resize', handleResize);
+			return () => window.removeEventListener('resize', handleResize);
+		}
+	}, []);
+
 	return (
-		<section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden" style={{ 
-			backgroundImage: `
-				linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
-				linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)
-			`,
-			backgroundSize: '20px 20px'
-		}}>
+		<section
+			className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden"
+			style={{
+				backgroundImage: `
+					linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)
+				`,
+				backgroundSize: '20px 20px',
+				paddingTop: typeof window !== 'undefined' && window.innerWidth < 640 ? '-8px' : undefined,
+				minHeight: typeof window !== 'undefined' && window.innerWidth < 640 ? `calc(${screenHeight}px - 8px)` : `${screenHeight}px`,
+			}}
+		>
 			<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"></div>
 			<div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-none select-none" style={{ minHeight: '60vh' }}>
 				<motion.div
@@ -56,7 +75,7 @@ export default function HeroSection() {
 				>
 					<div className="absolute inset-0 bg-white/40" />
 					<div className="absolute inset-0 z-0">
-						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
+						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white/40" />
 					</div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">
