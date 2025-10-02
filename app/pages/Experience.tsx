@@ -17,6 +17,7 @@ import {
 
 export default function Experience() {
   const [open, setOpen] = useState(false);
+  const [cardTransforms, setCardTransforms] = useState<Record<number, { x: number; y: number }>>({});
 
   const experiences = [
     {
@@ -80,6 +81,24 @@ export default function Experience() {
 
   const visibleExperiences = open ? experiences : experiences.slice(0, 4);
 
+  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const mouseX = e.clientX - centerX;
+    const mouseY = e.clientY - centerY;
+    
+    const moveX = -mouseX * 0.005;
+    const moveY = -mouseY * 0.005;
+    
+    setCardTransforms(prev => ({ ...prev, [index]: { x: moveX, y: moveY } }));
+  };
+
+  const handleCardMouseLeave = (index: number) => {
+    setCardTransforms(prev => ({ ...prev, [index]: { x: 0, y: 0 } }));
+  };
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -114,7 +133,14 @@ export default function Experience() {
                   ></motion.div>
                   
                   <div className="ml-16 flex-1">
-                    <Card className="relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300">
+                    <Card 
+                      className="card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300"
+                      onMouseMove={(e) => handleCardMouseMove(e, index)}
+                      onMouseLeave={() => handleCardMouseLeave(index)}
+                      style={{
+                        transform: `translate(${cardTransforms[index]?.x || 0}px, ${cardTransforms[index]?.y || 0}px)`
+                      }}
+                    >
                       <div className="absolute inset-0 bg-white/40 pointer-events-none" />
                       <div className="relative z-10">
                   <CardHeader>

@@ -14,6 +14,7 @@ export default function ProjectsSection() {
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [isAutoplay, setIsAutoplay] = useState(true);
   const [imageLoadingStates, setImageLoadingStates] = useState<{ [key: string]: boolean }>({});
+  const [cardTransforms, setCardTransforms] = useState<Record<number, { x: number; y: number }>>({});
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
@@ -89,6 +90,24 @@ export default function ProjectsSection() {
     }));
   };
 
+  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const mouseX = e.clientX - centerX;
+    const mouseY = e.clientY - centerY;
+    
+    const moveX = -mouseX * 0.005;
+    const moveY = -mouseY * 0.005;
+    
+    setCardTransforms(prev => ({ ...prev, [index]: { x: moveX, y: moveY } }));
+  };
+
+  const handleCardMouseLeave = (index: number) => {
+    setCardTransforms(prev => ({ ...prev, [index]: { x: 0, y: 0 } }));
+  };
+
   useEffect(() => {
     const initialStates: { [key: string]: boolean } = {};
     projects.forEach((p: any) => {
@@ -137,7 +156,14 @@ export default function ProjectsSection() {
                       : 'h-[520px] max-h-[600px] min-h-[400px] w-[90%] max-w-[320px] min-w-[220px]'
                   }`}
                 >
-                  <article className="project-card h-full flex flex-col">
+                  <article 
+                    className="project-card card-hover-effect h-full flex flex-col"
+                    onMouseMove={(e) => handleCardMouseMove(e, idx)}
+                    onMouseLeave={() => handleCardMouseLeave(idx)}
+                    style={{
+                      transform: `translate(${cardTransforms[idx]?.x || 0}px, ${cardTransforms[idx]?.y || 0}px)`
+                    }}
+                  >
                     <div className="project-card-gradient" />
                     <div className="project-card-inner flex flex-col h-full">
                       <div className={`project-image relative w-full mb-4 ${

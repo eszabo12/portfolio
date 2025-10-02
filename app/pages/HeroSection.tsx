@@ -91,7 +91,7 @@ export default function HeroSection() {
 									animate={{ opacity: 1 }}
 									transition={{ duration: 1.2 }}
 									style={{
-										letterSpacing: '0.01em',
+										letterSpacing: '0.005em',
 										pointerEvents: 'none',
 										userSelect: 'none',
 									}}

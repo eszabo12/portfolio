@@ -182,3 +182,8 @@ body {
 .contact-button:hover {
 	@apply bg-green-500 text-white border-green-500;
 }
+
+.card-hover-effect {
+	transition: transform 0.1s ease-out;
+	transform-style: preserve-3d;
+}

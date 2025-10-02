@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function GitHubContributions() {
+	const [cardTransform, setCardTransform] = useState({ x: 0, y: 0 });
 	const MIN_COLS = 14;
 	const MAX_COLS_DESKTOP = 30;
 	const MAX_COLS_MOBILE = 20;
@@ -14,6 +15,24 @@ export default function GitHubContributions() {
 		contributions: Array<{ count: number; date: string; level: number }>;
 	} | null>(null);
 	const [numCols, setNumCols] = useState(MIN_COLS);
+
+	const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+		const rect = e.currentTarget.getBoundingClientRect();
+		const centerX = rect.left + rect.width / 2;
+		const centerY = rect.top + rect.height / 2;
+		
+		const mouseX = e.clientX - centerX;
+		const mouseY = e.clientY - centerY;
+		
+		const moveX = -mouseX * 0.005;
+		const moveY = -mouseY * 0.005;
+		
+		setCardTransform({ x: moveX, y: moveY });
+	};
+
+	const handleCardMouseLeave = () => {
+		setCardTransform({ x: 0, y: 0 });
+	};
 
 	function calculateCols(width: number) {
 		const isMobile = width < 640;
@@ -60,7 +79,7 @@ export default function GitHubContributions() {
 					} w-3 h-3 rounded-full`}
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.7, delay: 0.01 * index }}
+					transition={{ duration: 0.7, delay: 0.005 * index }}
 				/>
 			),
 		);
@@ -93,7 +112,14 @@ export default function GitHubContributions() {
 					delay: 0
 				}}
 			>
-				<Card className="relative rounded-[25px] border-2 border-gray-200 bg-white/80 shadow-lg flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300 group">
+				<Card 
+					className="card-hover-effect relative rounded-[25px] border-2 border-gray-200 bg-white/80 shadow-lg flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300 group"
+					onMouseMove={handleCardMouseMove}
+					onMouseLeave={handleCardMouseLeave}
+					style={{
+						transform: `translate(${cardTransform.x}px, ${cardTransform.y}px)`
+					}}
+				>
 					<span
 						className="pointer-events-none absolute -top-2 -right-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 z-20"
 						aria-hidden="true"
@@ -112,7 +138,7 @@ export default function GitHubContributions() {
 					<CardContent className="p-0">
 						<div className="flex items-center mb-2">
 							<svg width="20" height="20" fill="white" viewBox="0 0 24 24" className="mr-2">
-								<path fill="#1a1a1a" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
+								<path fill="#1a1a1a" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.005 10.005 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
 							</svg>
 							<span className="text-gray-600 font-mono text-sm">eszabo12</span>
 						</div>
