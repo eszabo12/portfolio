@@ -43,7 +43,7 @@ export default function HeroSection() {
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/40 hover:border-green-400 flex flex-col items-stretch shadow-lg"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/40 hover:border-green-400 flex flex-col items-stretch shadow-lg"
 					style={{
 						minWidth: '320px',
 						maxWidth: '90vw',

@@ -11,7 +11,7 @@ export default function ContactSection() {
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/40 shadow-lg hover:border-green-500 transition-all duration-300"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-500 transition-all duration-300"
 				>
 					<div className="absolute inset-0" />
 					<motion.div
@@ -38,7 +38,7 @@ export default function ContactSection() {
 							>
 								$ contact --info
 							</motion.p>
-							<h2 className="text-3xl font-bold mb-8 text-gray-800 ">Let&apos;s Connect</h2>
+							<h2 className="text-3xl font-bold mb-8 text-gray-800 relative z-20">Let&apos;s Connect</h2>
 						
 							<motion.p
 								className="text-green-500 mt-8 mb-2"

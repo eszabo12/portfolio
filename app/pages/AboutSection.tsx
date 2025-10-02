@@ -13,7 +13,7 @@ export default function AboutSection() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="text-3xl font-bold mb-12 text-center text-gray-800"
+					className="text-3xl font-bold mb-12 text-center text-gray-800 relative z-20"
 				>
 					About Me
 				</motion.h2>
@@ -26,7 +26,7 @@ export default function AboutSection() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="flex flex-col items-center"
 					>
-							<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300 w-full h-full flex flex-col items-center justify-center">
+							<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300 w-full h-full flex flex-col items-center justify-center">
 							<div className="absolute inset-0 bg-white/40" />
 							<div className="relative w-full h-full min-h-[320px] sm:min-h-[400px]">
 								<Image
@@ -47,7 +47,7 @@ export default function AboutSection() {
 							transition={{ duration: 0.6, delay: 0.4 }}
 							className="flex-1 flex flex-col justify-center"
 						>
-							<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300 h-full flex flex-col justify-center">
+							<div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-400 transition-all duration-300 h-full flex flex-col justify-center">
 								<div className="absolute inset-0 bg-white/40" />
 								<div className="relative z-10">
 									<div>
