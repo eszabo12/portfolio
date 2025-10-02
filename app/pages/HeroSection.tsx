@@ -160,13 +160,13 @@ export default function HeroSection() {
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						style={{
-							filter: 'drop-shadow(0 0 12px #22c55e) drop-shadow(0 0 32px #22c55e)',
-							animation: 'arrowglow 1.5s infinite alternate, arrowbounce 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+							filter: 'drop-shadow(0 0 10px #fff) drop-shadow(0 0 24px #fff)',
+							animation: 'arrowglowwhite 1.5s infinite alternate, arrowbounce 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 						}}
 					>
 						<path
 							d="M18 8V28M18 28L10 20M18 28L26 20"
-							stroke="#22c55e"
+							stroke="#fff"
 							strokeWidth="2.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
@@ -180,9 +180,9 @@ export default function HeroSection() {
 						from { opacity: 0; transform: translateY(10px);}
 						to { opacity: 1; transform: translateY(0);}
 					}
-					@keyframes arrowglow {
-						from { filter: drop-shadow(0 0 12px #22c55e) drop-shadow(0 0 32px #22c55e);}
-						to { filter: drop-shadow(0 0 24px #22c55e) drop-shadow(0 0 48px #22c55e);}
+					@keyframes arrowglowwhite {
+						from { filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 24px #fff);}
+						to { filter: drop-shadow(0 0 18px #fff) drop-shadow(0 0 36px #fff);}
 					}
 					@keyframes arrowbounce {
 						0% { transform: translateY(0);}

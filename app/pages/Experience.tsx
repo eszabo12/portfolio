@@ -155,7 +155,7 @@ export default function Experience() {
                   <svg
                     className="w-7 h-7 transition-transform duration-200"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="green-500"
                     strokeWidth={2}
                     viewBox="0 0 24 24"
                   >
@@ -165,7 +165,7 @@ export default function Experience() {
                   <svg
                     className="w-7 h-7 transition-transform duration-200"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#22c55e"
                     strokeWidth={1}
                     viewBox="0 0 24 24"
                   >

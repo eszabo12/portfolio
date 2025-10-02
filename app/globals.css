@@ -30,7 +30,7 @@ body {
 		radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.25) 0%, transparent 50%),
 		radial-gradient(circle at 10% 60%, rgba(236, 72, 153, 0.25) 0%, transparent 50%),
 		radial-gradient(circle at 60% 10%, rgba(59, 130, 246, 0.25) 0%, transparent 50%);
-	animation: float 20s ease-in-out infinite;
+	animation: float 1s ease-in-out infinite;
 	z-index: 0;
 	pointer-events: none;
 }

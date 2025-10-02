@@ -232,11 +232,11 @@ export default function ProjectsSection() {
               >
                 {isAutoplay ? (
                   <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                    <path d="M6 4h2v12H6V4zM12 4h2v12h-2V4z" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 4h2v12H6V4zM12 4h2v12h-2V4z" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 ) : (
                   <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                    <path d="M6 4l8 6-8 6V4z" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 4l8 6-8 6V4z" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 )}
               </button>
@@ -248,7 +248,7 @@ export default function ProjectsSection() {
                 type="button"
               >
                 <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                  <path d="M13 15l-5-5 5-5" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13 15l-5-5 5-5" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
               <button
@@ -259,7 +259,7 @@ export default function ProjectsSection() {
                 type="button"
               >
                 <svg className={isDesktop ? "icon-svg-desktop" : "icon-svg-mobile"} fill="none" viewBox="0 0 20 20">
-                  <path d="M7 5l5 5-5 5" stroke="green" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M7 5l5 5-5 5" stroke="#22c55e" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
             </div>
