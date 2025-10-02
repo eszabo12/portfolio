@@ -90,7 +90,7 @@ export default function ProjectsSection() {
     }));
   };
 
-  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+  const handleCardMouseMove = (e: React.MouseEvent<HTMLElement>, index: number) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;

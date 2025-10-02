@@ -118,3 +118,63 @@ export const projects = [
         ]
       },
   ];
+
+export const experiences = [
+  {
+    title: 'Dripos (YC S20)',
+    description: '2024 - 2025',
+    details: [
+      'Led the integration of Parafin capital loans into the Dripos ecosystem',
+      'Developed the accounting feature from 0 to 1, collaborating with Layer Financial',
+      'Collaborated with customer facing teams to iterate on intuitive UI/UX for payroll features, driving a 44% attach rate and >100 NRR',
+      'Improved performance of sales reports by creating Redshift data warehouses and debugged fatal SQL errors',
+      'Contributed #2 most lines of code to organization',
+    ],
+    tech: ['Typescript', 'React', 'Next.js', 'Redis', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
+  },
+  {
+    title: 'Lucendo Labs, Inc.',
+    description: '2023 - 2024',
+    details: [
+      'Co-Founded a marketplace app company, raised an angel round from investors, and led 11 partnerships across the NYC ',
+      'Led design and development a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
+      'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
+    ],
+    tech: ['Dart', 'Flutter', 'React', 'Firebase'],
+  },
+  {
+    title: 'Microsoft',
+    description: '2021',
+    details: [
+      'Proved the feasibility of a fullstack proof-of-concept search indexing process for the Windows file explorer',
+      'Demoed to stakeholders and led adoption into the Windows 11 release'
+    ],
+    tech: ['C#', 'C/C++'],
+  },
+  {
+    title: 'NASA',
+    description: '2020',
+    details: [
+      'Built a navigation pipeline for an autonomous inspection rover',
+    ],
+    tech: ['C/C++', 'ROS', 'Python'],
+  },
+  {
+    title: 'Lucid Circuit',
+    description: '2020 - 2021',
+    details: [
+      'Simulated a machine learning model for satellite telemetry using Python TensorBoard Lite',
+      'Developed an API for electrical engineers that stores all information about architecture hardware parsed from JSON',
+    ],
+    tech: ['Python', 'TensorBoard', 'OpenCV', 'C/C++'],
+  },
+  {
+    title: 'Totall Metal Recycling',
+    description: '2019',
+    details: [
+      'Built Java web applications backed by a relational MySQL database',
+      'Created a VBScript-to-Java transpiler in Python to translate thousands of stored procedures',
+    ],
+    tech: ['Java Swing', 'MySQL', 'Python'],
+  },
+];

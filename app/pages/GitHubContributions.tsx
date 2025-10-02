@@ -16,7 +16,7 @@ export default function GitHubContributions() {
 	} | null>(null);
 	const [numCols, setNumCols] = useState(MIN_COLS);
 
-	const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+	const handleCardMouseMove = (e: React.MouseEvent<HTMLElement>) => {
 		const rect = e.currentTarget.getBoundingClientRect();
 		const centerX = rect.left + rect.width / 2;
 		const centerY = rect.top + rect.height / 2;
