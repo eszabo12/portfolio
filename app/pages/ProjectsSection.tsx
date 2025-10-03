@@ -77,6 +77,7 @@ export default function ProjectsSection() {
   };
 
   const handleImageLoad = (projectId: string) => {
+	console.log('image loaded', projectId);
     setImageLoadingStates(prev => ({
       ...prev,
       [projectId]: true
@@ -166,19 +167,21 @@ export default function ProjectsSection() {
                   >
                     <div className="project-card-gradient" />
                     <div className="project-card-inner flex flex-col h-full">
-                      <div className={`project-image relative w-full mb-4 ${
+                      <div className={`project-image relative rounded-xl w-full mb-4 ${
                         isDesktop ? 'h-112' : 'h-48'
                       }`}>
                         {!imageLoadingStates[p.title] && (
-                          <Skeleton className="absolute inset-0 rounded-xl bg-gray-400" />
+                          <Skeleton className="absolute inset-0 rounded-xl bg-gray-100" />
                         )}
                         {imageLoadingStates[p.title] && <Image 
                           src={p.img} 
                           alt={p.title} 
                           fill 
+						  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className={`object-cover rounded-xl transition-opacity duration-300
                           }`}
-                          onLoad={() => handleImageLoad(p.title)}
+						  loading="eager"
+                          onLoadingComplete={() => handleImageLoad(p.title)}
                           onError={() => handleImageError(p.title)}
                         />}
                       </div>
