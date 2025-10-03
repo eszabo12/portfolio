@@ -170,19 +170,17 @@ export default function ProjectsSection() {
                         isDesktop ? 'h-112' : 'h-48'
                       }`}>
                         {!imageLoadingStates[p.title] && (
-                          <Skeleton className="absolute inset-0 rounded-xl" />
+                          <Skeleton className="absolute inset-0 rounded-xl bg-gray-400" />
                         )}
-                        <Image 
+                        {imageLoadingStates[p.title] && <Image 
                           src={p.img} 
                           alt={p.title} 
                           fill 
-                          className={`object-cover rounded-xl transition-opacity duration-300 ${
-                            imageLoadingStates[p.title] ? 'opacity-100' : 'opacity-0'
+                          className={`object-cover rounded-xl transition-opacity duration-300
                           }`}
-                          loading="lazy"
                           onLoad={() => handleImageLoad(p.title)}
                           onError={() => handleImageError(p.title)}
-                        />
+                        />}
                       </div>
                         <h3 className="project-title">{p.title}</h3>
                       {p.date && <p className="text-green-400 font-mono text-xs mb-2">{p.date}</p>}
