@@ -77,7 +77,6 @@ export default function ProjectsSection() {
   };
 
   const handleImageLoad = (projectId: string) => {
-	console.log('image loaded', projectId);
     setImageLoadingStates(prev => ({
       ...prev,
       [projectId]: true
@@ -173,7 +172,7 @@ export default function ProjectsSection() {
                         {!imageLoadingStates[p.title] && (
                           <Skeleton className="absolute inset-0 rounded-xl bg-gray-100" />
                         )}
-                        {imageLoadingStates[p.title] && <Image 
+                        {<Image 
                           src={p.img} 
                           alt={p.title} 
                           fill 
