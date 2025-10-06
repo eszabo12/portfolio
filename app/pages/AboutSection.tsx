@@ -53,7 +53,7 @@ export default function AboutSection() {
 									<div>
 										<p className="text-gray-600 leading-relaxed mb-4">
 											Hi! 👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! 💻 . 
-											I offer domain expertise in fintech as well as 0-1 founding experience and workflow insights from big tech. 🏢
+											I offer 0-1 founding experience as well as workflow insights from big tech. 🏢
 										</p>
 
 										<p className="text-gray-600 leading-relaxed">

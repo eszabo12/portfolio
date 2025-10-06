@@ -128,6 +128,13 @@ export const projects = [
       skills: ['TypeScript','cheerio', 'npm'],
       gh: true,
       ghLink: 'https://github.com/eszabo12/Minimum-Wage',
+    // buttons: [
+    //   {
+    //     label: 'Demo',
+    //     href: 'https://min-wage-demo.vercel.app/',
+    //     className: 'btn-blue'
+    //   }
+    // ],
     },
   ];
 
