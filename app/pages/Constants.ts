@@ -117,6 +117,18 @@ export const projects = [
           }
         ]
       },
+    {
+      img: '/min-wage.jpeg',
+      title: 'min-wage npm package',
+      date: '2025',
+      description: [
+        'Published an npm package that scrapes live from the Department of Labor website ',
+        'Fetches the latest minimum wage data for all US states and territories for use in compliant payroll features',
+    ],
+      skills: ['TypeScript','cheerio', 'npm'],
+      gh: true,
+      ghLink: 'https://github.com/eszabo12/Minimum-Wage',
+    },
   ];
 
 export const experiences = [
