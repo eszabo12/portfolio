@@ -62,30 +62,30 @@ export const projects = [
       gh: true,
       ghLink: 'https://github.com/icaros-usc/pyribs/pull/208',
     },
-    {
-      img: '/oculus.jpg',
-      title: 'Mind Palace',
-      date: '2023',
-      description: [
-        'Created a VR game with an avatar which prompted Alzheimer\'s patients to discuss their memories',
-        'Transcribed the text from voice, summarized, and generated AI images of their memories in realtime'
-      ],
-      skills: ['C#', 'OpenAI'],
-      gh: true,
-      ghLink: 'https://github.com/puentesca/newtreehacks2023',
-    },
-    {
-      img: '/capture.png',
-      title: 'Image Capturing Pipeline',
-      date: '2023',
-      description: [
-        'First open source application for capturing images, not just videos, from the Intel Realsense Camera',
-        'Used by researchers in Japan and Korea to create custom datasets',
-      ],
-      skills: ['C/C++'],
-      gh: true,
-      ghLink: 'https://github.com/eszabo12/image_capturing_pipeline',
-    },
+    // {
+    //   img: '/oculus.jpg',
+    //   title: 'Mind Palace',
+    //   date: '2023',
+    //   description: [
+    //     'Created a VR game with an avatar which prompted Alzheimer\'s patients to discuss their memories',
+    //     'Transcribed the text from voice, summarized, and generated AI images of their memories in realtime'
+    //   ],
+    //   skills: ['C#', 'OpenAI'],
+    //   gh: true,
+    //   ghLink: 'https://github.com/puentesca/newtreehacks2023',
+    // },
+    // {
+    //   img: '/capture.png',
+    //   title: 'Image Capturing Pipeline',
+    //   date: '2023',
+    //   description: [
+    //     'First open source application for capturing images, not just videos, from the Intel Realsense Camera',
+    //     'Used by researchers in Japan and Korea to create custom datasets',
+    //   ],
+    //   skills: ['C/C++'],
+    //   gh: true,
+    //   ghLink: 'https://github.com/eszabo12/image_capturing_pipeline',
+    // },
     {
         img: '/daily_insights.gif',
         title: 'Daily Insights - Dripos',
@@ -122,7 +122,7 @@ export const projects = [
       title: 'min-wage npm package',
       date: '2025',
       description: [
-        'Published an npm package that scrapes live from the Department of Labor website ',
+        'Published a Typescript npm package that scrapes live from the Department of Labor website ',
         'Fetches the latest minimum wage data for all US states and territories for use in compliant payroll features',
     ],
       skills: ['TypeScript','cheerio', 'npm'],
@@ -135,6 +135,20 @@ export const projects = [
     //     className: 'btn-blue'
     //   }
     // ],
+    },
+    {
+      img: '/folio.png',
+      title: 'Portfolio  Website',
+      date: '2025',
+      description: [
+        'Designed and built my personal portfolio site to showcase experience',
+        'Implemented with a modern TypeScript/Node.js stack, deployed on Vercel',
+        'Features smooth carousels (Embla), and custom Tailwind CSS styling'
+      ],
+      skills: ['TypeScript', 'Node.js', 'Vercel', 'Embla', 'Tailwind CSS'],
+      gh: true,
+      ghLink: 'https://github.com/eszabo12/portfolio',
+      
     },
   ];
 
