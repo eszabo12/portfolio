@@ -11,6 +11,7 @@ body {
 	color: #1a1a1a;
 }
 
+/* Make the background a bit more green */
 .floating-background {
 	position: relative;
 	overflow-x: hidden;
@@ -24,19 +25,16 @@ body {
 	width: calc(100% + 100px);
 	height: calc(100% + 100px);
 	background: 
-		radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.3) 0%, transparent 50%),
-		radial-gradient(circle at 80% 30%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
-		radial-gradient(circle at 40% 70%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-		radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.25) 0%, transparent 50%),
-		radial-gradient(circle at 10% 60%, rgba(236, 72, 153, 0.25) 0%, transparent 50%),
-		radial-gradient(circle at 60% 10%, rgba(59, 130, 246, 0.25) 0%, transparent 50%);
-	animation: float 1s ease-in-out infinite;
+		radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.38) 0%, transparent 50%),
+		radial-gradient(circle at 80% 30%, rgba(34, 197, 94, 0.18) 0%, transparent 50%),
+		radial-gradient(circle at 40% 70%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+		radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.32) 0%, transparent 50%),
+		radial-gradient(circle at 10% 60%, rgba(236, 72, 153, 0.18) 0%, transparent 50%),
+		radial-gradient(circle at 60% 10%, rgba(34, 197, 94, 0.15) 0%, transparent 50%);
+	animation: float 10s ease-in-out infinite;
 	z-index: 0;
 	pointer-events: none;
 }
-
-
-
 
 .hero-section {
 	position: relative;
