@@ -138,19 +138,27 @@ export const projects = [
     },
   ];
 
-export const experiences = [
-  {
-    title: 'Dripos (YC S20)',
-    description: '2024 - 2025',
-    details: [
-      'Led the integration of Parafin capital loans into the Dripos ecosystem',
-      'Developed the accounting feature from 0 to 1, collaborating with Layer Financial',
-      'Collaborated with customer facing teams to iterate on intuitive UI/UX for payroll features, driving a 44% attach rate and >100 NRR',
-      'Improved performance of sales reports by creating Redshift data warehouses and debugged fatal SQL errors',
-      'Contributed #2 most lines of code to organization',
-    ],
-    tech: ['Typescript', 'React', 'Next.js', 'Redis', 'Postgres', 'React Native', 'Javascript', 'Go', 'AWS'],
-  },
+  export const experiences = [
+    {
+      title: 'Dripos (YC S20)',
+      description: 'Software Engineer II — Fintech (2024 - 2025)',
+      details: [
+        'Owned all financial features for this SMB fintech POS platform as the sole fintech engineer',
+        'Developed the accounting platform from 0→1 and led integration with Layer Financial for transaction syncing and ledger management',
+        'Ranked #2 in code contributions across the company, driving rapid feature delivery and code quality'
+      ],
+      tech: [
+        'TypeScript',
+        'React',
+        'Next.js',
+        'Redis',
+        'Postgres',
+        'React Native',
+        'Go',
+        'AWS',
+        'Redshift'
+      ],
+    },
   {
     title: 'Lucendo Labs, Inc.',
     description: '2023 - 2024',
