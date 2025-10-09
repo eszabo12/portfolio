@@ -148,7 +148,18 @@ export const projects = [
       skills: ['TypeScript', 'Node.js', 'Vercel', 'Embla', 'Tailwind CSS'],
       gh: true,
       ghLink: 'https://github.com/eszabo12/portfolio',
-      
+    },
+    {
+      img: '/Stripe-Logo.png',
+      title: 'Stripe SDK Extension',
+      date: '2024',
+      description: [
+        'Extended the Stripe Node.js SDK to enable advanced testing of payout triggers and webhook flows in a sandbox environment',
+        'Built custom scripts to simulate payout events, automate test scenarios, and validate integration with downstream financial systems'
+      ],
+      skills: ['TypeScript', 'Node.js', 'Stripe', 'Webhooks', 'Unit Testing'],
+      gh: true,
+      ghLink: 'https://github.com/eszabo12/stripe-cli/tree/elle/trigger',
     },
   ];
 
