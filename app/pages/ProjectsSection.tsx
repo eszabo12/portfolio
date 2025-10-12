@@ -202,12 +202,12 @@ export default function ProjectsSection() {
                       </div>
                       <div className="project-actions mt-auto flex flex-wrap gap-2">
                         {p.gh && (
-                          <motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" className="contact-button px-4 py-2 rounded-xl text-sm font-medium">
+                          <motion.a href={p.ghLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-green">
                             <span>GitHub</span>
                           </motion.a>
                         )}
                         {'demoLink' in p && p.demoLink && (
-                          <motion.a href={p.demoLink} target="_blank" rel="noopener noreferrer" className="contact-button-blue px-4 py-2 rounded-xl text-sm font-medium">
+                          <motion.a href={p.demoLink} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} className="btn-blue">
                             <span>Demo</span>
                           </motion.a>
                         )}
@@ -218,7 +218,7 @@ export default function ProjectsSection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
-                            className="contact-button-blue px-4 py-2 rounded-xl text-sm font-medium"
+                            className={btn.className}
                           >
                             <span>{btn.label}</span>
                           </motion.a>

@@ -79,18 +79,18 @@ export const projects = [
       gh: true,
       ghLink: 'https://github.com/eszabo12/Mobile_iOS_Bird-esque_Application',
     },
-    // {
-    //   img: '/lunar_lander.gif',
-    //   title: 'Pyribs',
-    //   date: '2022',
-    //   description: [
-    //     'Contributed to open-source Python machine learning library for exploring the latent spaces in diffusion models',
-    //     'Library used by thousands of researchers worldwide'
-    //   ],
-    //   skills: ['Python', 'Jax'],
-    //   gh: true,
-    //   ghLink: 'https://github.com/icaros-usc/pyribs/pull/208',
-    // },
+    {
+      img: '/lunar_lander.gif',
+      title: 'Pyribs',
+      date: '2022',
+      description: [
+        'Contributed to open-source Python machine learning library for exploring the latent spaces in diffusion models',
+        'Library used by thousands of researchers worldwide'
+      ],
+      skills: ['Python', 'Jax'],
+      gh: true,
+      ghLink: 'https://github.com/icaros-usc/pyribs/pull/208',
+    },
     // {
     //   img: '/oculus.jpg',
     //   title: 'Mind Palace',
@@ -141,25 +141,25 @@ export const projects = [
       gh: true,
       ghLink: 'https://github.com/eszabo12/portfolio',
     },
-    //   {
-    //     img: '/flask.gif',
-    //     title: 'AI Research',
-    //     date: '2023',
-    //     description: [
-    //       'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
-    //       'As top 15% of workshop submissions, gave a spotlight presentation at The Conference on Robot Learning (CoRL) in Atlanta, Georgia October 2023'
-    //     ],
-    //     skills: ['Python', 'NLP'],
-    //     gh: true,
-    //     ghLink: 'https://github.com/eszabo12/VLN-CE',
-    //     buttons: [
-    //       {
-    //         label: 'Paper',
-    //         href: 'https://openreview.net/forum?id=uABEHp6tjy',
-    //         className: 'btn-blue'
-    //       }
-    //     ]
-    //   },
+      {
+        img: '/flask.gif',
+        title: 'AI Research',
+        date: '2023',
+        description: [
+          'Innovated on the unique use of contrast sets in my first author AI + Robotics paper as an undergrad. Project highlighted by CoRL and later by NVIDIA Jetson Lab via the continuation of Abrar Anwar',
+          'As top 15% of workshop submissions, gave a spotlight presentation at The Conference on Robot Learning (CoRL) in Atlanta, Georgia October 2023'
+        ],
+        skills: ['Python', 'NLP'],
+        gh: true,
+        ghLink: 'https://github.com/eszabo12/VLN-CE',
+        buttons: [
+          {
+            label: 'Paper',
+            href: 'https://openreview.net/forum?id=uABEHp6tjy',
+            className: 'btn-blue'
+          }
+        ]
+      },
   ];
 
   export const experiences = [
