@@ -13,7 +13,7 @@ export default function AboutSection() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="text-3xl font-bold mb-12 text-center text-gray-800 relative z-20"
+					className="text-3xl font-bold mb-12 text-center text-gray-800 relative z-20 typewriter-header"
 				>
 					About Me
 				</motion.h2>
@@ -51,12 +51,12 @@ export default function AboutSection() {
 								<div className="absolute inset-0 bg-white/40" />
 								<div className="relative z-10">
 									<div>
-										<p className="text-gray-600 leading-relaxed mb-4">
+										<p className="text-gray-600 leading-relaxed mb-4 typewriter-description">
 											Hi! 👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! 💻 . 
 											I offer domain expertise in fintech, as well as 0-1 founding experience and workflow insights from big tech. 🏢
 										</p>
 
-										<p className="text-gray-600 leading-relaxed">
+										<p className="text-gray-600 leading-relaxed typewriter-description">
 											When I'm not coding, you'll find me reading a good book 📚, in the pilates studio, curating a playlist, and tending to my two houseplants.
 										</p>
 									</div>
