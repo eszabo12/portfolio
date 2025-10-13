@@ -51,12 +51,12 @@ export default function AboutSection() {
 								<div className="absolute inset-0 bg-white/40" />
 								<div className="relative z-10">
 									<div>
-										<p className="text-gray-600 leading-relaxed mb-4 font-mono">
+										<p className="text-gray-600 leading-relaxed mb-4">
 											Hi! 👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! 💻 . 
 											I offer domain expertise in fintech, as well as 0-1 founding experience and workflow insights from big tech. 🏢
 										</p>
 
-										<p className="text-gray-600 leading-relaxed font-mono">
+										<p className="text-gray-600 leading-relaxed">
 											When I'm not coding, you'll find me reading a good book 📚, in the pilates studio, curating a playlist, and tending to my two houseplants.
 										</p>
 									</div>
