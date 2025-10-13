@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Collapsible,
@@ -14,7 +14,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { experiences } from './Constants';
+import { experiences, type ExperienceDetail } from './Constants';
 
 export default function Experience() {
   const [open, setOpen] = useState(false);
@@ -59,7 +59,7 @@ export default function Experience() {
             ></motion.div>
             
             <div className="grid grid-cols-1 gap-8">
-              {visibleExperiences.map((project, index) => (
+              {visibleExperiences.map((project: ExperienceDetail, index: number) => (
                 <div key={index} className="relative flex items-start">
                   {/* Progress Dot */}
                   <motion.div 
@@ -91,12 +91,14 @@ export default function Experience() {
                   </CardHeader>
                   <CardContent>
                     <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
-                      {project.details.map((detail, i) => (
-                        <li key={i}>{detail}</li>
+                      {project.details.map((detail: string | React.ReactElement, i: number) => (
+                        <li key={i}>
+                          {detail}
+                        </li>
                       ))}
                     </ul>
                     <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, i) => (
+                      {project.tech.map((tech: string, i: number) => (
                         <span
                           key={i}
                           className="project-chip"

@@ -1,3 +1,4 @@
+import React from 'react';
 
 export const projects = [
     {
@@ -24,18 +25,6 @@ export const projects = [
       skills: ['TypeScript', 'Node.js', 'AWS SMS', 'MySQL'],
       gh: false,
     },
-    // {
-    //   img: '/stream.png',
-    //   title: 'Streaming Chrome Extension',
-    //   date: '2022',
-    //   description: [
-    //     'Developed a chrome extension for HackSC that scrapes Twitch chat data and visualizes sentiment in real time',
-    //     'Connected nltk sentiment library via socketing to browser client',
-    //   ],
-    //   skills: ['JavaScript', 'Chrome Extension', 'nltk', 'Socket.io', 'Flask'],
-    //   gh: true,
-    //   ghLink: 'https://github.com/likhity/twitch-stream-chat-analyzer',
-    // },
     {
       img: '/min-wage.jpeg',
       title: 'min-wage npm package',
@@ -47,13 +36,6 @@ export const projects = [
       skills: ['TypeScript','cheerio', 'npm'],
       gh: true,
       ghLink: 'https://github.com/eszabo12/Minimum-Wage',
-    // buttons: [
-    //   {
-    //     label: 'Demo',
-    //     href: 'https://min-wage-demo.vercel.app/',
-    //     className: 'btn-blue'
-    //   }
-    // ],
     },
     {
       img: '/Stripe-Logo.png',
@@ -91,30 +73,6 @@ export const projects = [
       gh: true,
       ghLink: 'https://github.com/icaros-usc/pyribs/pull/208',
     },
-    // {
-    //   img: '/oculus.jpg',
-    //   title: 'Mind Palace',
-    //   date: '2023',
-    //   description: [
-    //     'Created a VR game with an avatar which prompted Alzheimer\'s patients to discuss their memories',
-    //     'Transcribed the text from voice, summarized, and generated AI images of their memories in realtime'
-    //   ],
-    //   skills: ['C#', 'OpenAI'],
-    //   gh: true,
-    //   ghLink: 'https://github.com/puentesca/newtreehacks2023',
-    // },
-    // {
-    //   img: '/capture.png',
-    //   title: 'Image Capturing Pipeline',
-    //   date: '2023',
-    //   description: [
-    //     'First open source application for capturing images, not just videos, from the Intel Realsense Camera',
-    //     'Used by researchers in Japan and Korea to create custom datasets',
-    //   ],
-    //   skills: ['C/C++'],
-    //   gh: true,
-    //   ghLink: 'https://github.com/eszabo12/image_capturing_pipeline',
-    // },
     {
       img: '/codenames.jpg',
       title: 'Codenames',
@@ -162,14 +120,28 @@ export const projects = [
       },
   ];
 
-  export const experiences = [
+export interface ExperienceDetail {
+  title: string;
+  description: string;
+  details: (string | React.ReactElement)[];
+  tech: string[];
+}
+
+export const experiences: ExperienceDetail[] = [
     {
       title: 'Dripos (YC S20)',
       description: 'Software Engineer II — Fintech (2024 - 2025)',
       details: [
-        'Owned all financial features for this SMB fintech POS platform as the sole fintech engineer',
-        'Developed the accounting platform from 0→1 and led integration with Layer Financial for transaction syncing and ledger management',
-        'Ranked #2 in code contributions across the company, driving rapid feature delivery and code quality'
+        <>
+          Collaborated with customer facing and design teams to iterate on intuitive UI/UX for payroll, driving 44% attach rate, collaborating with{' '}
+          <a href="https://www.checkhq.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Check</a>
+        </>,
+        'Integrated Parafin capital loans into the Dripos ecosystem, improving revshare by 50%',
+        'Led payout architecture improvements, enabling the seamless transfer of ~$2MM per day',
+        <>
+          Developed and launched accounting feature from 0 to 1, collaborating with{' '}
+          <a href="https://www.layerfi.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Layer</a>
+        </>
       ],
       tech: [
         'TypeScript',
