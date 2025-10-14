@@ -39,10 +39,10 @@ export const projects = [
     },
     {
       img: '/Stripe-Logo.png',
-      title: 'Stripe SDK Extension',
+      title: 'Stripe CLI Extension',
       date: '2024',
       description: [
-        'Extended the Stripe Node.js SDK to enable advanced testing of payout triggers and webhook flows in a sandbox environment',
+        'Extended the Stripe Node.js CLI to enable advanced testing of payout triggers and webhook flows in a sandbox environment',
         'Built custom scripts to simulate payout events, automate test scenarios, and validate integration with downstream financial systems'
       ],
       skills: ['TypeScript', 'Node.js', 'Stripe', 'Webhooks', 'Unit Testing'],
