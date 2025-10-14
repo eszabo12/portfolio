@@ -161,7 +161,7 @@ export const experiences: ExperienceDetail[] = [
     description: '2023 - 2024',
     details: [
       'Co-Founded a marketplace app company, raised an angel round from investors, and led 11 partnerships across the NYC ',
-      'Led design and development a fullstack app in Typescript and React for mobile and web using Node.js as the backend',
+      'Led design and development a fullstack app in Typescript and React for mobile and web using Node.js on the backend',
       'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
     ],
     tech: ['Typescript', 'React', 'Dart', 'Figma', 'Vite', 'Firebase'],
