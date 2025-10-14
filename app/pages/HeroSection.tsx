@@ -7,7 +7,11 @@ import { TruckElectricIcon } from 'lucide-react';
 const WHOAMI = '$ whoami';
 const NAME = 'Elle Szabo';
 
-export default function HeroSection() {
+interface HeroSectionProps {
+	isMobile: boolean;
+}
+
+export default function HeroSection({ isMobile }: HeroSectionProps) {
 	const [showTerminal, setShowTerminal] = useState(false);
 	const [showArrow, setShowArrow] = useState(false);
 	const [screenHeight, setScreenHeight] = useState(

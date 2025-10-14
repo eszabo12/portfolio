@@ -16,7 +16,11 @@ import {
 } from "@/components/ui/card";
 import { experiences, type ExperienceDetail } from './Constants';
 
-export default function Experience() {
+interface ExperienceProps {
+	isMobile: boolean;
+}
+
+export default function Experience({ isMobile }: ExperienceProps) {
   const [open, setOpen] = useState(false);
   const [cardTransforms, setCardTransforms] = useState<Record<number, { x: number; y: number }>>({});
 

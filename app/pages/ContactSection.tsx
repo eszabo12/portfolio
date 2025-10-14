@@ -2,44 +2,99 @@
 
 import { motion } from 'framer-motion';
 
-function Footer() {
+import React from 'react';
+
+interface ContactSectionProps {
+	isMobile: boolean;
+}
+
+function Footer({ isMobile }: { isMobile: boolean }) {
+
 	return (
-		<footer className="flex flex-col items-center justify-center py-6 px-6 sm:px-0">
-			<div className="flex items-center gap-2 text-gray-400 text-sm">
-				<div className="flex flex-col items-center gap-1 text-gray-400 text-sm">
-					<span>© 2025 Elle Szabo</span>
-					<span className="flex items-center gap-1">
-						Built with{' '}
-						<a href="https://nextjs.org" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-							<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
-								<circle cx="16" cy="16" r="16" fill="currentColor"/>
-								<path d="M16.004 6.4c-5.302 0-9.604 4.302-9.604 9.604 0 5.302 4.302 9.604 9.604 9.604 5.302 0 9.604-4.302 9.604-9.604 0-5.302-4.302-9.604-9.604-9.604zm0 17.208c-4.2 0-7.604-3.404-7.604-7.604 0-4.2 3.404-7.604 7.604-7.604 4.2 0 7.604 3.404 7.604 7.604 0 4.2-3.404 7.604-7.604 7.604z" fill="#fff"/>
-							</svg>
-							Next.js
-						</a>
-						{', '}
-						<a href="https://vercel.com" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-							<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
-								<path d="M16 6l12 20H4L16 6z" fill="currentColor"/>
-							</svg>
-							Vercel
-						</a>
-						{', and  '}
-						<a href="https://ui.shadcn.com" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-							<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 24 24" fill="none">
-								<rect width="24" height="24" rx="4" fill="currentColor"/>
-								<path d="M7.5 7.5h9v9h-9z" fill="#fff"/>
-							</svg>
-							Shadcn
-						</a>
-					</span>
+		<>
+			<footer className="flex flex-col items-center justify-center py-6 px-6 sm:px-0">
+				<div className="flex items-center gap-2 text-gray-400 text-sm">
+					<div className="flex flex-col items-center gap-1 text-gray-400 text-sm">
+						<span>© 2025 Elle Szabo</span>
+						{isMobile ? (
+							<>
+								<span>Built with</span>
+								<div className="flex items-center gap-2 flex-wrap justify-center text-center">
+									<a
+										href="https://nextjs.org"
+										className="underline hover:text-green-400 flex items-center gap-1"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
+											<circle cx="16" cy="16" r="16" fill="currentColor"/>
+											<path d="M16.004 6.4c-5.302 0-9.604 4.302-9.604 9.604 0 5.302 4.302 9.604 9.604 9.604 5.302 0 9.604-4.302 9.604-9.604 0-5.302-4.302-9.604-9.604-9.604zm0 17.208c-4.2 0-7.604-3.404-7.604-7.604 0-4.2 3.404-7.604 7.604-7.604 4.2 0 7.604 3.404 7.604 7.604 0 4.2-3.404 7.604-7.604 7.604z" fill="#fff"/>
+										</svg>
+										Next.js
+									</a>
+									<span>,</span>
+									<a
+										href="https://vercel.com"
+										className="underline hover:text-green-400 flex items-center gap-1"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
+											<path d="M16 6l12 20H4L16 6z" fill="currentColor"/>
+										</svg>
+										Vercel
+									</a>
+									<span>, and</span>
+									<a
+										href="https://ui.shadcn.com"
+										className="underline hover:text-green-400 flex items-center gap-1"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 24 24" fill="none">
+											<rect width="24" height="24" rx="4" fill="currentColor"/>
+											<path d="M7.5 7.5h9v9h-9z" fill="#fff"/>
+										</svg>
+										Shadcn
+									</a>
+								</div>
+							</>
+						) : (
+							<span className="flex items-center gap-1">
+								Built with{' '}
+								<a href="https://nextjs.org" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+									<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
+										<circle cx="16" cy="16" r="16" fill="currentColor"/>
+										<path d="M16.004 6.4c-5.302 0-9.604 4.302-9.604 9.604 0 5.302 4.302 9.604 9.604 9.604 5.302 0 9.604-4.302 9.604-9.604 0-5.302-4.302-9.604-9.604-9.604zm0 17.208c-4.2 0-7.604-3.404-7.604-7.604 0-4.2 3.404-7.604 7.604-7.604 4.2 0 7.604 3.404 7.604 7.604 0 4.2-3.404 7.604-7.604 7.604z" fill="#fff"/>
+									</svg>
+									Next.js
+								</a>
+								{', '}
+								<a href="https://vercel.com" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+									<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 32 32" fill="none">
+										<path d="M16 6l12 20H4L16 6z" fill="currentColor"/>
+									</svg>
+									Vercel
+								</a>
+								{', and '}
+								<a href="https://ui.shadcn.com" className="underline hover:text-green-400 flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+									<svg className="w-4 h-4 inline-block text-gray-400" viewBox="0 0 24 24" fill="none">
+										<rect width="24" height="24" rx="4" fill="currentColor"/>
+										<path d="M7.5 7.5h9v9h-9z" fill="#fff"/>
+									</svg>
+									Shadcn
+								</a>
+							</span>
+						)}
+					</div>
 				</div>
-			</div>
-		</footer>
+			</footer>
+			<div style={{ paddingBottom: isMobile ? 40 : 24 }} /> {/* Extra space below the footer */}
+		</>
 	);
 }
 
-export default function ContactSection() {
+export default function ContactSection({ isMobile }: ContactSectionProps) {
 	return (
 		<div>
 			<section className="py-20 px-6 sm:px-4 pb-32 sm:pb-20 bg-white">
@@ -214,7 +269,7 @@ export default function ContactSection() {
 					</motion.div>
 				</div>
 			</section>
-			<Footer />
+			<Footer isMobile={isMobile} />
 		</div>
 	);	
 }	

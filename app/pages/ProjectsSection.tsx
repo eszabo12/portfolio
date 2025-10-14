@@ -7,8 +7,12 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { projects } from './Constants';
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function ProjectsSection() {
-  const [isDesktop, setIsDesktop] = useState(false);
+interface ProjectsSectionProps {
+  isMobile: boolean;
+  isDesktop: boolean;
+}
+
+export default function ProjectsSection({ isMobile, isDesktop }: ProjectsSectionProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -26,14 +30,7 @@ export default function ProjectsSection() {
   });
 
   useEffect(() => {
-    const mql = window.matchMedia('(min-width: 1024px)');
-    const handler = (e: MediaQueryListEvent | MediaQueryList) => {
-      setIsDesktop('matches' in e ? e.matches : (e as MediaQueryList).matches);
-      setIsLoaded(true);
-    };
-    handler(mql);
-    mql.addEventListener?.('change', handler as (e: MediaQueryListEvent) => void);
-    return () => mql.removeEventListener?.('change', handler as (e: MediaQueryListEvent) => void);
+    setIsLoaded(true);
   }, []);
 
   const scrollTo = useCallback(

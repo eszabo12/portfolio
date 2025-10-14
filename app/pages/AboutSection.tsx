@@ -4,7 +4,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import GitHubContributions from './GitHubContributions';
 
-export default function AboutSection() {
+interface AboutSectionProps {
+	isMobile: boolean;
+}
+
+export default function AboutSection({ isMobile }: AboutSectionProps) {
 	return (
 		<section className="py-20 px-4">
 			<div className="max-w-6xl mx-auto">
@@ -64,7 +68,7 @@ export default function AboutSection() {
 							</div>
 						</motion.div>
 						<div className="mt-6 w-full">
-							<GitHubContributions />
+							<GitHubContributions isMobile={isMobile} />
 						</div>
 					</div>
 				</div>

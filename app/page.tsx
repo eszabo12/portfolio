@@ -7,8 +7,12 @@ import ContactSection from './pages/ContactSection';
 import Script from 'next/script';
 import ProjectsSection from './pages/ProjectsSection';
 import CustomCursor from './pages/CustomCursor';
+import { useIsMobile, useIsDesktop } from '../lib/useIsMobile';
 
 export default function BackendPortfolio() {
+	const isMobile = useIsMobile();
+	const isDesktop = useIsDesktop();
+
 	return (
 		<>
 			<Script
@@ -19,20 +23,20 @@ export default function BackendPortfolio() {
 				<CustomCursor />
 
 				<section id="hero" className="hero-section">
-					<HeroSection />
+					<HeroSection isMobile={isMobile} />
 				</section>
 				<div className="floating-background">
 					<section id="about">
-						<AboutSection />
+						<AboutSection isMobile={isMobile} />
 					</section>
 					<section id="experience">
-						<Experience />
+						<Experience isMobile={isMobile} />
 					</section>
 					<section id="projects">
-						<ProjectsSection />
+						<ProjectsSection isMobile={isMobile} isDesktop={isDesktop} />
 					</section>
 					<section id="contact">
-						<ContactSection />
+						<ContactSection isMobile={isMobile} />
 					</section>
 				</div>
 			</main>

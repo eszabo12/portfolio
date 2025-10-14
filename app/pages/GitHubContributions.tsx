@@ -5,7 +5,11 @@ import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function GitHubContributions() {
+interface GitHubContributionsProps {
+	isMobile: boolean;
+}
+
+export default function GitHubContributions({ isMobile }: GitHubContributionsProps) {
 	const [cardTransform, setCardTransform] = useState({ x: 0, y: 0 });
 	const MIN_COLS = 14;
 	const MAX_COLS_DESKTOP = 30;
@@ -35,7 +39,6 @@ export default function GitHubContributions() {
 	};
 
 	function calculateCols(width: number) {
-		const isMobile = width < 640;
 		const maxCols = isMobile ? MAX_COLS_MOBILE : MAX_COLS_DESKTOP;
 		return Math.min(Math.max(MIN_COLS, Math.floor(width / 25)), maxCols);
 	}
