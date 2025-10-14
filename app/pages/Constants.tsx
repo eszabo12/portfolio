@@ -147,11 +147,12 @@ export const experiences: ExperienceDetail[] = [
         'TypeScript',
         'React',
         'Next.js',
+        'AWS',
         'Redis',
         'Postgres',
+        'Sentry',
         'React Native',
         'Go',
-        'AWS',
         'Redshift'
       ],
     },
@@ -163,7 +164,7 @@ export const experiences: ExperienceDetail[] = [
       'Led design and development a fullstack app in Flutter for Android, iOS, and web using Firebase as the backend',
       'Featured in top press such as TechCrunch, Inc. Magazine, and Morning Brew',
     ],
-    tech: ['Dart', 'Flutter', 'React', 'Firebase'],
+    tech: ['Typescript', 'React', 'Dart', 'Figma', 'Vite', 'Firebase'],
   },
   {
     title: 'Microsoft',
