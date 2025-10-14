@@ -12,6 +12,48 @@ interface ProjectsSectionProps {
   isDesktop: boolean;
 }
 
+// Number of shimmer cards to show in loading state, fallback if projects not available
+const SHIMMER_CARD_COUNT = 3;
+
+function ShimmerCard({ isDesktop }: { isDesktop: boolean }) {
+  return (
+    <div
+      className={`
+        embla__slide embla-slide flex-shrink-0 animate-pulse
+        ${isDesktop
+          ? 'h-[600px] max-h-[700px] min-h-[500px] w-[600px] max-w-[700px] min-w-[500px]'
+          : 'h-[520px] max-h-[600px] min-h-[400px] w-[90%] max-w-[320px] min-w-[220px]'
+        }
+      `}
+    >
+      <article className="project-card card-hover-effect h-full flex flex-col">
+        <div className="project-card-gradient" />
+        <div className="project-card-inner flex flex-col h-full">
+          <div className={`project-image relative rounded-xl w-full mb-4 ${isDesktop ? 'h-112' : 'h-48'}`}>
+            <Skeleton className="absolute inset-0 rounded-xl bg-gray-100" />
+          </div>
+          <Skeleton className="h-6 w-2/3 mb-2 rounded" />
+          <Skeleton className="h-4 w-1/4 mb-4 rounded" />
+          <div className="space-y-1 mb-4">
+            <Skeleton className="h-3 w-3/4 rounded" />
+            <Skeleton className="h-3 w-2/3 rounded" />
+            <Skeleton className="h-3 w-1/2 rounded" />
+          </div>
+          <div className="flex flex-wrap gap-2 mb-2">
+            <Skeleton className="h-6 w-14 rounded-lg" />
+            <Skeleton className="h-6 w-10 rounded-lg" />
+            <Skeleton className="h-6 w-12 rounded-lg" />
+          </div>
+          <div className="flex flex-wrap gap-2 mt-auto">
+            <Skeleton className="h-8 w-20 rounded-md" />
+            <Skeleton className="h-8 w-20 rounded-md" />
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+}
+
 export default function ProjectsSection({ isMobile, isDesktop }: ProjectsSectionProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -29,8 +71,10 @@ export default function ProjectsSection({ isMobile, isDesktop }: ProjectsSection
     inViewThreshold: 0.7,
   });
 
+  // Simulate loading state for shimmer effect, can tweak this to control duration (e.g. 1200ms)
   useEffect(() => {
-    setIsLoaded(true);
+    const timeout = setTimeout(() => setIsLoaded(true), 1200); // ~1.2s shimmer, adjust as needed
+    return () => clearTimeout(timeout);
   }, []);
 
   const scrollTo = useCallback(
@@ -114,10 +158,28 @@ export default function ProjectsSection({ isMobile, isDesktop }: ProjectsSection
   }, []);
 
   if (!isLoaded) {
+    // Shimmer effect loading state
     return (
       <section className="py-20 px-4 bg-gray-50">
         <div className="projects-container">
-          <h2 className="projects-title">Projects</h2>
+          <div className="flex items-center justify-center mb-10">
+            <Skeleton className="h-8 w-32 rounded mb-2" />
+          </div>
+          <div className="carousel">
+            <div className="embla overflow-hidden">
+              <div
+                className={`embla__container flex ${
+                  isDesktop
+                    ? 'flex-row gap-6'
+                    : 'flex-row gap-4'
+                }`}
+              >
+                {[...Array(SHIMMER_CARD_COUNT)].map((_, idx) => (
+                  <ShimmerCard key={idx} isDesktop={isDesktop} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     );
@@ -173,10 +235,10 @@ export default function ProjectsSection({ isMobile, isDesktop }: ProjectsSection
                           src={p.img} 
                           alt={p.title} 
                           fill 
-						  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className={`object-cover rounded-xl transition-opacity duration-300
                           }`}
-						  loading="eager"
+                          loading="eager"
                           onLoadingComplete={() => handleImageLoad(p.title)}
                           onError={() => handleImageError(p.title)}
                         />}
