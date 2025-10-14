@@ -134,7 +134,7 @@ export const experiences: ExperienceDetail[] = [
       details: [
         <>
           Collaborated with customer facing and design teams to iterate on intuitive UI/UX for payroll, driving 44% attach rate, collaborating with{' '}
-          <a href="https://www.checkhq.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Check</a>
+          <a href="https://www.checkhq.com/partners/dripos" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Check</a>
         </>,
         'Integrated Parafin capital loans into the Dripos ecosystem, improving revshare by 50%',
         'Led payout architecture improvements, enabling the seamless transfer of ~$2MM per day',
