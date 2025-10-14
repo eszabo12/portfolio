@@ -130,7 +130,7 @@ export interface ExperienceDetail {
 export const experiences: ExperienceDetail[] = [
     {
       title: 'Dripos (YC S20)',
-      description: '(2024 - 2025)',
+      description: '2024 - 2025',
       details: [
         <>
           Collaborated with customer facing and design teams to iterate on intuitive UI/UX for payroll, driving 44% attach rate, collaborating with{' '}
