@@ -45,7 +45,7 @@ export const projects = [
         'Extended the Stripe CLI to enable advanced testing of payout triggers and webhook flows in a sandbox environment',
         'Built custom scripts to simulate payout events, automate test scenarios, and validate integration with downstream financial systems'
       ],
-      skills: ['TypeScript', 'Node.js', 'Stripe', 'Webhooks'],
+      skills: ['Go', 'Stripe', 'Webhooks'],
       gh: true,
       ghLink: 'https://github.com/eszabo12/stripe-cli/tree/elle/trigger',
     },
