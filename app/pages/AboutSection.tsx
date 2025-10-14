@@ -17,7 +17,7 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="text-3xl font-bold mb-12 text-center text-gray-800 relative z-20 typewriter-header"
+					className="text-3xl font-bold mb-12 text-center text-gray-800 relative z-20"
 				>
 					About Me
 				</motion.h2>
