@@ -173,7 +173,7 @@ export const experiences: ExperienceDetail[] = [
       'Proved the feasibility of a fullstack proof-of-concept search indexing process for the Windows file explorer',
       'Demoed to stakeholders and led adoption into the Windows 11 release'
     ],
-    tech: ['C#', 'C/C++'],
+    tech: [ 'C/C++', 'C#'],
   },
   {
     title: 'NASA',
