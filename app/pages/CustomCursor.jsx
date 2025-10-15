@@ -110,16 +110,32 @@ const CustomCursor = () => {
           {`
             @keyframes ripple {
               0% {
-                opacity: 0.6;
-                transform: scale(0.7);
+                opacity: 0;
               }
-              80% {
+              10% {
+                opacity: 0.1;
+              }
+              50% {
+                opacity: 0.4;
+                transform: scale(1.1);
+              }
+              60% {
+                opacity: 0.3;
+                transform: scale(1.1);
+              }
+              70% {
                 opacity: 0.2;
                 transform: scale(1.3);
               }
+              80% {
+                opacity: 0.1;
+                transform: scale(1.1);
+              }
+              90% {
+                opacity: 0.0;
+              }
               100% {
                 opacity: 0;
-                transform: scale(1.8);
               }
             }
           `}
