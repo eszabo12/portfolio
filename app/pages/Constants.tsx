@@ -42,7 +42,7 @@ export const projects = [
       title: 'Stripe CLI Extension',
       date: '2024',
       description: [
-        'Extended the Stripe CLI to enable advanced testing of payout triggers and webhook flows in a sandbox environment',
+        'Extended the Stripe CLI to enable testing of all payout states in a sandbox environment',
         'Built custom scripts to simulate payout events, automate test scenarios, and validate integration with downstream financial systems'
       ],
       skills: ['Go', 'Stripe', 'Webhooks'],
