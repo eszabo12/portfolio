@@ -17,6 +17,7 @@ export default function HeroSection({ isMobile }: HeroSectionProps) {
 	const [screenHeight, setScreenHeight] = useState(
 		typeof window !== 'undefined' ? window.innerHeight : 0
 	);
+	const [cardTransform, setCardTransform] = useState({ x: 0, y: 0 });
 
 	const whoamiDelay = 400;
 	const titleDelay = WHOAMI.length * 90 + 1000;
@@ -47,6 +48,24 @@ export default function HeroSection({ isMobile }: HeroSectionProps) {
 		}
 	}, []);
 
+	const handleCardMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+		const rect = e.currentTarget.getBoundingClientRect();
+		const centerX = rect.left + rect.width / 2;
+		const centerY = rect.top + rect.height / 2;
+		
+		const mouseX = e.clientX - centerX;
+		const mouseY = e.clientY - centerY;
+		
+		const moveX = -mouseX * 0.005;
+		const moveY = -mouseY * 0.005;
+		
+		setCardTransform({ x: moveX, y: moveY });
+	};
+
+	const handleCardMouseLeave = () => {
+		setCardTransform({ x: 0, y: 0 });
+	};
+
 	return (
 		<section
 			className="relative w-full flex flex-col items-center justify-center overflow-hidden"
@@ -66,7 +85,7 @@ export default function HeroSection({ isMobile }: HeroSectionProps) {
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: showTerminal ? 1 : 0, y: showTerminal ? 0 : 30 }}
 					transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/60 hover:border-green-400 flex flex-col items-stretch shadow-lg"
+					className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/50 hover:border-green-400 flex flex-col items-stretch shadow-lg"
 					style={{
 						minWidth: '320px',
 						maxWidth: '90vw',
@@ -77,9 +96,9 @@ export default function HeroSection({ isMobile }: HeroSectionProps) {
 						userSelect: 'auto',
 					}}
 				>
-					<div className="absolute inset-0 bg-white/60" />
+					<div className="absolute inset-0 bg-white/50" />
 					<div className="absolute inset-0 z-0">
-						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white/60" />
+						<div className="absolute inset-0 rounded-3xl blur-2xl bg-white/50" />
 					</div>
 					<div className="relative z-10">
 						<div className="flex items-center gap-2 mb-6">

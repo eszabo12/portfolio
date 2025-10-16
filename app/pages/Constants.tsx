@@ -140,7 +140,7 @@ export const experiences: ExperienceDetail[] = [
         'Led payout architecture improvements, enabling the seamless transfer of ~$2MM per day',
         <>
           Developed and launched accounting feature from 0 to 1, collaborating with{' '}
-          <a href="https://www.layerfi.com/customers" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Layer</a>
+          <a href="https://www.layerfi.com/post/dripos" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Layer</a>
         </>
       ],
       tech: [

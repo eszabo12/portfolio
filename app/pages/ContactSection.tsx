@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ContactSectionProps {
 	isMobile: boolean;
@@ -95,19 +95,44 @@ function Footer({ isMobile }: { isMobile: boolean }) {
 }
 
 export default function ContactSection({ isMobile }: ContactSectionProps) {
+	const [cardTransform, setCardTransform] = useState({ x: 0, y: 0 });
+
+	const handleCardMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+		const rect = e.currentTarget.getBoundingClientRect();
+		const centerX = rect.left + rect.width / 2;
+		const centerY = rect.top + rect.height / 2;
+		
+		const mouseX = e.clientX - centerX;
+		const mouseY = e.clientY - centerY;
+		
+		const moveX = -mouseX * 0.005;
+		const moveY = -mouseY * 0.005;
+		
+		setCardTransform({ x: moveX, y: moveY });
+	};
+
+	const handleCardMouseLeave = () => {
+		setCardTransform({ x: 0, y: 0 });
+	};
+
 	return (
 		<div>
 			<section className="py-20 px-6 sm:px-4 pb-32 sm:pb-20 bg-white">
 				<div className="max-w-6xl mx-auto">
 					<div
-						className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/40 shadow-lg hover:border-green-500 transition-all duration-300"
+						className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/50 shadow-lg hover:border-green-500 transition-all duration-300 card-hover-effect"
+						onMouseMove={handleCardMouseMove}
+						onMouseLeave={handleCardMouseLeave}
+						style={{
+							transform: `translate(${cardTransform.x}px, ${cardTransform.y}px)`
+						}}
 					>
 						<div className="absolute inset-0" />
 						<div
 							aria-hidden
 							className="absolute inset-0 z-0"
 						>
-							<div className="absolute inset-0 rounded-3xl blur-2xl bg-white" />
+							<div className="absolute inset-0 rounded-3xl blur-2xl bg-white/50" />
 						</div>
 						<div className="relative z-10">
 							<div className="flex items-center gap-2 mb-6">
