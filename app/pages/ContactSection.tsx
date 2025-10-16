@@ -105,8 +105,8 @@ export default function ContactSection({ isMobile }: ContactSectionProps) {
 		const mouseX = e.clientX - centerX;
 		const mouseY = e.clientY - centerY;
 		
-		const moveX = -mouseX * 0.005;
-		const moveY = -mouseY * 0.005;
+		const moveX = -mouseX * 0.0025;
+		const moveY = -mouseY * 0.0025;
 		
 		setCardTransform({ x: moveX, y: moveY });
 	};

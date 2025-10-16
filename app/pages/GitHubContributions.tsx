@@ -116,7 +116,7 @@ export default function GitHubContributions({ isMobile }: GitHubContributionsPro
 				}}
 			>
 				<Card 
-					className="card-hover-effect relative rounded-[25px] border-2 border-gray-200 bg-white/50 shadow-lg flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300 group"
+					className="card-hover-effect relative rounded-[25px] border-2 border-gray-200 bg-white/70 shadow-lg flex flex-col justify-center p-4 hover:border-green-400 transition-all duration-300 group"
 					onMouseMove={handleCardMouseMove}
 					onMouseLeave={handleCardMouseLeave}
 					style={{
