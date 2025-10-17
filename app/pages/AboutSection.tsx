@@ -92,7 +92,7 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 									<div>
 										<p className="text-gray-600 leading-relaxed mb-4 typewriter-description">
 											Hi! 👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! 💻 . 
-											I offer domain expertise in fintech, as well as 0-1 founding experience and workflow insights from big tech. 🏢
+											I offer 0-1 founding experience and workflow insights from big tech as well as a background in ML research. 🏢
 										</p>
 
 										<p className="text-gray-600 leading-relaxed typewriter-description">
