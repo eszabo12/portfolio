@@ -43,7 +43,7 @@ const CustomCursor = () => {
       if (rippleTimeout.current) clearTimeout(rippleTimeout.current);
       rippleTimeout.current = setTimeout(() => {
         setRipple(false);
-      }, 500);
+      }, 300);
     };
 
     window.addEventListener('mousedown', handleClick, true);
@@ -112,30 +112,20 @@ const CustomCursor = () => {
               0% {
                 opacity: 0;
               }
-              10% {
+              25% {
                 opacity: 0.1;
               }
               50% {
                 opacity: 0.4;
                 transform: scale(1.1);
               }
-              60% {
+              75% {
                 opacity: 0.3;
-                transform: scale(1.1);
-              }
-              70% {
-                opacity: 0.2;
-                transform: scale(1.3);
-              }
-              80% {
-                opacity: 0.1;
-                transform: scale(1.1);
-              }
-              90% {
-                opacity: 0.0;
+                transform: scale(1.2);
               }
               100% {
-                opacity: 0;
+                opacity: 0.2;
+                transform: scale(1.3);
               }
             }
           `}
