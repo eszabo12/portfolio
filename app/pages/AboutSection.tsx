@@ -95,9 +95,9 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 											I offer 0-1 founding experience and workflow insights from big tech as well as a background in ML research. 🏢
 										</p>
 
-										<p className="text-gray-600 leading-relaxed typewriter-description">
+										{/* <p className="text-gray-600 leading-relaxed typewriter-description">
 											When I'm not coding, you'll find me reading a good book 📚, in the pilates studio, curating a playlist, and tending to my two houseplants.
-										</p>
+										</p> */}
 									</div>
 								</div>
 							</div>
