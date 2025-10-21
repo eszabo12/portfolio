@@ -201,7 +201,7 @@ export const experiences: ExperienceDetail[] = [
     title: 'Totall Metal Recycling',
     description: '2019',
     details: [
-      'Built Java web applications backed by a relational MySQL database',
+      'Built Java web applications with Swing frontend and MySQL database on the backend',
       'Created a VBScript-to-Java transpiler in Python to translate thousands of stored procedures',
     ],
     tech: ['Java Swing', 'MySQL', 'Python'],
