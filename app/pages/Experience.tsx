@@ -80,7 +80,7 @@ export default function Experience({ isMobile }: ExperienceProps) {
                   
                   <div className="ml-16 flex-1">
                     <Card 
-                      className="experience-card card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/50 hover:border-green-400"
+                      className="card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/50 hover:bg-green-800 hover:text-white hover:border-green-400 transition-all duration-300"
                       onMouseMove={(e) => handleCardMouseMove(e, index)}
                       onMouseLeave={() => handleCardMouseLeave(index)}
                       style={{
@@ -90,11 +90,11 @@ export default function Experience({ isMobile }: ExperienceProps) {
                       <div className="absolute inset-0 bg-white/50 pointer-events-none" />
                       <div className="relative z-10">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-gray-800">{project.title}</CardTitle>
-                    <CardDescription className="text-green-400 font-mono">{project.description}</CardDescription>
+                    <CardTitle className="text-2xl font-bold text-gray-800 hover:text-white font-mono transition-colors duration-300">{project.title}</CardTitle>
+                    <CardDescription className="text-green-400 hover:text-white font-mono transition-colors duration-300">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
+                    <ul className="list-disc list-inside space-y-2 text-gray-600 hover:text-white mb-6 font-mono transition-colors duration-300">
                       {project.details.map((detail: string | React.ReactElement, i: number) => (
                         <li key={i}>
                           {detail}
