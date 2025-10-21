@@ -62,11 +62,9 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 							<div className="absolute inset-0 bg-white/50" />
 							<div className="relative z-10">
 								<p className="text-gray-600 leading-relaxed mb-4 typewriter-description">
-									Hi! 👋 I'm Elle. I have developed an aptitude for creating beautiful fullstack applications that suit business requirements! 💻 . 
-									I offer 0-1 founding experience and workflow insights from big tech as well as a background in ML research. 🏢
-								</p>
+								Hi! 👋 I’m Elle Szabo, a software engineer with experience across big tech, government, AI research 🤖, and early-stage startups 🚀. I specialize in building scalable, user-focused full-stack applications 💻 that align with business goals. I bring 0→1 product experience, a background in NLP research, and a passion for turning ideas into reliable, high-impact systems.
 								<p className="text-gray-600 leading-relaxed typewriter-description">
-									When I'm not coding, you'll find me reading a good book 📚, on a run 🏃‍♀️, curating a playlist🎶.
+									When I'm not coding, I enjoy reading, running, and curating playlists. 🎶
 								</p>
 							</div>
 						</div>
