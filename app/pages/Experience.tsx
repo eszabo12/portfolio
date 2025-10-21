@@ -45,6 +45,7 @@ export default function Experience({ isMobile }: ExperienceProps) {
     setCardTransforms(prev => ({ ...prev, [index]: { x: 0, y: 0 } }));
   };
 
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -67,7 +68,7 @@ export default function Experience({ isMobile }: ExperienceProps) {
                 <div key={index} className="relative flex items-start">
                   {/* Progress Dot */}
                   <motion.div 
-                    className="absolute left-6 w-4 h-4 bg-green-400 rounded-full z-20 border-2 border-white shadow-lg"
+                    className="absolute left-6 w-4 h-4 bg-green-400 rounded-fuoll z-20 brder-2 border-white shadow-lg"
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
@@ -80,7 +81,7 @@ export default function Experience({ isMobile }: ExperienceProps) {
                   
                   <div className="ml-16 flex-1">
                     <Card 
-                      className="card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/50 hover:bg-green-800 hover:text-white hover:border-green-400 transition-all duration-300"
+                      className="card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/50 hover:border-green-400 transition-all duration-300"
                       onMouseMove={(e) => handleCardMouseMove(e, index)}
                       onMouseLeave={() => handleCardMouseLeave(index)}
                       style={{
@@ -90,11 +91,11 @@ export default function Experience({ isMobile }: ExperienceProps) {
                       <div className="absolute inset-0 bg-white/50 pointer-events-none" />
                       <div className="relative z-10">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-gray-800 hover:text-white font-mono transition-colors duration-300">{project.title}</CardTitle>
-                    <CardDescription className="text-green-400 hover:text-white font-mono transition-colors duration-300">{project.description}</CardDescription>
+                    <CardTitle className="text-2xl font-bold text-gray-800 font-mono">{project.title}</CardTitle>
+                    <CardDescription className="text-green-400 font-mono">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-gray-600 hover:text-white mb-6 font-mono transition-colors duration-300">
+                    <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6 font-mono">
                       {project.details.map((detail: string | React.ReactElement, i: number) => (
                         <li key={i}>
                           {detail}
@@ -123,7 +124,7 @@ export default function Experience({ isMobile }: ExperienceProps) {
             <CollapsibleTrigger asChild>
               <button
                 aria-label={open ? "Show less experience" : "Show more experience"}
-                className="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-50 hover:border-green-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 text-green-600 active:border-gray-300"
+                className="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-green-800 hover:border-green-900 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 text-green-600 active:border-gray-300"
               >
                 {open ? (
                   <svg
