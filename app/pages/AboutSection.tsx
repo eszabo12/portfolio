@@ -62,7 +62,7 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 							<div className="absolute inset-0 bg-white/50" />
 							<div className="relative w-full h-full min-h-[320px] sm:min-h-[400px]">
 								<Image
-									src="/headshot.png"
+									src="/headshot.jpeg"
 									alt="Elle Szabo"
 									fill
 									className="object-cover w-full h-full rounded-xl"
@@ -96,7 +96,7 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 										</p>
 
 										 <p className="text-gray-600 leading-relaxed typewriter-description">
-When I'm not coding, you'll find me reading a good book 📚, on a run 🏃‍♀️, curating a playlist🎶, and tending to my two houseplants 🌱.
+When I'm not coding, you'll find me reading a good book 📚, on a run 🏃‍♀️, curating a playlist🎶.
 									</p>
 									</div>
 								</div>
