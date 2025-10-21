@@ -80,7 +80,7 @@ export default function Experience({ isMobile }: ExperienceProps) {
                   
                   <div className="ml-16 flex-1">
                     <Card 
-                      className="card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/50 shadow-lg hover:border-green-400 transition-all duration-300"
+                      className="experience-card card-hover-effect relative rounded-2xl overflow-hidden border-2 border-gray-200 bg-white/50 hover:border-green-400"
                       onMouseMove={(e) => handleCardMouseMove(e, index)}
                       onMouseLeave={() => handleCardMouseLeave(index)}
                       style={{

@@ -165,7 +165,7 @@ export default function HeroSection({ isMobile }: HeroSectionProps) {
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ duration: 1.7, ease: 'easeOut' }}
 								>
-									<span className="text-green-400 font-bold text-lg mb-1 font-mono" style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}>
+									<span className="text-green-500 font-bold text-lg mb-1 font-mono" style={{ fontSize: '1.1rem', letterSpacing: '0.04em' }}>
 										Software Engineer
 									</span>
 								</motion.div>

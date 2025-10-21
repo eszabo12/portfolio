@@ -224,6 +224,16 @@ export default function ContactSection({ isMobile }: ContactSectionProps) {
 										<span>LinkedIn</span>
 									</a>
 									<a
+										href="https://app.beli.ai/u/ellelele"
+										className="contact-button inline-flex items-center gap-3 px-6 py-3 rounded-xl cursor-pointer"
+									>
+										<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+											{/* Beli icon (simple shopping bag) */}
+											<path d="M7 7V6a5 5 0 0110 0v1h3a1 1 0 011 1v13a2 2 0 01-2 2H6a2 2 0 01-2-2V8a1 1 0 011-1h3zm2-1a3 3 0 016 0v1H9V6zm10 3H5v12a1 1 0 001 1h12a1 1 0 001-1V9z" />
+										</svg>
+										<span>Beli</span>
+									</a>
+									<a
 										href="https://x.com/ElleSzabo"
 										className="contact-button inline-flex items-center gap-3 px-6 py-3 rounded-xl cursor-pointer"
 									>

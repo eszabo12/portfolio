@@ -141,7 +141,7 @@ export const experiences: ExperienceDetail[] = [
         <>
           Developed and launched accounting feature from 0 to 1, collaborating with{' '}
           <a href="https://www.layerfi.com/post/dripos" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Layer</a>
-        </>
+        </>,
       ],
       tech: [
         'TypeScript',
