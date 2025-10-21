@@ -72,28 +72,11 @@ export default function AboutSection({ isMobile }: AboutSectionProps) {
 						</div>
 					</motion.div>
 
-					{/* GitHub Contributions */}
-					<motion.div
-						initial={{ opacity: 0, x: isMobile ? 0 : 30 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6, delay: 0.4 }}
-						className="flex flex-col justify-center"
-					>
-						<div
-							className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-lg border-2 border-gray-200 bg-white/50 shadow-lg hover:border-green-400 transition-all duration-300 h-full flex flex-col justify-center card-hover-effect"
-							onMouseMove={(e) => handleCardMouseMove(e, 1)}
-							onMouseLeave={() => handleCardMouseLeave(1)}
-							style={{
-								transform: `translate(${cardTransforms[1]?.x || 0}px, ${cardTransforms[1]?.y || 0}px)`
-							}}
-						>
-							<div className="absolute inset-0 bg-white/50" />
+						<div>
 							<div className="relative z-10">
 								<GitHubContributions isMobile={isMobile} />
 							</div>
 						</div>
-					</motion.div>
 				</div>
 			</div>
 		</section>
