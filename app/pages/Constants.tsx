@@ -125,6 +125,7 @@ export interface ExperienceDetail {
   description: string;
   details: (string | React.ReactElement)[];
   tech: string[];
+  companyUrl?: string;
 }
 
 export const experiences: ExperienceDetail[] = [
@@ -155,6 +156,7 @@ export const experiences: ExperienceDetail[] = [
         'Go',
         'Redshift'
       ],
+      companyUrl: 'https://dripos.com',
     },
   {
     title: 'Lucendo Labs, Inc.',
@@ -174,6 +176,7 @@ export const experiences: ExperienceDetail[] = [
       'Demoed to stakeholders and led adoption into the Windows 11 release'
     ],
     tech: [ 'C/C++', 'C#'],
+    companyUrl: 'https://microsoft.com',
   },
   {
     title: 'NASA',
@@ -182,6 +185,7 @@ export const experiences: ExperienceDetail[] = [
       'Built a navigation pipeline for an autonomous inspection rover',
     ],
     tech: ['C/C++', 'ROS', 'Python'],
+    companyUrl: 'https://nasa.gov',
   },
   {
     title: 'Lucid Circuit',
@@ -191,6 +195,7 @@ export const experiences: ExperienceDetail[] = [
       'Developed an API for electrical engineers that stores all information about architecture hardware parsed from JSON',
     ],
     tech: ['Python', 'TensorBoard', 'OpenCV', 'C/C++'],
+    companyUrl: 'https://lucidcircuit.com',
   },
   {
     title: 'Totall Metal Recycling',
@@ -200,5 +205,6 @@ export const experiences: ExperienceDetail[] = [
       'Created a VBScript-to-Java transpiler in Python to translate thousands of stored procedures',
     ],
     tech: ['Java Swing', 'MySQL', 'Python'],
+    companyUrl: 'https://www.tmrusa.com/',
   },
 ];
