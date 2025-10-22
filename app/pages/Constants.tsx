@@ -19,7 +19,7 @@ export const projects = [
       date: '2025',
       description: [
         'Designed and developed a mobile and desktop-responsive daily insights email template for Dripos, aggregating key business metrics and trends for coffee shop owners',
-        'Automated a high-throughput scheduled event for timely delivery to thousands of users',
+        'Introduced product-led growth levers gamify unlocking additional products',
         'Tracked send and open rates with a MongoDB collection',
       ],
       skills: ['TypeScript', 'Node.js', 'AWS SMS', 'MySQL'],
@@ -118,6 +118,25 @@ export const projects = [
           }
         ]
       },
+  {
+    img: '/betterpage.png',
+    title: 'App (Lucendo Labs)',
+    date: '2023-2024',
+    description: [
+      'Co-founded marketplace app, shipping for web and mobile',
+      'Directed product/UX and engineering for a team of 6',
+      'App functional to designs, no longer hosted but view prototype below:'
+    ],
+    skills: ['Typescript', 'React', 'Node.js', 'Figma', 'Vite', 'Firebase'],
+    gh: false,
+    buttons: [
+      {
+        label: 'Prototype',
+        href: 'https://www.figma.com/proto/4FxRwv1MKc7q5CRaRrLBq8/All-Otea-spring-2024-Design-Files-Consolidated?node-id=4-7794&starting-point-node-id=4%3A7792',
+        className: 'btn-blue'
+      }
+    ]
+  },
   ];
 
 export interface ExperienceDetail {
