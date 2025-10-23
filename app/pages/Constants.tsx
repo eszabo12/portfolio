@@ -132,7 +132,7 @@ export const projects = [
     buttons: [
       {
         label: 'Prototype',
-        href: 'https://www.figma.com/proto/4FxRwv1MKc7q5CRaRrLBq8/All-Otea-spring-2024-Design-Files-Consolidated?node-id=4-7794&starting-point-node-id=4%3A7792',
+        href: 'https://www.figma.com/proto/O66dwrnY6eG85umFkO9H6R/demo?node-id=1-468&t=N9z2UeXh1wHBraCS-1',
         className: 'btn-blue'
       }
     ]
@@ -201,7 +201,7 @@ export const experiences: ExperienceDetail[] = [
     title: 'NASA',
     description: '2020',
     details: [
-      'Built a navigation pipeline for an autonomous inspection rover',
+      'Improved a computer vision pipeline with ROS and Gazebo for an autonomous inspection rover',
     ],
     tech: ['C/C++', 'ROS', 'Python'],
     companyUrl: 'https://nasa.gov',
