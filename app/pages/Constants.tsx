@@ -137,6 +137,18 @@ export const projects = [
       }
     ]
   },
+  {
+    img: '/stream.png',
+    title: 'Streaming Chrome Extension',
+    date: '2022',
+    description: [
+      'Developed a chrome extension for HackSC that scrapes Twitch chat data and visualizes sentiment in real time',
+      'Connected nltk sentiment library via socketing to browser client',
+    ],
+    skills: ['JavaScript', 'Chrome Extension', 'nltk', 'Socket.io', 'Flask'],
+    gh: true,
+    ghLink: 'https://github.com/likhity/twitch-stream-chat-analyzer',
+  },
   ];
 
 export interface ExperienceDetail {
